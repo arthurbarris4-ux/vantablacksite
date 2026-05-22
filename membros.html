@@ -92,7 +92,75 @@ p{color:var(--muted);line-height:1.7}
 .quick-tool{padding:18px;border-radius:20px;border:1px solid rgba(242,184,107,.11);background:rgba(255,255,255,.026)}
 .quick-tool strong{display:block;margin:8px 0 6px}
 .quick-tool p{font-size:.88rem;line-height:1.5}
+.member-os{display:grid;gap:16px}
+.os-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:16px;align-items:stretch}
+.os-copy,.next-move,.os-kpi,.os-note{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.052),rgba(255,255,255,.018));box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.os-copy,.next-move{border-radius:26px;padding:28px}
+.member-os h1{font-size:clamp(2.4rem,5vw,4.8rem);line-height:.92;margin:14px 0}
+.member-os h2{font-size:clamp(1.7rem,3vw,2.45rem);line-height:1;margin:10px 0 12px}
+.next-move{display:flex;flex-direction:column;justify-content:space-between;gap:18px;background:radial-gradient(circle at 20% 0%,rgba(242,184,107,.12),transparent 38%),linear-gradient(180deg,rgba(255,255,255,.058),rgba(255,255,255,.018))}
+.next-move strong{font:800 2rem "Space Grotesk";letter-spacing:-.055em;line-height:1.02;color:var(--gold)}
+.os-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.os-kpi{border-radius:20px;padding:18px}
+.os-kpi small,.target-list small,.unit-grid small{display:block;color:var(--gold);font-size:.62rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.os-kpi strong,.target-list strong,.unit-grid strong{display:block;margin-top:8px;font:800 1.78rem "Space Grotesk";letter-spacing:-.055em}
+.os-kpi span{display:block;margin-top:6px;color:var(--muted);font-size:.82rem;line-height:1.45}
+.os-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:16px}
+.wide-grid{grid-template-columns:minmax(260px,.8fr) minmax(260px,.95fr) minmax(260px,.85fr)}
+.os-inputs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+.target-list,.unit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+.target-list div,.unit-grid div{border:1px solid rgba(242,184,107,.11);border-radius:18px;padding:16px;background:rgba(255,255,255,.028)}
+.os-note{margin-top:16px;border-radius:18px;padding:14px 16px;color:var(--muted);line-height:1.55}
+.funnel{display:grid;gap:13px;margin-top:18px}
+.funnel-row{display:grid;grid-template-columns:92px 52px 1fr;align-items:center;gap:12px}
+.funnel-row span{font-size:.72rem;font-weight:900;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.funnel-row strong{font:800 1.2rem "Space Grotesk";color:var(--gold)}
+.funnel-bar{height:12px;border-radius:999px;background:rgba(255,255,255,.065);overflow:hidden}
+.funnel-bar i{display:block;height:100%;width:var(--w,0%);border-radius:inherit;background:linear-gradient(90deg,var(--gold),rgba(242,184,107,.25))}
+.sliders{display:grid;gap:13px;margin-top:16px}
+.sliders label{display:grid;grid-template-columns:108px 1fr;gap:12px;align-items:center;color:var(--muted);font-weight:800;font-size:.86rem}
+.sliders input{accent-color:var(--gold);width:100%}
+.action-board{display:grid;gap:10px;margin-top:16px}
+.action-card{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:flex-start;padding:14px;border-radius:18px;background:rgba(255,255,255,.026);border:1px solid rgba(242,184,107,.10)}
+.action-card input{margin-top:4px;accent-color:var(--gold)}
+.action-card small{display:block;color:var(--gold);font-size:.62rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.action-card strong{display:block;margin-top:3px}
+.action-card p{font-size:.9rem;line-height:1.55;margin-top:4px}
+.finance-suite{display:grid;gap:16px}
+.finance-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.58fr);gap:16px}
+.finance-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+.finance-kpi,.finance-tile,.list-item{border:1px solid rgba(242,184,107,.11);border-radius:18px;background:rgba(255,255,255,.028);padding:16px}
+.finance-kpi small,.finance-tile small,.list-item small{display:block;color:var(--gold);font-size:.62rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.finance-kpi strong,.finance-tile strong{display:block;margin-top:8px;font:800 1.7rem "Space Grotesk";letter-spacing:-.055em}
+.finance-toolmap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.finance-toolmap div{min-height:130px;border:1px solid rgba(242,184,107,.11);border-radius:18px;background:linear-gradient(180deg,rgba(242,184,107,.055),rgba(255,255,255,.02));padding:16px}
+.finance-toolmap small{display:block;color:var(--gold);font-size:.6rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.finance-toolmap strong{display:block;margin-top:8px;font:800 1.04rem "Space Grotesk";letter-spacing:-.035em;line-height:1.1}
+.finance-toolmap p{font-size:.82rem;line-height:1.45;margin-top:7px}
+.finance-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.85fr);gap:16px}
+.finance-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.finance-list{display:grid;gap:10px;margin-top:16px;max-height:360px;overflow:auto;padding-right:4px}
+.list-item{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+.list-item strong{display:block}
+.list-item p{font-size:.88rem;line-height:1.45;margin-top:4px}
+.mini-btn{border:1px solid rgba(242,184,107,.2);border-radius:999px;background:rgba(242,184,107,.08);color:var(--text);font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:9px 12px;cursor:pointer}
+.cashflow{display:grid;gap:10px;margin-top:16px}
+.cash-row{display:grid;grid-template-columns:130px 1fr auto;gap:12px;align-items:center}
+.cash-row span{font-size:.7rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.cash-track{height:12px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}
+.cash-track i{display:block;height:100%;width:var(--w,1%);background:linear-gradient(90deg,var(--gold),rgba(242,184,107,.28));border-radius:inherit}
+.alert-list{display:grid;gap:10px;margin-top:16px}
+.premium-alert{padding:14px;border-radius:16px;border:1px solid rgba(242,184,107,.13);background:linear-gradient(180deg,rgba(242,184,107,.06),rgba(255,255,255,.02));color:var(--muted);line-height:1.55}
+.sim-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
+.sim-output{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
+.sim-output div{padding:15px;border-radius:16px;border:1px solid rgba(242,184,107,.11);background:rgba(255,255,255,.028)}
+.sim-output small{display:block;color:var(--gold);font-size:.6rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+.sim-output strong{display:block;margin-top:6px;font:800 1.55rem "Space Grotesk";letter-spacing:-.05em}
+.executive-report{white-space:pre-wrap;margin-top:16px;padding:16px;border-radius:18px;border:1px solid rgba(242,184,107,.12);background:rgba(0,0,0,.22);color:var(--muted);line-height:1.6}
 @media(max-width:900px){.hero,.grid,.stats,.tool-grid,.kpi-form,.command,.forecast-grid,.pipeline,.workspace,.quick-tools{grid-template-columns:1fr}.topbar{align-items:center;padding:12px 0 22px}.logo img{width:112px}.top-actions{flex-direction:row;align-items:center}.pill,.ghost,.solid{min-height:42px;padding:0 14px}.form-actions .pill,.form-actions .ghost,.form-actions .solid{width:100%}.card{padding:22px;border-radius:22px}.shell{padding-left:18px;padding-right:18px}h1{font-size:3rem}.resource{align-items:flex-start;flex-direction:column}.command-title{display:grid}.score-orbit{width:138px;height:138px}.score-core{width:106px;height:106px}.brief-grid{grid-template-columns:1fr}.matrix-row{grid-template-columns:80px 1fr auto}}
+@media(max-width:1040px){.os-hero,.os-grid,.wide-grid,.os-kpis,.os-inputs{grid-template-columns:1fr 1fr}.wide-grid{grid-template-columns:1fr}.os-inputs{grid-template-columns:1fr 1fr}}
+@media(max-width:1040px){.finance-hero,.finance-layout,.finance-kpis,.finance-form,.sim-grid,.sim-output{grid-template-columns:1fr 1fr}.finance-toolmap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.member-os{gap:12px}.os-hero,.os-grid,.wide-grid,.os-kpis,.os-inputs,.target-list,.unit-grid,.quick-tools,.finance-hero,.finance-layout,.finance-kpis,.finance-form,.sim-grid,.sim-output,.finance-toolmap{grid-template-columns:1fr}.os-copy,.next-move{padding:22px;border-radius:22px}.member-os h1{font-size:2.75rem}.member-os h2{font-size:1.85rem}.funnel-row,.cash-row{grid-template-columns:1fr;gap:8px}.sliders label{grid-template-columns:1fr;gap:8px}.quick-tool{padding:16px}.list-item{grid-template-columns:1fr}.finance-list{max-height:none}.finance-toolmap div{min-height:auto}}
 </style>
 </head>
 <body>
@@ -141,112 +209,275 @@ p{color:var(--muted);line-height:1.7}
 <p>Seu login existe, mas seu acesso premium nao esta ativo. Fale com a Vanta para liberar sua conta.</p>
 </section>
 
-<main class="dashboard hidden" id="dashboardView">
-<section class="command">
-<div class="card">
-<div class="command-title">
-<div>
+<main class="dashboard member-os hidden" id="dashboardView">
+<section class="os-hero">
+<div class="os-copy">
 <span class="eyebrow" id="memberPlan">Vanta Premium</span>
-<h1>Painel de crescimento com <span>inteligencia.</span></h1>
-<p id="memberIntro">Controle metas, aquisicao, oferta e proximos passos em um unico lugar.</p>
+<h1>Central do empresario.</h1>
+<p id="memberIntro">Um painel simples para acompanhar aquisicao, caixa, vendas e as proximas decisoes do seu crescimento.</p>
 </div>
-<div class="score-orbit" id="scoreOrbit" style="--score:82%">
-<div class="score-core"><div><strong id="scoreValue">82</strong><span>Score</span></div></div>
-</div>
-</div>
-<div class="brief-grid">
-<div class="brief"><small>Meta mensal</small><strong id="kpiRevenue">R$ 0</strong></div>
-<div class="brief"><small>Leads alvo</small><strong id="leadGoal">--</strong></div>
-<div class="brief"><small>Previsao</small><strong id="forecastRevenue">R$ 0</strong></div>
-</div>
-</div>
-<div class="card ai-brief">
-<span class="eyebrow">Vanta Intelligence</span>
-<h2>Briefing do dia</h2>
-<p id="actionSummary">Preencha os numeros do painel para gerar uma leitura comercial instantanea.</p>
-<div class="pulse-line" id="pulseLine"></div>
-<div class="insight-list">
-<div class="insight" id="insightPrimary">Prioridade inicial: clarear a promessa e registrar a meta comercial.</div>
-<div class="insight" id="insightSecondary">Quando o funil estiver preenchido, o painel mostra gargalo, ritmo e acao recomendada.</div>
-</div>
+<div class="next-move">
+<span class="eyebrow">Proxima melhor acao</span>
+<strong id="nextMoveTitle">Preencher os numeros da semana</strong>
+<p id="nextMoveText">Com leads, reunioes, propostas e vendas, o painel calcula gargalo, meta e prioridade.</p>
 </div>
 </section>
 
-<section class="forecast-grid">
-<div class="forecast-card"><span class="eyebrow">Ticket medio</span><strong id="kpiTicket">R$ 0</strong><p>Valor medio por cliente convertido.</p></div>
-<div class="forecast-card"><span class="eyebrow">Conversao</span><strong id="kpiConversion">0%</strong><p>Taxa de lead para venda.</p></div>
-<div class="forecast-card"><span class="eyebrow">Reunioes</span><strong id="kpiMeetings">0</strong><p>Volume comercial da semana.</p></div>
-<div class="forecast-card"><span class="eyebrow">Ritmo</span><strong id="weekRhythm">0%</strong><p>Vendas sobre leads recebidos.</p></div>
+<section class="os-kpis">
+<div class="os-kpi"><small>Receita estimada</small><strong id="estimatedRevenue">R$ 0</strong><span id="revenueHint">Baseada nas vendas da semana</span></div>
+<div class="os-kpi"><small>Meta do mes</small><strong id="targetRevenueLabel">R$ 0</strong><span id="targetGap">Defina sua meta</span></div>
+<div class="os-kpi"><small>Custo por lead</small><strong id="cplLabel">R$ 0</strong><span id="budgetHint">Informe verba e leads</span></div>
+<div class="os-kpi"><small>Conversao final</small><strong id="closeRateLabel">0%</strong><span id="closeHint">Vendas / leads</span></div>
 </section>
 
-<section class="grid">
-<div class="card">
-<span class="eyebrow">Simulador premium</span>
-<h2>Meta de leads e trafego</h2>
-<p>Projete quantos leads e visitas voce precisa para buscar a meta comercial.</p>
-<div class="kpi-form">
-<div class="field"><label>Meta R$</label><input id="metaRevenue" type="number" min="0" placeholder="50000"/></div>
-<div class="field"><label>Ticket R$</label><input id="avgTicket" type="number" min="0" placeholder="5000"/></div>
-<div class="field"><label>Lead para venda %</label><input id="conversionRate" type="number" min="1" max="100" placeholder="20"/></div>
-<div class="field"><label>Visitas/mes</label><input id="visitsMonth" type="number" min="0" placeholder="2500"/></div>
-<div class="field"><label>Pagina converte %</label><input id="pageConversion" type="number" min="1" max="100" placeholder="4"/></div>
-<div class="field"><label>Verba ads R$</label><input id="adBudget" type="number" min="0" placeholder="3000"/></div>
+<section class="os-grid">
+<div class="card os-control">
+<span class="eyebrow">Painel de controle</span>
+<h2>Dados que importam</h2>
+<p>Atualize uma vez por semana. O painel transforma esses numeros em metas praticas e plano de acao.</p>
+<div class="os-inputs">
+<div class="field"><label>Meta mensal R$</label><input id="targetRevenue" type="number" min="0" placeholder="80000"/></div>
+<div class="field"><label>Ticket medio R$</label><input id="avgTicket" type="number" min="0" placeholder="8000"/></div>
+<div class="field"><label>Verba de trafego R$</label><input id="adBudget" type="number" min="0" placeholder="4000"/></div>
+<div class="field"><label>Leads na semana</label><input id="leadsWeek" type="number" min="0" value="0"/></div>
+<div class="field"><label>Reunioes feitas</label><input id="meetingsWeek" type="number" min="0" value="0"/></div>
+<div class="field"><label>Propostas enviadas</label><input id="proposalsWeek" type="number" min="0" value="0"/></div>
+<div class="field"><label>Vendas fechadas</label><input id="salesWeek" type="number" min="0" value="0"/></div>
+<div class="field"><label>Oportunidades abertas</label><input id="openDeals" type="number" min="0" value="0"/></div>
 </div>
-<div class="result"><span>Leads necessarios</span><strong id="neededLeads">0</strong><p id="trafficNeed">Informe os dados para estimar visitas e investimento.</p></div>
 </div>
 
-<div class="card">
-<span class="eyebrow">Controle semanal</span>
-<h2>Movimento comercial</h2>
-<p>Atualize toda semana para o painel entender o ritmo real do negocio.</p>
-<div class="kpi-form">
-<div class="field"><label>Leads</label><input id="leadsWeek" type="number" min="0" value="0"/></div>
-<div class="field"><label>Reunioes</label><input id="meetingsWeek" type="number" min="0" value="0"/></div>
-<div class="field"><label>Vendas</label><input id="salesWeek" type="number" min="0" value="0"/></div>
+<div class="card os-plan">
+<span class="eyebrow">Metas automaticas</span>
+<h2>Numero para perseguir</h2>
+<div class="target-list">
+<div><small>Vendas no mes</small><strong id="neededSales">0</strong></div>
+<div><small>Leads no mes</small><strong id="neededLeads">0</strong></div>
+<div><small>Leads por dia</small><strong id="dailyLeads">0</strong></div>
+<div><small>Reunioes alvo</small><strong id="neededMeetings">0</strong></div>
 </div>
-<div class="pipeline">
-<div class="pipeline-stage"><small>Visitantes</small><strong id="pipeVisits">0</strong></div>
-<div class="pipeline-stage"><small>Leads</small><strong id="pipeLeads">0</strong></div>
-<div class="pipeline-stage"><small>Reunioes</small><strong id="pipeMeetings">0</strong></div>
-<div class="pipeline-stage"><small>Vendas</small><strong id="pipeSales">0</strong></div>
-</div>
+<div class="os-note" id="goalNarrative">Preencha meta, ticket e conversao real para ver o plano.</div>
 </div>
 </section>
 
-<section class="workspace">
+<section class="os-grid">
 <div class="card">
-<span class="eyebrow">Matriz de gargalos</span>
-<h2>Onde atacar primeiro</h2>
-<p>Uma leitura visual do que mais influencia aquisicao, percepcao e fechamento.</p>
-<div class="matrix">
-<div class="matrix-row"><span>Oferta</span><div class="bar"><i id="barOffer" style="--value:50%"></i></div><strong id="barOfferLabel">50%</strong></div>
-<div class="matrix-row"><span>Trafego</span><div class="bar"><i id="barTraffic" style="--value:50%"></i></div><strong id="barTrafficLabel">50%</strong></div>
-<div class="matrix-row"><span>Venda</span><div class="bar"><i id="barSales" style="--value:50%"></i></div><strong id="barSalesLabel">50%</strong></div>
-<div class="matrix-row"><span>Dados</span><div class="bar"><i id="barData" style="--value:50%"></i></div><strong id="barDataLabel">50%</strong></div>
+<span class="eyebrow">Funil comercial</span>
+<h2>Onde esta vazando</h2>
+<div class="funnel">
+<div class="funnel-row"><span>Leads</span><strong id="funnelLeads">0</strong><div class="funnel-bar"><i id="leadBar"></i></div></div>
+<div class="funnel-row"><span>Reunioes</span><strong id="funnelMeetings">0</strong><div class="funnel-bar"><i id="meetingBar"></i></div></div>
+<div class="funnel-row"><span>Propostas</span><strong id="funnelProposals">0</strong><div class="funnel-bar"><i id="proposalBar"></i></div></div>
+<div class="funnel-row"><span>Vendas</span><strong id="funnelSales">0</strong><div class="funnel-bar"><i id="saleBar"></i></div></div>
 </div>
+<div class="os-note" id="funnelDiagnosis">Preencha o funil para descobrir o gargalo principal.</div>
 </div>
 
 <div class="card">
-<span class="eyebrow">Plano de acao</span>
-<h2>Checklist de alta alavancagem</h2>
+<span class="eyebrow">Caixa e midia</span>
+<h2>Unit economics</h2>
+<div class="unit-grid">
+<div><small>CPL</small><strong id="unitCpl">R$ 0</strong></div>
+<div><small>CPA</small><strong id="unitCpa">R$ 0</strong></div>
+<div><small>ROAS estimado</small><strong id="unitRoas">0.0x</strong></div>
+<div><small>Margem antes da entrega</small><strong id="unitMargin">R$ 0</strong></div>
+</div>
+<div class="os-note" id="unitAdvice">Quando houver verba e vendas, voce enxerga se a aquisicao esta saudavel.</div>
+</div>
+</section>
+
+<section class="os-grid wide-grid">
+<div class="card">
+<span class="eyebrow">Diagnostico rapido</span>
+<h2>5 alavancas do negocio</h2>
+<p>Arraste de 1 a 5. O menor ponto vira prioridade do plano.</p>
+<div class="sliders">
+<label>Oferta <input id="leverOffer" data-lever="Oferta" type="range" min="1" max="5" value="3"/></label>
+<label>Pagina <input id="leverPage" data-lever="Pagina" type="range" min="1" max="5" value="3"/></label>
+<label>Trafego <input id="leverTraffic" data-lever="Trafego" type="range" min="1" max="5" value="3"/></label>
+<label>Atendimento <input id="leverSales" data-lever="Atendimento" type="range" min="1" max="5" value="3"/></label>
+<label>Mensuracao <input id="leverData" data-lever="Mensuracao" type="range" min="1" max="5" value="3"/></label>
+</div>
+<div class="os-note" id="leverAdvice">A prioridade aparece aqui.</div>
+</div>
+
+<div class="card">
+<span class="eyebrow">Plano de 7 dias</span>
+<h2>Execucao objetiva</h2>
 <div class="action-board" id="checklist">
-<label class="action-card"><input type="checkbox" data-check="headline"/><div><small>Mensagem</small><strong>Promessa principal clara na primeira dobra</strong><p>O visitante entende o valor antes de rolar a pagina.</p></div></label>
-<label class="action-card"><input type="checkbox" data-check="proof"/><div><small>Autoridade</small><strong>Provas, numeros ou exemplos visiveis</strong><p>A pagina reduz duvida com evidencia objetiva.</p></div></label>
-<label class="action-card"><input type="checkbox" data-check="cta"/><div><small>Conversao</small><strong>CTA direto para WhatsApp ou diagnostico</strong><p>O proximo passo aparece sem atrito.</p></div></label>
-<label class="action-card"><input type="checkbox" data-check="tracking"/><div><small>Mensuracao</small><strong>Eventos e origem de lead rastreados</strong><p>Campanhas, formulario e WhatsApp ficam acompanhaveis.</p></div></label>
+<label class="action-card"><input type="checkbox" data-check="followup"/><div><small>Hoje</small><strong>Responder todos os leads abertos</strong><p>Sem lead parado sem retorno.</p></div></label>
+<label class="action-card"><input type="checkbox" data-check="proof"/><div><small>Oferta</small><strong>Adicionar uma prova forte na pagina</strong><p>Depoimento, numero, caso ou antes/depois.</p></div></label>
+<label class="action-card"><input type="checkbox" data-check="crm"/><div><small>Vendas</small><strong>Separar oportunidades quentes</strong><p>Liste quem pediu preco, prazo ou proposta.</p></div></label>
+<label class="action-card"><input type="checkbox" data-check="tracking"/><div><small>Dados</small><strong>Conferir origem de cada lead</strong><p>WhatsApp, formulario, anuncio ou indicacao.</p></div></label>
 </div>
+</div>
+
+<div class="card">
+<span class="eyebrow">CRM rapido</span>
+<h2>Proximas oportunidades</h2>
+<div class="field"><label>Clientes para acionar</label><textarea id="hotList" placeholder="Ex: Maria - pediu proposta, chamar sexta."></textarea></div>
+<div class="field"><label>Observacoes da semana</label><textarea id="weekNotes" placeholder="O que funcionou, objeções, ideias e gargalos."></textarea></div>
+</div>
+</section>
+
+<section class="finance-suite">
+<div class="finance-hero">
+<div class="card">
+<span class="eyebrow">Dashboard financeiro empresarial</span>
+<h2>Controle de caixa, equipe e lucro</h2>
+<p>Use como uma central simples de gestao: entradas, gastos, salarios, metas, alertas e decisoes antes de contratar ou investir mais.</p>
+<div class="finance-kpis">
+<div class="finance-kpi"><small>Faturamento</small><strong id="finRevenueLabel">R$ 0</strong></div>
+<div class="finance-kpi"><small>Custos totais</small><strong id="finCostsLabel">R$ 0</strong></div>
+<div class="finance-kpi"><small>Lucro estimado</small><strong id="finProfitLabel">R$ 0</strong></div>
+<div class="finance-kpi"><small>Margem de lucro</small><strong id="finMarginLabel">0%</strong></div>
+</div>
+</div>
+<div class="card">
+<span class="eyebrow">Leitura CFO (diretor financeiro)</span>
+<h2>Resumo executivo</h2>
+<p id="financialSummary">Preencha os dados financeiros para receber uma leitura automatica.</p>
+<button class="solid" id="copyReportBtn" type="button">Copiar relatorio</button>
+</div>
+</div>
+
+<div class="card">
+<span class="eyebrow">10 ferramentas inclusas</span>
+<h2>Uma central financeira que parece consultoria</h2>
+<div class="finance-toolmap">
+<div><small>01</small><strong>Fluxo de caixa</strong><p>Entradas, saidas, saldo previsto e leitura do mes.</p></div>
+<div><small>02</small><strong>Controle de gastos</strong><p>Despesas por categoria, recorrencia e status de pagamento.</p></div>
+<div><small>03</small><strong>Funcionarios e salarios</strong><p>Cadastro de equipe, cargos, tipo de contrato e folha total.</p></div>
+<div><small>04</small><strong>Impostos e pro-labore</strong><p>Percentual de impostos e retirada do dono dentro da conta.</p></div>
+<div><small>05</small><strong>Margem de lucro</strong><p>Lucro estimado e margem em porcentagem para decisao rapida.</p></div>
+<div><small>06</small><strong>Reserva de caixa</strong><p>Compara saldo previsto com a reserva minima desejada.</p></div>
+<div><small>07</small><strong>Ponto de equilibrio</strong><p>Mostra quanto a empresa precisa faturar para cobrir custos.</p></div>
+<div><small>08</small><strong>Simulador de decisao</strong><p>Testa contratar, aumentar trafego ou assumir novo custo.</p></div>
+<div><small>09</small><strong>Mini Meta Ads simulador</strong><p>Projeta visitas, leads, CPL (custo por lead) e vendas.</p></div>
+<div><small>10</small><strong>Relatorio executivo</strong><p>Gera um resumo copiavel para reuniao, socio ou gestor.</p></div>
+</div>
+</div>
+
+<div class="finance-layout">
+<div class="card">
+<span class="eyebrow">Fluxo de caixa</span>
+<h2>Entradas e saidas do mes</h2>
+<div class="finance-form">
+<div class="field"><label>Faturamento recebido R$</label><input id="finRevenue" type="number" min="0" placeholder="85000"/></div>
+<div class="field"><label>Entradas previstas R$</label><input id="finReceivables" type="number" min="0" placeholder="15000"/></div>
+<div class="field"><label>Impostos %</label><input id="finTaxRate" type="number" min="0" max="100" placeholder="12"/></div>
+<div class="field"><label>Pro-labore R$</label><input id="finOwnerPay" type="number" min="0" placeholder="8000"/></div>
+<div class="field"><label>Meta de lucro %</label><input id="finProfitGoal" type="number" min="0" max="100" placeholder="25"/></div>
+<div class="field"><label>Reserva desejada R$</label><input id="finReserveGoal" type="number" min="0" placeholder="20000"/></div>
+</div>
+<div class="cashflow">
+<div class="cash-row"><span>Entradas</span><div class="cash-track"><i id="cashInBar"></i></div><strong id="cashInLabel">R$ 0</strong></div>
+<div class="cash-row"><span>Saidas</span><div class="cash-track"><i id="cashOutBar"></i></div><strong id="cashOutLabel">R$ 0</strong></div>
+<div class="cash-row"><span>Saldo previsto</span><div class="cash-track"><i id="cashBalanceBar"></i></div><strong id="cashBalanceLabel">R$ 0</strong></div>
+</div>
+</div>
+
+<div class="card">
+<span class="eyebrow">Indicadores inteligentes</span>
+<h2>Saude financeira</h2>
+<div class="target-list">
+<div><small>Folha / faturamento</small><strong id="payrollRatioLabel">0%</strong></div>
+<div><small>Marketing / faturamento</small><strong id="marketingRatioLabel">0%</strong></div>
+<div><small>Ponto de equilibrio</small><strong id="breakEvenLabel">R$ 0</strong></div>
+<div><small>Reserva de caixa</small><strong id="reserveStatusLabel">R$ 0</strong></div>
+</div>
+<div class="alert-list" id="premiumAlerts"></div>
+</div>
+</div>
+
+<div class="finance-layout">
+<div class="card">
+<span class="eyebrow">Cadastro de funcionarios</span>
+<h2>Equipe e salarios</h2>
+<div class="finance-form">
+<div class="field"><label>Nome</label><input id="employeeName" type="text" placeholder="Ex: Ana Souza"/></div>
+<div class="field"><label>Cargo</label><input id="employeeRole" type="text" placeholder="Vendas"/></div>
+<div class="field"><label>Salario R$</label><input id="employeeSalary" type="number" min="0" placeholder="3500"/></div>
+<div class="field"><label>Tipo</label><select id="employeeType"><option>CLT</option><option>PJ</option><option>Freelancer</option><option>Comissao</option></select></div>
+<div class="field"><label>Status</label><select id="employeeStatus"><option>Ativo</option><option>Inativo</option></select></div>
+<div class="field"><label>&nbsp;</label><button class="solid" id="addEmployeeBtn" type="button">Adicionar</button></div>
+</div>
+<div class="finance-list" id="employeeList"></div>
+</div>
+
+<div class="card">
+<span class="eyebrow">Controle de gastos</span>
+<h2>Despesas e vencimentos</h2>
+<div class="finance-form">
+<div class="field"><label>Gasto</label><input id="expenseName" type="text" placeholder="Ex: Software CRM"/></div>
+<div class="field"><label>Categoria</label><select id="expenseCategory"><option>Marketing</option><option>Equipe</option><option>Software</option><option>Impostos</option><option>Aluguel</option><option>Fornecedores</option><option>Trafego pago</option><option>Outros</option></select></div>
+<div class="field"><label>Valor R$</label><input id="expenseValue" type="number" min="0" placeholder="497"/></div>
+<div class="field"><label>Tipo</label><select id="expenseRecurrence"><option>Recorrente</option><option>Pontual</option></select></div>
+<div class="field"><label>Status</label><select id="expenseStatus"><option>Pendente</option><option>Pago</option></select></div>
+<div class="field"><label>&nbsp;</label><button class="solid" id="addExpenseBtn" type="button">Adicionar</button></div>
+</div>
+<div class="finance-list" id="expenseList"></div>
+</div>
+</div>
+
+<div class="finance-layout">
+<div class="card">
+<span class="eyebrow">Simulador de decisao</span>
+<h2>Posso contratar ou investir mais?</h2>
+<div class="finance-form">
+<div class="field"><label>Novo salario/custo R$</label><input id="hireCost" type="number" min="0" placeholder="4500"/></div>
+<div class="field"><label>Aumento em trafego R$</label><input id="extraAds" type="number" min="0" placeholder="2000"/></div>
+<div class="field"><label>Receita extra esperada R$</label><input id="extraRevenue" type="number" min="0" placeholder="12000"/></div>
+</div>
+<div class="os-note" id="decisionAdvice">Preencha os cenarios para validar a decisao antes de comprometer o caixa.</div>
+</div>
+
+<div class="card">
+<span class="eyebrow">Metas financeiras</span>
+<h2>Lucro, gastos e seguranca</h2>
+<div class="target-list">
+<div><small>Meta de lucro</small><strong id="profitGoalLabel">0%</strong></div>
+<div><small>Reducao recomendada</small><strong id="cutSuggestionLabel">R$ 0</strong></div>
+<div><small>Faturamento minimo</small><strong id="minimumRevenueLabel">R$ 0</strong></div>
+<div><small>Espaco para investir</small><strong id="investmentRoomLabel">R$ 0</strong></div>
+</div>
+</div>
+</div>
+
+<div class="card">
+<span class="eyebrow">Mini Meta Ads simulador</span>
+<h2>Simulacao de trafego, visitas e leads</h2>
+<p>Estime resultado antes de investir. CPC significa custo por clique. CPL significa custo por lead.</p>
+<div class="sim-grid">
+<div class="field"><label>Verba R$</label><input id="trafficBudget" type="number" min="0" placeholder="3000"/></div>
+<div class="field"><label>CPC (custo por clique) R$</label><input id="trafficCpc" type="number" min="0" step="0.01" placeholder="1.80"/></div>
+<div class="field"><label>Conversao da pagina %</label><input id="trafficLandingRate" type="number" min="0" max="100" placeholder="4"/></div>
+<div class="field"><label>Lead vira venda %</label><input id="trafficSalesRate" type="number" min="0" max="100" placeholder="10"/></div>
+</div>
+<div class="sim-output">
+<div><small>Visitas estimadas</small><strong id="trafficVisitsLabel">0</strong></div>
+<div><small>Leads estimados</small><strong id="trafficLeadsLabel">0</strong></div>
+<div><small>CPL (custo por lead)</small><strong id="trafficCplLabel">R$ 0</strong></div>
+<div><small>Vendas estimadas</small><strong id="trafficSalesLabel">0</strong></div>
+</div>
+<div class="os-note" id="trafficAdvice">Preencha a verba e o CPC (custo por clique) para simular.</div>
+</div>
+
+<div class="card">
+<span class="eyebrow">Exportacao simples</span>
+<h2>Relatorio mensal</h2>
+<div class="executive-report" id="executiveReport">Preencha os dados para gerar um relatorio executivo copiavel.</div>
 </div>
 </section>
 
 <section class="card wide">
-<span class="eyebrow">Suite empresarial</span>
-<h2>Ferramentas exclusivas</h2>
-<p>Atalhos para decisao, revisao de oferta e materiais de aquisicao.</p>
+<span class="eyebrow">Central premium</span>
+<h2>Ferramentas e materiais</h2>
 <div class="quick-tools">
-<a class="quick-tool" href="checklist-vanta-black.html"><small>Auditoria</small><strong>Primeira dobra premium</strong><p>Revise clareza, prova e chamada para acao.</p></a>
-<a class="quick-tool" href="recursos.html"><small>Diagnostico</small><strong>Calculadoras e FAQ</strong><p>Use recursos de decisao para priorizar melhorias.</p></a>
-<a class="quick-tool" href="versao-trafego-pago.html"><small>Aquisicao</small><strong>Roteiro de trafego pago</strong><p>Prepare campanha, criativos e mensuracao.</p></a>
-<a class="quick-tool" href="ofertas.html"><small>Planos</small><strong>Arquitetura de investimento</strong><p>Compare estruturas para evoluir sua presenca digital.</p></a>
+<a class="quick-tool" href="checklist-vanta-black.html"><small>Auditoria</small><strong>Checklist da primeira dobra</strong><p>Revise clareza, autoridade e CTA.</p></a>
+<a class="quick-tool" href="versao-trafego-pago.html"><small>Aquisicao</small><strong>Plano de trafego pago</strong><p>Prepare campanha, criativos e mensuracao.</p></a>
+<a class="quick-tool" href="recursos.html"><small>Recursos</small><strong>Calculadoras e FAQ</strong><p>Use materiais para tomada de decisao.</p></a>
+<a class="quick-tool" href="ofertas.html"><small>Evolucao</small><strong>Planos Vanta</strong><p>Veja proximos niveis de estrutura digital.</p></a>
 </div>
 </section>
 </main>
@@ -258,6 +489,7 @@ const $ = (id) => document.getElementById(id);
 const stateKey = "vanta-member-dashboard";
 let supabase;
 let authIntent = {};
+let financeState = { employees: [], expenses: [] };
 
 function setStatus(text){ $("loginStatus").textContent = text || ""; }
 function setPasswordStatus(text){ $("passwordSetupStatus").textContent = text || ""; }
@@ -293,9 +525,12 @@ async function loadConfig(){
 }
 
 function saveLocal(){
-  const inputIds = ["metaRevenue","avgTicket","conversionRate","visitsMonth","pageConversion","adBudget","leadsWeek","meetingsWeek","salesWeek"];
+  const inputIds = ["targetRevenue","avgTicket","adBudget","leadsWeek","meetingsWeek","proposalsWeek","salesWeek","openDeals","leverOffer","leverPage","leverTraffic","leverSales","leverData","finRevenue","finReceivables","finTaxRate","finOwnerPay","finProfitGoal","finReserveGoal","hireCost","extraAds","extraRevenue","trafficBudget","trafficCpc","trafficLandingRate","trafficSalesRate"];
+  const textIds = ["hotList","weekNotes"];
   const data = {
     inputs:Object.fromEntries(inputIds.map(id=>[id,$(id).value])),
+    texts:Object.fromEntries(textIds.map(id=>[id,$(id).value])),
+    finance:financeState,
     checks:[...document.querySelectorAll("[data-check]")].filter(i=>i.checked).map(i=>i.dataset.check)
   };
   localStorage.setItem(stateKey,JSON.stringify(data));
@@ -304,67 +539,268 @@ function saveLocal(){
 function restoreLocal(){
   const data = JSON.parse(localStorage.getItem(stateKey) || "{}");
   const legacy = data.inputs || data;
-  ["metaRevenue","avgTicket","conversionRate","visitsMonth","pageConversion","adBudget","leadsWeek","meetingsWeek","salesWeek"].forEach(id=>{ if(legacy[id]) $(id).value=legacy[id]; });
+  const textLegacy = data.texts || {};
+  financeState = data.finance || financeState;
+  ["targetRevenue","avgTicket","adBudget","leadsWeek","meetingsWeek","proposalsWeek","salesWeek","openDeals","leverOffer","leverPage","leverTraffic","leverSales","leverData","finRevenue","finReceivables","finTaxRate","finOwnerPay","finProfitGoal","finReserveGoal","hireCost","extraAds","extraRevenue","trafficBudget","trafficCpc","trafficLandingRate","trafficSalesRate"].forEach(id=>{ if(legacy[id]) $(id).value=legacy[id]; });
+  ["hotList","weekNotes"].forEach(id=>{ if(textLegacy[id]) $(id).value=textLegacy[id]; });
   (data.checks || []).forEach(key=>{ const input=document.querySelector(`[data-check="${key}"]`); if(input) input.checked=true; });
+  renderFinanceLists();
+}
+
+function escapeHtml(value){
+  return String(value || "").replace(/[&<>"']/g, (char)=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[char]));
+}
+
+function renderFinanceLists(){
+  const employeeList = $("employeeList");
+  const expenseList = $("expenseList");
+  if(employeeList){
+    employeeList.innerHTML = financeState.employees.length ? financeState.employees.map((item,index)=>`
+      <div class="list-item">
+        <div><small>${escapeHtml(item.type)} - ${escapeHtml(item.status)}</small><strong>${escapeHtml(item.name)}</strong><p>${escapeHtml(item.role)} - ${money(item.salary)}</p></div>
+        <button class="mini-btn" data-remove-employee="${index}" type="button">Remover</button>
+      </div>`).join("") : `<div class="os-note">Nenhum funcionario cadastrado ainda.</div>`;
+  }
+  if(expenseList){
+    expenseList.innerHTML = financeState.expenses.length ? financeState.expenses.map((item,index)=>`
+      <div class="list-item">
+        <div><small>${escapeHtml(item.category)} - ${escapeHtml(item.status)}</small><strong>${escapeHtml(item.name)}</strong><p>${escapeHtml(item.recurrence)} - ${money(item.value)}</p></div>
+        <button class="mini-btn" data-remove-expense="${index}" type="button">Remover</button>
+      </div>`).join("") : `<div class="os-note">Nenhum gasto cadastrado ainda.</div>`;
+  }
+}
+
+function updateFinancialDashboard(){
+  const revenue = Number($("finRevenue").value || 0);
+  const receivables = Number($("finReceivables").value || 0);
+  const taxRate = Number($("finTaxRate").value || 0);
+  const ownerPay = Number($("finOwnerPay").value || 0);
+  const profitGoal = Number($("finProfitGoal").value || 0);
+  const reserveGoal = Number($("finReserveGoal").value || 0);
+  const payroll = financeState.employees.filter(item=>item.status === "Ativo").reduce((sum,item)=>sum + Number(item.salary || 0),0);
+  const expenses = financeState.expenses.reduce((sum,item)=>sum + Number(item.value || 0),0);
+  const marketing = financeState.expenses.filter(item=>["Marketing","Trafego pago"].includes(item.category)).reduce((sum,item)=>sum + Number(item.value || 0),0);
+  const taxes = revenue * (taxRate / 100);
+  const costs = payroll + expenses + taxes + ownerPay;
+  const profit = revenue - costs;
+  const margin = revenue ? profit / revenue : 0;
+  const cashIn = revenue + receivables;
+  const cashOut = costs;
+  const balance = cashIn - cashOut;
+  const payrollRatio = revenue ? payroll / revenue : 0;
+  const marketingRatio = revenue ? marketing / revenue : 0;
+  const minimumRevenue = profitGoal < 100 ? Math.ceil(costs / Math.max(1 - (profitGoal / 100), .05)) : costs;
+  const cutSuggestion = revenue && profitGoal ? Math.max(0, Math.ceil(costs - (revenue * (1 - profitGoal / 100)))) : 0;
+  const investmentRoom = Math.max(0, profit - reserveGoal);
+  const maxCash = Math.max(cashIn, cashOut, Math.abs(balance), 1);
+
+  $("finRevenueLabel").textContent = money(revenue);
+  $("finCostsLabel").textContent = money(costs);
+  $("finProfitLabel").textContent = money(profit);
+  $("finMarginLabel").textContent = `${Math.round(margin * 100)}%`;
+  $("cashInLabel").textContent = money(cashIn);
+  $("cashOutLabel").textContent = money(cashOut);
+  $("cashBalanceLabel").textContent = money(balance);
+  $("cashInBar").style.setProperty("--w", `${Math.max(3, Math.round((cashIn / maxCash) * 100))}%`);
+  $("cashOutBar").style.setProperty("--w", `${Math.max(3, Math.round((cashOut / maxCash) * 100))}%`);
+  $("cashBalanceBar").style.setProperty("--w", `${Math.max(3, Math.round((Math.abs(balance) / maxCash) * 100))}%`);
+  $("payrollRatioLabel").textContent = `${Math.round(payrollRatio * 100)}%`;
+  $("marketingRatioLabel").textContent = `${Math.round(marketingRatio * 100)}%`;
+  $("breakEvenLabel").textContent = money(costs);
+  $("reserveStatusLabel").textContent = money(Math.max(0,balance));
+  $("profitGoalLabel").textContent = `${profitGoal || 0}%`;
+  $("cutSuggestionLabel").textContent = money(cutSuggestion);
+  $("minimumRevenueLabel").textContent = money(minimumRevenue);
+  $("investmentRoomLabel").textContent = money(investmentRoom);
+
+  const alerts = [];
+  if(revenue && payrollRatio > .35) alerts.push("A folha salarial esta acima de 35% do faturamento. Revise capacidade, produtividade ou ticket medio.");
+  if(revenue && marketingRatio < .05) alerts.push("Marketing esta abaixo de 5% do faturamento. Para crescer, talvez falte aquisicao previsivel.");
+  if(profit < 0) alerts.push("Risco de caixa negativo: as saidas estao maiores que o faturamento recebido.");
+  if(revenue && profitGoal && margin < profitGoal / 100) alerts.push(`Margem abaixo da meta de ${profitGoal}%. Corte custos ou aumente faturamento minimo para ${money(minimumRevenue)}.`);
+  if(balance < reserveGoal) alerts.push(`Reserva abaixo do desejado. Faltam ${money(Math.max(0,reserveGoal - balance))} para a seguranca definida.`);
+  if(!alerts.length) alerts.push("Financeiro saudavel no cenario atual. Continue acompanhando gastos, margem e previsibilidade.");
+  $("premiumAlerts").innerHTML = alerts.map(alert=>`<div class="premium-alert">${escapeHtml(alert)}</div>`).join("");
+
+  const hireCost = Number($("hireCost").value || 0);
+  const extraAds = Number($("extraAds").value || 0);
+  const extraRevenue = Number($("extraRevenue").value || 0);
+  const scenarioProfit = profit + extraRevenue - hireCost - extraAds;
+  $("decisionAdvice").textContent = (hireCost || extraAds || extraRevenue)
+    ? scenarioProfit >= Math.max(0,reserveGoal * .2)
+      ? `Cenario aprovado com cautela: lucro projetado ficaria em ${money(scenarioProfit)}.`
+      : `Cenario arriscado: lucro projetado ficaria em ${money(scenarioProfit)}. Ajuste custo ou aumente receita esperada.`
+    : "Preencha os cenarios para validar a decisao antes de comprometer o caixa.";
+
+  const trafficBudget = Number($("trafficBudget").value || 0);
+  const trafficCpc = Number($("trafficCpc").value || 0);
+  const landingRate = Number($("trafficLandingRate").value || 0) / 100;
+  const salesRate = Number($("trafficSalesRate").value || 0) / 100;
+  const visits = trafficBudget && trafficCpc ? Math.floor(trafficBudget / trafficCpc) : 0;
+  const trafficLeads = Math.floor(visits * landingRate);
+  const trafficCpl = trafficLeads ? trafficBudget / trafficLeads : 0;
+  const trafficSales = Math.floor(trafficLeads * salesRate);
+  $("trafficVisitsLabel").textContent = visits.toLocaleString("pt-BR");
+  $("trafficLeadsLabel").textContent = trafficLeads.toLocaleString("pt-BR");
+  $("trafficCplLabel").textContent = money(trafficCpl);
+  $("trafficSalesLabel").textContent = trafficSales;
+  $("trafficAdvice").textContent = trafficLeads ? `Com ${money(trafficBudget)}, o simulador estima ${trafficLeads} leads e ${trafficSales} vendas. Use como previsao, nao promessa.` : "Preencha verba, CPC (custo por clique) e conversao para simular.";
+
+  const report = [
+    "Relatorio executivo Vanta",
+    `Faturamento recebido: ${money(revenue)}`,
+    `Custos totais: ${money(costs)} | Lucro estimado: ${money(profit)} | Margem: ${Math.round(margin * 100)}%`,
+    `Folha salarial: ${money(payroll)} (${Math.round(payrollRatio * 100)}% do faturamento)`,
+    `Marketing e trafego: ${money(marketing)} (${Math.round(marketingRatio * 100)}% do faturamento)`,
+    `Ponto de equilibrio: ${money(costs)} | Faturamento minimo para meta: ${money(minimumRevenue)}`,
+    `Simulador de trafego: ${visits.toLocaleString("pt-BR")} visitas, ${trafficLeads} leads, CPL (custo por lead) ${money(trafficCpl)}`,
+    `Leitura CFO (diretor financeiro): ${alerts[0]}`
+  ].join("\\n");
+  $("executiveReport").textContent = report;
+  $("financialSummary").textContent = alerts[0];
 }
 
 function updateCalculators(){
-  const revenue = Number($("metaRevenue").value || 0);
+  const targetRevenue = Number($("targetRevenue").value || 0);
   const ticket = Number($("avgTicket").value || 0);
-  const conversion = Number($("conversionRate").value || 0);
-  const visitsMonth = Number($("visitsMonth").value || 0);
-  const pageConversion = Number($("pageConversion").value || 0);
   const adBudget = Number($("adBudget").value || 0);
-  const leads = ticket && conversion ? Math.ceil((revenue / ticket) / (conversion / 100)) : 0;
-  const neededTraffic = leads && pageConversion ? Math.ceil(leads / (pageConversion / 100)) : 0;
-  $("neededLeads").textContent = leads;
-  $("leadGoal").textContent = leads || "--";
-  $("kpiRevenue").textContent = money(revenue);
-  $("kpiTicket").textContent = money(ticket);
-  $("kpiConversion").textContent = `${conversion || 0}%`;
-  $("kpiMeetings").textContent = $("meetingsWeek").value || "0";
   const weeklyLeads = Number($("leadsWeek").value || 0);
   const meetings = Number($("meetingsWeek").value || 0);
+  const proposals = Number($("proposalsWeek").value || 0);
   const sales = Number($("salesWeek").value || 0);
-  const weeklyClose = weeklyLeads ? Math.round((sales / weeklyLeads) * 100) : 0;
-  const projectedSales = weeklyLeads && conversion ? Math.round(weeklyLeads * (conversion / 100)) : sales;
-  const projectedRevenue = (projectedSales || sales) * ticket;
-  const cpl = weeklyLeads && adBudget ? adBudget / Math.max(weeklyLeads * 4, 1) : 0;
-  const roas = projectedRevenue && adBudget ? projectedRevenue / adBudget : 0;
-  const checkCount = document.querySelectorAll("[data-check]:checked").length;
-  const score = Math.min(98, Math.round(34 + checkCount * 10 + Math.min(weeklyLeads, 30) * .55 + Math.min(meetings, 16) * .9 + Math.min(sales, 8) * 1.6 + (revenue && ticket ? 8 : 0) + (pageConversion ? 5 : 0)));
+  const openDeals = Number($("openDeals").value || 0);
+  const monthlyLeads = weeklyLeads * 4;
+  const monthlySales = sales * 4;
+  const estimatedRevenue = monthlySales * ticket;
+  const finalClose = weeklyLeads ? sales / weeklyLeads : 0;
+  const leadToMeeting = weeklyLeads ? meetings / weeklyLeads : 0;
+  const meetingToProposal = meetings ? proposals / meetings : 0;
+  const proposalToSale = proposals ? sales / proposals : 0;
+  const safeClose = Math.max(finalClose || .08, .04);
+  const neededSales = targetRevenue && ticket ? Math.ceil(targetRevenue / ticket) : 0;
+  const neededLeads = neededSales ? Math.ceil(neededSales / safeClose) : 0;
+  const neededMeetings = neededLeads ? Math.ceil(neededLeads * Math.max(leadToMeeting || .35, .18)) : 0;
+  const dailyLeads = neededLeads ? Math.ceil(neededLeads / 22) : 0;
+  const cpl = monthlyLeads && adBudget ? adBudget / monthlyLeads : 0;
+  const cpa = monthlySales && adBudget ? adBudget / monthlySales : 0;
+  const roas = estimatedRevenue && adBudget ? estimatedRevenue / adBudget : 0;
+  const margin = estimatedRevenue - adBudget;
 
-  $("weekRhythm").textContent = `${weeklyClose}%`;
-  $("forecastRevenue").textContent = money(projectedRevenue);
-  $("trafficNeed").textContent = neededTraffic ? `${neededTraffic.toLocaleString("pt-BR")} visitas estimadas para gerar ${leads} leads.` : "Informe conversao da pagina para estimar visitas.";
-  $("pipeVisits").textContent = visitsMonth ? visitsMonth.toLocaleString("pt-BR") : "0";
-  $("pipeLeads").textContent = weeklyLeads || "0";
-  $("pipeMeetings").textContent = meetings || "0";
-  $("pipeSales").textContent = sales || "0";
-  $("scoreValue").textContent = score;
-  $("scoreOrbit").style.setProperty("--score", `${score}%`);
-  $("pulseLine").style.transform = `scaleX(${Math.max(.18, score / 100)})`;
+  $("estimatedRevenue").textContent = money(estimatedRevenue);
+  $("targetRevenueLabel").textContent = money(targetRevenue);
+  $("targetGap").textContent = targetRevenue ? (estimatedRevenue >= targetRevenue ? "No ritmo para bater a meta" : `${money(targetRevenue - estimatedRevenue)} para buscar`) : "Defina sua meta";
+  $("cplLabel").textContent = money(cpl);
+  $("budgetHint").textContent = monthlyLeads ? `${monthlyLeads} leads projetados no mes` : "Informe verba e leads";
+  $("closeRateLabel").textContent = `${Math.round(finalClose * 100)}%`;
+  $("closeHint").textContent = weeklyLeads ? `${sales} vendas em ${weeklyLeads} leads` : "Vendas / leads";
+  $("neededSales").textContent = neededSales;
+  $("neededLeads").textContent = neededLeads;
+  $("dailyLeads").textContent = dailyLeads;
+  $("neededMeetings").textContent = neededMeetings;
+  $("goalNarrative").textContent = neededLeads ? `Para buscar ${money(targetRevenue)}, mire em ${neededLeads} leads no mes, ${dailyLeads} por dia util.` : "Preencha meta e ticket para gerar metas comerciais.";
 
-  const offerScore = Math.min(100, 35 + checkCount * 14 + (ticket ? 9 : 0));
-  const trafficScore = Math.min(100, 28 + (visitsMonth ? 24 : 0) + (adBudget ? 18 : 0) + (weeklyLeads ? Math.min(24, weeklyLeads) : 0));
-  const salesScore = Math.min(100, 30 + (meetings ? Math.min(24, meetings * 3) : 0) + (sales ? Math.min(28, sales * 7) : 0) + (conversion ? Math.min(18, conversion) : 0));
-  const dataScore = Math.min(100, 30 + (pageConversion ? 18 : 0) + (adBudget ? 18 : 0) + checkCount * 8);
-  [["barOffer",offerScore],["barTraffic",trafficScore],["barSales",salesScore],["barData",dataScore]].forEach(([id,value])=>$(id).style.setProperty("--value",`${value}%`));
-  $("barOfferLabel").textContent = `${offerScore}%`;
-  $("barTrafficLabel").textContent = `${trafficScore}%`;
-  $("barSalesLabel").textContent = `${salesScore}%`;
-  $("barDataLabel").textContent = `${dataScore}%`;
+  $("funnelLeads").textContent = weeklyLeads;
+  $("funnelMeetings").textContent = meetings;
+  $("funnelProposals").textContent = proposals;
+  $("funnelSales").textContent = sales;
+  const base = Math.max(weeklyLeads, meetings, proposals, sales, 1);
+  [["leadBar", weeklyLeads],["meetingBar", meetings],["proposalBar", proposals],["saleBar", sales]].forEach(([id,value])=>$(id).style.setProperty("--w", `${Math.max(3, Math.round((value / base) * 100))}%`));
 
-  const biggestGap = [
-    ["oferta", offerScore, "refinar promessa, prova e CTA antes de aumentar investimento."],
-    ["trafego", trafficScore, "aumentar volume qualificado e testar criativos com mensagem mais direta."],
-    ["vendas", salesScore, "melhorar follow-up, agenda e script para converter mais oportunidades."],
-    ["dados", dataScore, "rastrear origem dos leads e eventos para decidir com mais seguranca."]
-  ].sort((a,b)=>a[1]-b[1])[0];
-  $("actionSummary").textContent = `Score ${score}/100. O maior gargalo agora parece estar em ${biggestGap[0]}.`;
-  $("insightPrimary").textContent = `Prioridade recomendada: ${biggestGap[2]}`;
-  $("insightSecondary").textContent = roas ? `Projecao atual: ${money(projectedRevenue)} em receita potencial e ROAS estimado de ${roas.toFixed(1)}x.` : cpl ? `CPL estimado: ${money(cpl)}. Compare com seu ticket para validar margem.` : "Preencha verba, leads e ticket para estimar CPL, receita potencial e retorno.";
+  $("unitCpl").textContent = money(cpl);
+  $("unitCpa").textContent = money(cpa);
+  $("unitRoas").textContent = `${roas.toFixed(1)}x`;
+  $("unitMargin").textContent = money(margin);
+  $("unitAdvice").textContent = roas ? (roas >= 3 ? "A aquisicao parece saudavel. Escale com controle de qualidade." : "Retorno apertado. Antes de aumentar verba, melhore oferta, pagina ou fechamento.") : "Quando houver verba e vendas, voce enxerga se a aquisicao esta saudavel.";
+
+  let funnelDiagnosis = "Preencha o funil para descobrir o gargalo principal.";
+  if(weeklyLeads && leadToMeeting < .25) funnelDiagnosis = "Gargalo: muitos leads nao viram conversa. Revise velocidade de resposta e qualificacao.";
+  else if(meetings && meetingToProposal < .45) funnelDiagnosis = "Gargalo: reunioes nao estao virando proposta. Revise roteiro, oferta e proximo passo.";
+  else if(proposals && proposalToSale < .25) funnelDiagnosis = "Gargalo: proposta nao esta fechando. Trabalhe follow-up, prova e urgencia.";
+  else if(sales) funnelDiagnosis = "Funil com movimento. Agora a prioridade e aumentar volume sem perder qualidade.";
+  $("funnelDiagnosis").textContent = funnelDiagnosis;
+
+  const levers = [
+    ["Oferta", Number($("leverOffer").value), "Reescreva promessa, publico, resultado e prova principal."],
+    ["Pagina", Number($("leverPage").value), "Simplifique primeira dobra, CTA e argumentos de confianca."],
+    ["Trafego", Number($("leverTraffic").value), "Teste criativos por dor, desejo e prova social."],
+    ["Atendimento", Number($("leverSales").value), "Reduza tempo de resposta e padronize follow-up."],
+    ["Mensuracao", Number($("leverData").value), "Registre origem, status e proximo passo de cada lead."]
+  ].sort((a,b)=>a[1]-b[1]);
+  $("leverAdvice").textContent = `Prioridade: ${levers[0][0]}. ${levers[0][2]}`;
+
+  let title = "Preencher os numeros da semana";
+  let text = "Com leads, reunioes, propostas e vendas, o painel calcula gargalo, meta e prioridade.";
+  if(openDeals > 0 && sales === 0){ title = "Atacar oportunidades abertas"; text = `Voce tem ${openDeals} oportunidades abertas. Priorize follow-up antes de buscar mais leads.`; }
+  else if(weeklyLeads && leadToMeeting < .25){ title = "Melhorar resposta aos leads"; text = "O primeiro vazamento esta entre lead e reuniao. Velocidade e abordagem importam aqui."; }
+  else if(proposals && proposalToSale < .25){ title = "Fechar propostas paradas"; text = "Ajuste prova, condicao e follow-up das propostas enviadas."; }
+  else if(sales > 0){ title = "Escalar o que ja converte"; text = "Ha vendas no funil. Proteja a qualidade e aumente volume com teste controlado."; }
+  $("nextMoveTitle").textContent = title;
+  $("nextMoveText").textContent = text;
+  updateFinancialDashboard();
   saveLocal();
+}
+
+function showLocalPreview(){
+  $("memberPlan").textContent = "Preview Vanta";
+  $("memberIntro").textContent = "Modo de analise local: veja a experiencia do cliente com dados de exemplo.";
+  $("loginView").classList.add("hidden");
+  $("passwordSetupView").classList.add("hidden");
+  $("lockedView").classList.add("hidden");
+  $("dashboardView").classList.remove("hidden");
+  $("logoutBtn").classList.add("hidden");
+
+  const defaults = {
+    targetRevenue:"80000",
+    avgTicket:"8000",
+    adBudget:"4500",
+    leadsWeek:"32",
+    meetingsWeek:"11",
+    proposalsWeek:"6",
+    salesWeek:"2",
+    openDeals:"8",
+    leverOffer:"4",
+    leverPage:"3",
+    leverTraffic:"3",
+    leverSales:"2",
+    leverData:"2",
+    finRevenue:"85000",
+    finReceivables:"12000",
+    finTaxRate:"12",
+    finOwnerPay:"9000",
+    finProfitGoal:"25",
+    finReserveGoal:"20000",
+    hireCost:"4500",
+    extraAds:"2000",
+    extraRevenue:"12000",
+    trafficBudget:"3000",
+    trafficCpc:"1.80",
+    trafficLandingRate:"4",
+    trafficSalesRate:"10"
+  };
+  Object.entries(defaults).forEach(([id,value])=>{
+    if($(id) && !$(id).value) $(id).value = value;
+  });
+  if(!$("hotList").value){
+    $("hotList").value = "Lead A - pediu proposta\nLead B - respondeu no WhatsApp\nLead C - marcar reuniao";
+  }
+  if(!$("weekNotes").value){
+    $("weekNotes").value = "Observar objeções sobre prazo e reforçar prova social antes da proposta.";
+  }
+  if(!financeState.employees.length){
+    financeState.employees = [
+      { name:"Ana Souza", role:"Vendas", salary:3800, type:"CLT", status:"Ativo" },
+      { name:"Lucas Lima", role:"Operacao", salary:4200, type:"PJ", status:"Ativo" }
+    ];
+  }
+  if(!financeState.expenses.length){
+    financeState.expenses = [
+      { name:"Meta Ads", category:"Trafego pago", value:4500, recurrence:"Recorrente", status:"Pendente" },
+      { name:"Ferramentas", category:"Software", value:697, recurrence:"Recorrente", status:"Pago" },
+      { name:"Contabilidade", category:"Impostos", value:600, recurrence:"Recorrente", status:"Pago" }
+    ];
+  }
+  renderFinanceLists();
+  updateCalculators();
 }
 
 function showPasswordSetup(session){
@@ -394,7 +830,7 @@ async function showDashboard(session){
   }
 
   $("memberPlan").textContent = profile.plan || "Vanta Premium";
-  $("memberIntro").textContent = `${profile.company || profile.full_name || profile.email}, este e seu centro de crescimento e acompanhamento premium.`;
+  $("memberIntro").textContent = `${profile.company || profile.full_name || profile.email}, acompanhe aqui as metas, oportunidades e proximas acoes do seu crescimento.`;
   $("loginView").classList.add("hidden");
   $("passwordSetupView").classList.add("hidden");
   $("lockedView").classList.add("hidden");
@@ -406,6 +842,10 @@ async function showDashboard(session){
 
 async function boot(){
   try{
+    if(location.protocol === "file:"){
+      showLocalPreview();
+      return;
+    }
     const config = await loadConfig();
     authIntent = getAuthIntent();
     supabase = createClient(config.supabaseUrl, config.supabaseAnonKey);
@@ -487,7 +927,68 @@ $("logoutBtn").addEventListener("click", async ()=>{
   location.reload();
 });
 
-["metaRevenue","avgTicket","conversionRate","visitsMonth","pageConversion","adBudget","leadsWeek","meetingsWeek","salesWeek"].forEach(id=>$(id).addEventListener("input",updateCalculators));
+function addEmployee(){
+  const name = $("employeeName").value.trim();
+  const salary = Number($("employeeSalary").value || 0);
+  if(!name || !salary) return;
+  financeState.employees.push({
+    name,
+    role:$("employeeRole").value.trim() || "Sem cargo",
+    salary,
+    type:$("employeeType").value,
+    status:$("employeeStatus").value
+  });
+  ["employeeName","employeeRole","employeeSalary"].forEach(id=>$(id).value="");
+  renderFinanceLists();
+  updateCalculators();
+}
+
+function addExpense(){
+  const name = $("expenseName").value.trim();
+  const value = Number($("expenseValue").value || 0);
+  if(!name || !value) return;
+  financeState.expenses.push({
+    name,
+    category:$("expenseCategory").value,
+    value,
+    recurrence:$("expenseRecurrence").value,
+    status:$("expenseStatus").value
+  });
+  ["expenseName","expenseValue"].forEach(id=>$(id).value="");
+  renderFinanceLists();
+  updateCalculators();
+}
+
+$("addEmployeeBtn").addEventListener("click", addEmployee);
+$("addExpenseBtn").addEventListener("click", addExpense);
+$("copyReportBtn").addEventListener("click", async ()=>{
+  const text = $("executiveReport").textContent;
+  try{
+    await navigator.clipboard.writeText(text);
+    $("financialSummary").textContent = "Relatorio copiado para a area de transferencia.";
+  }catch(error){
+    $("financialSummary").textContent = text;
+  }
+});
+
+document.addEventListener("click", (event)=>{
+  const employeeIndex = event.target.dataset.removeEmployee;
+  const expenseIndex = event.target.dataset.removeExpense;
+  if(employeeIndex !== undefined){
+    financeState.employees.splice(Number(employeeIndex),1);
+    renderFinanceLists();
+    updateCalculators();
+  }
+  if(expenseIndex !== undefined){
+    financeState.expenses.splice(Number(expenseIndex),1);
+    renderFinanceLists();
+    updateCalculators();
+  }
+});
+
+["targetRevenue","avgTicket","adBudget","leadsWeek","meetingsWeek","proposalsWeek","salesWeek","openDeals","leverOffer","leverPage","leverTraffic","leverSales","leverData"].forEach(id=>$(id).addEventListener("input",updateCalculators));
+["finRevenue","finReceivables","finTaxRate","finOwnerPay","finProfitGoal","finReserveGoal","hireCost","extraAds","extraRevenue","trafficBudget","trafficCpc","trafficLandingRate","trafficSalesRate"].forEach(id=>$(id).addEventListener("input",updateCalculators));
+["hotList","weekNotes"].forEach(id=>$(id).addEventListener("input",saveLocal));
 document.querySelectorAll("[data-check]").forEach(input=>input.addEventListener("change",updateCalculators));
 
 boot();
