@@ -4,92 +4,436 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="robots" content="noindex, nofollow"/>
-<title>Painel Administrativo | Vanta Black</title><link rel="icon" href="/vanta-black-assets/vanta-favicon.svg?v=4" type="image/svg+xml"/><link rel="alternate icon" href="/favicon.ico?v=4"/><link rel="apple-touch-icon" href="/vanta-black-assets/apple-touch-icon.png?v=4"/>
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<title>Painel Administrativo | Vanta Black</title>
+<link rel="icon" href="vanta-black-assets/vanta-favicon.svg?v=4" type="image/svg+xml"/>
+<link rel="alternate icon" href="favicon.ico?v=4"/>
+<link rel="apple-touch-icon" href="vanta-black-assets/apple-touch-icon.png?v=4"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#050505;--panel:#0d0d0d;--gold:#f2b86b;--gold2:#d89a52;--text:#f7f0e6;--muted:rgba(247,240,230,.62);--line:rgba(242,184,107,.14);--green:#25d366;--red:#ff6b6b}
-body{min-height:100vh;background:radial-gradient(circle at 82% 0%,rgba(242,184,107,.09),transparent 28%),#050505;color:var(--text);font-family:Inter,sans-serif}
-.shell{max-width:1180px;margin:auto;padding:28px 22px 70px}
-.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:36px}
-.logo img{width:132px;height:auto}
-.actions{display:flex;gap:10px}
-button,a{font:inherit}
-.btn{border:1px solid var(--line);border-radius:999px;min-height:44px;padding:0 18px;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,.035);color:var(--text);font-size:.74rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer}
-.btn.primary{border:0;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#070707}
-.card{border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));box-shadow:0 24px 70px rgba(0,0,0,.34);padding:28px}
-.login{max-width:460px;margin:70px auto 0}
-.eyebrow{font-size:.7rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-h1,h2,h3{font-family:"Space Grotesk";letter-spacing:-.045em}
-h1{font-size:clamp(2.6rem,6vw,5rem);line-height:.92;margin:16px 0}
-h1 span,h2 span{color:var(--gold)}
-p{color:var(--muted);line-height:1.7}
-.field{display:grid;gap:8px;margin-top:14px}
-.field label{font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
-.field input,.field select{width:100%;min-height:50px;border:1px solid var(--line);border-radius:14px;background:rgba(0,0,0,.28);color:var(--text);padding:0 14px;font:600 1rem Inter;outline:none}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
-.status{margin-top:14px;color:var(--muted);line-height:1.5}
+:root{
+  --bg:#030708;
+  --panel:#081113;
+  --panel2:#10191c;
+  --text:#f6f3ee;
+  --muted:rgba(246,243,238,.62);
+  --line:rgba(255,255,255,.1);
+  --cyan:#34ddd6;
+  --gold:#f5b65f;
+  --purple:#8c55ff;
+  --orange:#ff704d;
+  --pink:#ef4eb8;
+  --green:#29df8e;
+  --red:#ff6474;
+  --shadow:0 28px 90px rgba(0,0,0,.42);
+}
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 15% 0%,rgba(52,221,214,.13),transparent 32%),
+    radial-gradient(circle at 86% 8%,rgba(245,182,95,.1),transparent 34%),
+    linear-gradient(180deg,#030708,#040606 56%,#030708);
+  font-family:Inter,system-ui,sans-serif;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.24;
+  background-image:
+    linear-gradient(rgba(255,255,255,.038) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.038) 1px,transparent 1px);
+  background-size:70px 70px;
+  mask-image:radial-gradient(circle at 52% 14%,#000 0%,transparent 68%);
+}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
 .hidden{display:none!important}
-.admin-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px}
-.member-list{display:grid;gap:10px;margin-top:18px}
-.member{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;border:1px solid rgba(242,184,107,.12);border-radius:18px;padding:16px;background:rgba(255,255,255,.026)}
-.member strong{display:block}
-.member small{display:block;color:var(--muted);margin-top:4px}
-.badge{display:inline-flex;align-items:center;min-height:28px;border-radius:999px;padding:0 10px;font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
-.badge.active{background:rgba(37,211,102,.12);color:var(--green)}
-.badge.paused,.badge.cancelled{background:rgba(255,107,107,.12);color:var(--red)}
-.member-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-@media(max-width:900px){.admin-grid,.form-grid,.member{grid-template-columns:1fr}.actions,.member-actions{width:100%;flex-direction:column}.btn{width:100%}.topbar{align-items:flex-start;flex-direction:column}.card{padding:22px;border-radius:22px}}
+.btn{
+  min-height:42px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:0 16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color:var(--text);
+  background:rgba(255,255,255,.04);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  transition:.18s ease;
+}
+.btn:hover{border-color:rgba(52,221,214,.45);background:rgba(255,255,255,.07)}
+.btn.primary{border:0;color:#031111;background:linear-gradient(135deg,var(--cyan),#78ffe7);box-shadow:0 16px 34px rgba(52,221,214,.18)}
+.btn.gold{border:0;color:#090706;background:linear-gradient(135deg,var(--gold),#f2a23d)}
+.btn.red{color:var(--red);border-color:rgba(255,100,116,.26);background:rgba(255,100,116,.07)}
+.login-shell{
+  width:min(1180px,calc(100% - 36px));
+  margin:0 auto;
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  position:relative;
+  z-index:1;
+}
+.login-card{
+  width:min(460px,100%);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:34px;
+  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.025));
+  box-shadow:var(--shadow);
+}
+.logo{display:block;margin-bottom:32px}
+.logo img{width:132px;height:auto}
+.eyebrow{
+  display:inline-flex;
+  color:var(--cyan);
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.055em}
+.login-card h1{font-size:clamp(2.5rem,7vw,4rem);line-height:.92;margin:14px 0 16px}
+p{color:var(--muted);line-height:1.65}
+.form-stack{display:grid;gap:14px;margin-top:22px}
+.field{display:grid;gap:8px}
+.field label{
+  color:var(--gold);
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.field input,.field select{
+  min-height:48px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;
+  outline:none;
+  color:var(--text);
+  background:rgba(0,0,0,.25);
+  padding:0 14px;
+  font-weight:750;
+}
+.field input:focus,.field select:focus{border-color:rgba(52,221,214,.55);box-shadow:0 0 0 4px rgba(52,221,214,.08)}
+.status{min-height:24px;margin-top:12px;color:var(--muted);line-height:1.45}
+.app{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:250px minmax(0,1fr);
+  position:relative;
+  z-index:1;
+}
+.sidebar{
+  position:sticky;
+  top:0;
+  height:100vh;
+  border-right:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(180deg,rgba(8,17,19,.9),rgba(4,7,8,.95));
+  padding:22px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.side-logo{padding:8px 8px 12px}
+.side-logo img{width:130px;height:auto}
+.nav{display:grid;gap:8px}
+.nav button{
+  min-height:44px;
+  border:1px solid transparent;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:rgba(246,243,238,.7);
+  background:transparent;
+  padding:0 12px;
+  text-align:left;
+  font-weight:850;
+}
+.nav button.active,.nav button:hover{color:#041111;background:linear-gradient(135deg,var(--cyan),#74ffe6)}
+.nav i{width:10px;height:10px;border-radius:4px;background:currentColor;opacity:.9}
+.admin-profile{
+  margin-top:auto;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:20px;
+  background:rgba(255,255,255,.035);
+  padding:14px;
+}
+.admin-profile small{display:block;color:var(--muted);font-size:.78rem;margin-top:4px;word-break:break-word}
+.main{padding:26px 30px 56px;min-width:0}
+.topline{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:22px;
+}
+.topline h1{font-size:clamp(2rem,4vw,3.4rem);line-height:.95}
+.topline p{margin-top:7px}
+.top-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-bottom:16px;
+}
+.stat{
+  min-height:132px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:18px;
+  background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.022));
+  box-shadow:0 20px 70px rgba(0,0,0,.26);
+  position:relative;
+  overflow:hidden;
+}
+.stat::after{content:"";position:absolute;right:-36px;bottom:-46px;width:120px;height:120px;border-radius:50%;background:currentColor;opacity:.1}
+.stat.cyan{color:var(--cyan)}
+.stat.purple{color:var(--purple)}
+.stat.orange{color:var(--orange)}
+.stat.pink{color:var(--pink)}
+.stat small{display:block;color:rgba(246,243,238,.72);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+.stat strong{display:block;margin-top:12px;color:var(--text);font-family:"Space Grotesk";font-size:2.2rem;letter-spacing:-.06em}
+.stat span{display:block;margin-top:8px;color:currentColor;font-size:.82rem;font-weight:850}
+.layout{
+  display:grid;
+  grid-template-columns:minmax(340px,.78fr) minmax(0,1.22fr);
+  gap:16px;
+}
+.panel{
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px;
+  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.018));
+  box-shadow:var(--shadow);
+}
+.panel h2{font-size:1.8rem;line-height:1;margin:8px 0 8px}
+.invite-form{display:grid;gap:12px;margin-top:18px}
+.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:16px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.search{
+  min-width:260px;
+  min-height:42px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;
+  background:rgba(0,0,0,.22);
+  color:var(--text);
+  padding:0 13px;
+  font-weight:750;
+  outline:none;
+}
+.select{
+  min-height:42px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+  padding:0 12px;
+  font-weight:850;
+  outline:none;
+}
+.table-wrap{overflow:auto;border-radius:18px;border:1px solid rgba(255,255,255,.08)}
+table{width:100%;border-collapse:collapse;min-width:780px;background:rgba(0,0,0,.18)}
+th,td{padding:15px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.07);vertical-align:middle}
+th{color:rgba(246,243,238,.6);font-size:.68rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.035)}
+td{color:rgba(246,243,238,.9);font-size:.92rem}
+tr:last-child td{border-bottom:0}
+.client-main strong{display:block}
+.client-main small{display:block;color:var(--muted);margin-top:4px}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  border-radius:999px;
+  padding:0 10px;
+  font-size:.66rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.badge.active{color:#041111;background:var(--green)}
+.badge.paused{color:#130809;background:#ffbf4d}
+.badge.cancelled,.badge.deleted{color:#fff;background:rgba(255,100,116,.72)}
+.badge.pending{color:#031111;background:var(--cyan)}
+.row-actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.mini{
+  min-height:34px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:999px;
+  color:var(--text);
+  background:rgba(255,255,255,.045);
+  padding:0 11px;
+  font-size:.64rem;
+  font-weight:900;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.mini:hover{background:rgba(255,255,255,.075)}
+.mini.red{color:var(--red);border-color:rgba(255,100,116,.25);background:rgba(255,100,116,.07)}
+.empty{padding:28px;color:var(--muted)}
+.mobile-nav{display:none}
+@media(max-width:1120px){
+  .app{grid-template-columns:220px minmax(0,1fr)}
+  .layout,.stats{grid-template-columns:1fr 1fr}
+}
+@media(max-width:820px){
+  .app{display:block}
+  .sidebar{display:none}
+  .main{padding:18px 14px 90px}
+  .topline{align-items:flex-start;flex-direction:column}
+  .top-actions,.top-actions .btn{width:100%}
+  .stats,.layout{grid-template-columns:1fr}
+  .panel{border-radius:22px;padding:18px}
+  .panel-head{align-items:flex-start;flex-direction:column}
+  .search,.select{width:100%;min-width:0}
+  .filters{width:100%}
+  .login-shell{width:calc(100% - 28px)}
+  .login-card{padding:24px;border-radius:22px}
+  .mobile-nav{
+    position:fixed;
+    left:12px;
+    right:12px;
+    bottom:12px;
+    z-index:20;
+    height:58px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:6px;
+    padding:7px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    background:rgba(6,10,11,.88);
+    backdrop-filter:blur(18px);
+  }
+  .mobile-nav button{
+    border:0;
+    border-radius:14px;
+    color:rgba(246,243,238,.68);
+    background:transparent;
+    font-size:.66rem;
+    font-weight:900;
+  }
+  .mobile-nav button.active{color:#041111;background:var(--cyan)}
+}
 </style>
 </head>
 <body>
-<div class="shell">
-<header class="topbar">
-<a class="logo" href="index.html"><img src="/vanta-black-assets/vanta-logo-dark.png" alt="Vanta Black"/></a>
-<div class="actions">
-<a class="btn" href="membros.html">Area de membros</a>
-<button class="btn hidden" id="logoutBtn" type="button">Sair</button>
-</div>
-</header>
-
-<section class="login card" id="loginView">
-<span class="eyebrow">Admin Vanta</span>
-<h1>Painel de liberação.</h1>
-<p>Entre com seu e-mail administrativo para liberar ou pausar acessos da area premium.</p>
-<form id="loginForm">
-<div class="field"><label for="adminEmail">E-mail</label><input id="adminEmail" type="email" autocomplete="email" required/></div>
-<div class="field"><label for="adminPassword">Senha</label><input id="adminPassword" type="password" autocomplete="current-password" required/></div>
-<button class="btn primary" style="width:100%;margin-top:18px" type="submit">Entrar no painel</button>
-<div class="status" id="loginStatus"></div>
-</form>
+<section class="login-shell" id="loginView">
+  <div class="login-card">
+    <a class="logo" href="index.html"><img src="vanta-black-assets/vanta-logo-dark.png" alt="Vanta Black"/></a>
+    <span class="eyebrow">Admin Vanta</span>
+    <h1>Painel privado de acessos.</h1>
+    <p>Entre com seu e-mail administrativo para liberar, pausar e organizar clientes da area premium.</p>
+    <form class="form-stack" id="loginForm">
+      <div class="field"><label for="adminEmail">E-mail</label><input id="adminEmail" type="email" autocomplete="email" required/></div>
+      <div class="field"><label for="adminPassword">Senha</label><input id="adminPassword" type="password" autocomplete="current-password" required/></div>
+      <button class="btn primary" type="submit">Entrar no painel</button>
+      <div class="status" id="loginStatus"></div>
+    </form>
+  </div>
 </section>
 
-<main class="hidden" id="adminView">
-<section class="admin-grid">
-<div class="card">
-<span class="eyebrow">Novo cliente</span>
-<h1>Liberar acesso</h1>
-<p>Ao liberar, o cliente recebe o e-mail de convite do Supabase para criar senha e entrar na area premium.</p>
-<form id="inviteForm">
-<div class="field"><label for="memberEmail">E-mail do cliente</label><input id="memberEmail" type="email" required/></div>
-<div class="field"><label for="fullName">Nome</label><input id="fullName" type="text"/></div>
-<div class="field"><label for="company">Empresa</label><input id="company" type="text"/></div>
-<div class="field"><label for="plan">Plano</label><select id="plan"><option>Vanta Start</option><option selected>Vanta Core</option><option>Vanta Ascension</option><option>Vanta Growth</option></select></div>
-<button class="btn primary" style="width:100%;margin-top:18px" type="submit">Liberar acesso</button>
-<div class="status" id="inviteStatus"></div>
-</form>
-</div>
+<main class="app hidden" id="adminView">
+  <aside class="sidebar">
+    <a class="side-logo" href="index.html"><img src="vanta-black-assets/vanta-logo-dark.png" alt="Vanta Black"/></a>
+    <nav class="nav" aria-label="Painel administrativo">
+      <button class="active" data-view="overview" type="button"><i></i>Dashboard</button>
+      <button data-view="clients" type="button"><i></i>Clientes</button>
+      <button data-view="invite" type="button"><i></i>Novo acesso</button>
+    </nav>
+    <div class="admin-profile">
+      <strong>Admin Vanta</strong>
+      <small id="adminEmailLabel">admin@vanta</small>
+    </div>
+  </aside>
 
-<div class="card">
-<span class="eyebrow">Clientes</span>
-<h1>Acessos ativos</h1>
-<p>Gerencie quem pode entrar na area premium da Vanta.</p>
-<div class="member-list" id="memberList"></div>
-</div>
-</section>
+  <section class="main">
+    <div class="topline">
+      <div>
+        <span class="eyebrow">Vanta Admin OS</span>
+        <h1>Controle de membros.</h1>
+        <p>Gerencie convites, planos e status dos clientes sem deixar a operacao carregada.</p>
+      </div>
+      <div class="top-actions">
+        <a class="btn" href="membros.html">Area de membros</a>
+        <a class="btn" href="index.html">Site</a>
+        <button class="btn red" id="logoutBtn" type="button">Sair</button>
+      </div>
+    </div>
+
+    <section class="stats" id="statsView">
+      <article class="stat cyan"><small>Clientes ativos</small><strong id="activeCount">0</strong><span>com acesso liberado</span></article>
+      <article class="stat purple"><small>Total de clientes</small><strong id="totalCount">0</strong><span>na base da Vanta</span></article>
+      <article class="stat orange"><small>Pausados</small><strong id="pausedCount">0</strong><span>sem acesso no momento</span></article>
+      <article class="stat pink"><small>Planos premium</small><strong id="premiumCount">0</strong><span>Core, Ascension ou Growth</span></article>
+    </section>
+
+    <section class="layout">
+      <section class="panel" data-section="invite">
+        <span class="eyebrow">Novo cliente</span>
+        <h2>Liberar acesso</h2>
+        <p>O cliente recebe o e-mail de convite para criar senha e acessar a area premium.</p>
+        <form class="invite-form" id="inviteForm">
+          <div class="field"><label for="memberEmail">E-mail do cliente</label><input id="memberEmail" type="email" required/></div>
+          <div class="field"><label for="fullName">Nome</label><input id="fullName" type="text"/></div>
+          <div class="field"><label for="company">Empresa</label><input id="company" type="text"/></div>
+          <div class="field"><label for="plan">Plano</label><select id="plan"><option>Vanta Start</option><option selected>Vanta Core</option><option>Vanta Ascension</option><option>Vanta Growth</option></select></div>
+          <button class="btn primary" type="submit">Liberar acesso</button>
+          <div class="status" id="inviteStatus"></div>
+        </form>
+      </section>
+
+      <section class="panel" data-section="clients">
+        <div class="panel-head">
+          <div>
+            <span class="eyebrow">Clientes</span>
+            <h2>Acessos da area premium</h2>
+            <p>Ative, pause ou exclua clientes antigos da lista.</p>
+          </div>
+          <div class="filters">
+            <input class="search" id="searchInput" type="search" placeholder="Buscar cliente, e-mail ou empresa"/>
+            <select class="select" id="statusFilter">
+              <option value="all">Todos</option>
+              <option value="active">Ativos</option>
+              <option value="paused">Pausados</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-wrap" id="tableWrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Empresa</th>
+                <th>Plano</th>
+                <th>Status</th>
+                <th style="text-align:right">Acoes</th>
+              </tr>
+            </thead>
+            <tbody id="memberRows"></tbody>
+          </table>
+        </div>
+        <div class="empty hidden" id="emptyState">Nenhum cliente encontrado.</div>
+      </section>
+    </section>
+  </section>
+
+  <nav class="mobile-nav" aria-label="Navegacao admin mobile">
+    <button class="active" data-view="overview" type="button">Resumo</button>
+    <button data-view="clients" type="button">Clientes</button>
+    <button data-view="invite" type="button">Novo</button>
+  </nav>
 </main>
-</div>
+
 <script type="module">
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
@@ -97,10 +441,23 @@ const $ = (id) => document.getElementById(id);
 let supabase;
 let session;
 let appConfig;
+let members = [];
 
 function setLoginStatus(text){ $("loginStatus").textContent = text || ""; }
 function setInviteStatus(text){ $("inviteStatus").textContent = text || ""; }
-
+function escapeHtml(value){
+  return String(value || "").replace(/[&<>"']/g, (char)=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[char]));
+}
+function statusLabel(status){
+  const labels = { active:"Ativo", paused:"Pausado", cancelled:"Cancelado", deleted:"Excluido" };
+  return labels[status] || status || "Pendente";
+}
+function statusClass(status){
+  if(status === "active") return "active";
+  if(status === "paused") return "paused";
+  if(status === "cancelled" || status === "deleted") return "deleted";
+  return "pending";
+}
 async function loadConfig(){
   const response = await fetch("/api/config");
   if(!response.ok) throw new Error("Configuracao nao encontrada.");
@@ -108,7 +465,6 @@ async function loadConfig(){
   if(!config.supabaseUrl || !config.supabaseAnonKey || !config.adminEmail) throw new Error("Configure Supabase e ADMIN_EMAIL na Netlify.");
   return config;
 }
-
 async function api(path, options = {}){
   const token = session?.access_token;
   const response = await fetch(`/api/${path}`, {
@@ -123,30 +479,56 @@ async function api(path, options = {}){
   if(!response.ok) throw new Error(data.error || "Erro na requisicao.");
   return data;
 }
-
-async function renderMembers(){
-  const list = $("memberList");
-  list.innerHTML = "<p>Carregando clientes...</p>";
-  const { members } = await api("list-members");
-  if(!members.length){
-    list.innerHTML = "<p>Nenhum cliente liberado ainda.</p>";
-    return;
-  }
-  list.innerHTML = members.map(member => `
-    <article class="member" data-id="${member.id}">
-      <div>
-        <strong>${member.full_name || member.email}</strong>
-        <small>${member.email} • ${member.company || "Empresa nao informada"} • ${member.plan || "Plano nao informado"}</small>
-        <span class="badge ${member.access_status}">${member.access_status}</span>
-      </div>
-      <div class="member-actions">
-        <button class="btn" data-action="active">Ativar</button>
-        <button class="btn" data-action="paused">Pausar</button>
-      </div>
-    </article>
+function updateStats(){
+  const active = members.filter(member=>member.access_status === "active").length;
+  const paused = members.filter(member=>member.access_status === "paused").length;
+  const premium = members.filter(member=>["Vanta Core","Vanta Ascension","Vanta Growth"].includes(member.plan)).length;
+  $("activeCount").textContent = active;
+  $("totalCount").textContent = members.length;
+  $("pausedCount").textContent = paused;
+  $("premiumCount").textContent = premium;
+}
+function filteredMembers(){
+  const query = $("searchInput").value.trim().toLowerCase();
+  const status = $("statusFilter").value;
+  return members.filter(member=>{
+    const haystack = [member.full_name, member.email, member.company, member.plan].join(" ").toLowerCase();
+    const matchesQuery = !query || haystack.includes(query);
+    const matchesStatus = status === "all" || member.access_status === status;
+    return matchesQuery && matchesStatus;
+  });
+}
+function renderMembers(){
+  updateStats();
+  const rows = $("memberRows");
+  const list = filteredMembers();
+  $("tableWrap").classList.toggle("hidden", !list.length);
+  $("emptyState").classList.toggle("hidden", !!list.length);
+  rows.innerHTML = list.map(member=>`
+    <tr data-id="${escapeHtml(member.id)}" data-email="${escapeHtml(member.email)}">
+      <td class="client-main">
+        <strong>${escapeHtml(member.full_name || member.email)}</strong>
+        <small>${escapeHtml(member.email)}</small>
+      </td>
+      <td>${escapeHtml(member.company || "Empresa nao informada")}</td>
+      <td>${escapeHtml(member.plan || "Plano nao informado")}</td>
+      <td><span class="badge ${statusClass(member.access_status)}">${statusLabel(member.access_status)}</span></td>
+      <td>
+        <div class="row-actions">
+          <button class="mini" data-action="active" type="button">Ativar</button>
+          <button class="mini" data-action="paused" type="button">Pausar</button>
+          <button class="mini red" data-delete type="button">Excluir</button>
+        </div>
+      </td>
+    </tr>
   `).join("");
 }
-
+async function loadMembers(){
+  $("memberRows").innerHTML = `<tr><td colspan="5">Carregando clientes...</td></tr>`;
+  const data = await api("list-members");
+  members = data.members || [];
+  renderMembers();
+}
 async function showAdmin(currentSession){
   session = currentSession;
   const email = currentSession.user.email || "";
@@ -155,12 +537,11 @@ async function showAdmin(currentSession){
     await supabase.auth.signOut();
     return;
   }
+  $("adminEmailLabel").textContent = email;
   $("loginView").classList.add("hidden");
   $("adminView").classList.remove("hidden");
-  $("logoutBtn").classList.remove("hidden");
-  await renderMembers();
+  await loadMembers();
 }
-
 async function boot(){
   try{
     appConfig = await loadConfig();
@@ -171,6 +552,12 @@ async function boot(){
   }catch(error){
     setLoginStatus(error.message);
   }
+}
+function showView(view){
+  document.querySelectorAll("[data-view]").forEach(button=>button.classList.toggle("active", button.dataset.view === view));
+  if(view === "clients") document.querySelector("[data-section='clients']").scrollIntoView({ behavior:"smooth", block:"start" });
+  if(view === "invite") document.querySelector("[data-section='invite']").scrollIntoView({ behavior:"smooth", block:"start" });
+  if(view === "overview") window.scrollTo({ top:0, behavior:"smooth" });
 }
 
 $("loginForm").addEventListener("submit", async (event)=>{
@@ -183,7 +570,6 @@ $("loginForm").addEventListener("submit", async (event)=>{
   if(error){ setLoginStatus(error.message); return; }
   await showAdmin(data.session);
 });
-
 $("inviteForm").addEventListener("submit", async (event)=>{
   event.preventDefault();
   setInviteStatus("Liberando acesso...");
@@ -198,27 +584,42 @@ $("inviteForm").addEventListener("submit", async (event)=>{
     setInviteStatus(result.message || "Acesso liberado.");
     event.target.reset();
     $("plan").value = "Vanta Core";
-    await renderMembers();
+    await loadMembers();
   }catch(error){
     setInviteStatus(error.message);
   }
 });
-
-$("memberList").addEventListener("click", async (event)=>{
-  const button = event.target.closest("[data-action]");
-  if(!button) return;
-  const item = button.closest("[data-id]");
+$("memberRows").addEventListener("click", async (event)=>{
+  const row = event.target.closest("[data-id]");
+  if(!row) return;
+  const deleteButton = event.target.closest("[data-delete]");
+  const actionButton = event.target.closest("[data-action]");
   try{
-    await api("update-member", {
-      method:"POST",
-      body:JSON.stringify({ id:item.dataset.id, accessStatus:button.dataset.action })
-    });
-    await renderMembers();
+    if(deleteButton){
+      const email = row.dataset.email || "este cliente";
+      const ok = confirm(`Excluir ${email} da area de membros? Essa acao remove o perfil da lista e tenta remover o login do Supabase.`);
+      if(!ok) return;
+      await api("update-member", {
+        method:"POST",
+        body:JSON.stringify({ id:row.dataset.id, action:"delete" })
+      });
+      await loadMembers();
+      return;
+    }
+    if(actionButton){
+      await api("update-member", {
+        method:"POST",
+        body:JSON.stringify({ id:row.dataset.id, accessStatus:actionButton.dataset.action })
+      });
+      await loadMembers();
+    }
   }catch(error){
     alert(error.message);
   }
 });
-
+$("searchInput").addEventListener("input", renderMembers);
+$("statusFilter").addEventListener("change", renderMembers);
+document.querySelectorAll("[data-view]").forEach(button=>button.addEventListener("click", ()=>showView(button.dataset.view)));
 $("logoutBtn").addEventListener("click", async ()=>{
   await supabase.auth.signOut();
   location.reload();

@@ -4,496 +4,935 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="robots" content="noindex, nofollow"/>
-<title>Area de Membros | Vanta Black</title><link rel="icon" href="/vanta-black-assets/vanta-favicon.svg?v=4" type="image/svg+xml"/><link rel="alternate icon" href="/favicon.ico?v=4"/><link rel="apple-touch-icon" href="/vanta-black-assets/apple-touch-icon.png?v=4"/>
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<title>Area de Membros | Vanta Black</title>
+<link rel="icon" href="vanta-black-assets/vanta-favicon.svg?v=4" type="image/svg+xml"/>
+<link rel="alternate icon" href="favicon.ico?v=4"/>
+<link rel="apple-touch-icon" href="vanta-black-assets/apple-touch-icon.png?v=4"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#050505;--panel:#0d0d0d;--panel2:#141414;--gold:#f2b86b;--gold2:#d89a52;--text:#f7f0e6;--muted:rgba(247,240,230,.62);--line:rgba(242,184,107,.14);--green:#25d366;--red:#ff6b6b}
-body{min-height:100vh;background:radial-gradient(circle at 20% 0%,rgba(242,184,107,.09),transparent 30%),linear-gradient(180deg,#050505,#0a0a0a);color:var(--text);font-family:Inter,sans-serif;overflow-x:hidden}
+:root{
+  --bg:#030506;
+  --panel:#0a1012;
+  --panel2:#11191c;
+  --panel3:#151515;
+  --text:#f7f1e8;
+  --muted:rgba(247,241,232,.62);
+  --soft:rgba(247,241,232,.1);
+  --line:rgba(255,255,255,.1);
+  --gold:#f4b45d;
+  --orange:#ff704d;
+  --cyan:#35d7d0;
+  --green:#27df8b;
+  --pink:#d94cff;
+  --red:#ff6572;
+  --shadow:0 30px 90px rgba(0,0,0,.42);
+}
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 12% 0%,rgba(53,215,208,.14),transparent 32%),
+    radial-gradient(circle at 88% 6%,rgba(244,180,93,.13),transparent 34%),
+    linear-gradient(180deg,#030506 0%,#050708 48%,#030506 100%);
+  font-family:Inter,system-ui,sans-serif;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.34;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:76px 76px;
+  mask-image:radial-gradient(circle at 50% 16%,#000 0%,transparent 68%);
+}
 a{color:inherit;text-decoration:none}
-.shell{max-width:1180px;margin:auto;padding:28px 22px 70px}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0 34px}
-.logo{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk";font-weight:800;letter-spacing:.22em;text-transform:uppercase}
-.logo img{width:132px;height:auto}
-.top-actions{display:flex;gap:10px;align-items:center}
-.pill,.ghost,.solid{border:1px solid var(--line);border-radius:999px;min-height:44px;padding:0 18px;display:inline-flex;align-items:center;justify-content:center;font-size:.74rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.035);color:var(--text);cursor:pointer}
-.solid{border:0;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#070707}
-.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:22px;align-items:stretch;margin-top:10px}
-.card{border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));box-shadow:0 24px 70px rgba(0,0,0,.34);padding:28px}
-.eyebrow{font-size:.7rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-h1,h2,h3{font-family:"Space Grotesk",sans-serif;letter-spacing:-.045em}
-h1{font-size:clamp(2.8rem,6vw,5.4rem);line-height:.92;margin:18px 0}
-h1 span,h2 span{color:var(--gold)}
-p{color:var(--muted);line-height:1.7}
-.login{max-width:460px;margin:70px auto 0}
-.login h1{font-size:2.8rem}
-.field{display:grid;gap:8px;margin-top:14px}
-.field label{font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
-.field input,.field select,.field textarea{width:100%;min-height:50px;border:1px solid var(--line);border-radius:14px;background:rgba(0,0,0,.28);color:var(--text);padding:0 14px;font:600 1rem Inter;outline:none}
-.field textarea{min-height:120px;padding:14px;resize:vertical}
-.form-actions{display:grid;gap:10px;margin-top:18px}
-.status{margin-top:14px;color:var(--muted);font-size:.92rem;line-height:1.5}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
 .hidden{display:none!important}
-.dashboard{margin-top:26px}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:20px 0}
-.stat{padding:20px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.035)}
-.stat strong{display:block;font:800 2.2rem "Space Grotesk";color:var(--gold);letter-spacing:-.055em}
-.stat span{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-.wide{grid-column:1/-1}
-.tool-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
-.tool{border:1px solid var(--line);border-radius:18px;padding:16px;background:rgba(255,255,255,.03)}
-.tool strong{display:block;margin-bottom:8px}
-.checklist{display:grid;gap:10px;margin-top:16px}
-.check{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid rgba(242,184,107,.1);border-radius:14px;background:rgba(255,255,255,.025)}
-.check input{margin-top:3px;accent-color:var(--gold)}
-.kpi-form{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.result{margin-top:16px;padding:18px;border-radius:18px;background:rgba(242,184,107,.08);border:1px solid rgba(242,184,107,.2)}
-.result strong{display:block;font:800 2.4rem "Space Grotesk";color:var(--gold)}
-.resource-list{display:grid;gap:10px;margin-top:16px}
-.resource{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px;border:1px solid rgba(242,184,107,.12);border-radius:16px;background:rgba(255,255,255,.026)}
-.resource small{color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:.12em}
-.locked{max-width:660px;margin:70px auto 0;text-align:center}
-.command{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);gap:16px;margin-top:16px;align-items:stretch}
-.command-title{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
-.score-orbit{width:154px;height:154px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;background:conic-gradient(var(--gold) var(--score,82%),rgba(255,255,255,.07) 0);box-shadow:0 0 60px rgba(242,184,107,.12)}
-.score-core{width:118px;height:118px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#17130d,#070707);border:1px solid rgba(242,184,107,.18)}
-.score-core strong{font:800 2.7rem "Space Grotesk";color:var(--gold);letter-spacing:-.07em}
-.score-core span{font-size:.56rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
-.brief-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
-.brief{padding:14px;border-radius:18px;background:rgba(255,255,255,.032);border:1px solid rgba(242,184,107,.10)}
-.brief small,.pipeline-stage small,.action-card small{display:block;color:var(--gold);font-size:.62rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-.brief strong{display:block;margin-top:8px;font:800 1.55rem "Space Grotesk";letter-spacing:-.055em}
-.ai-brief{display:grid;gap:14px}
-.pulse-line{height:7px;border-radius:99px;background:linear-gradient(90deg,var(--gold),rgba(242,184,107,.16));transform-origin:left;scale:.82 1}
-.insight-list{display:grid;gap:10px}
-.insight{padding:13px 14px;border-radius:16px;background:rgba(255,255,255,.026);border:1px solid rgba(242,184,107,.10);color:var(--muted);line-height:1.55}
-.forecast-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
-.forecast-card{padding:18px;border-radius:20px;background:linear-gradient(180deg,rgba(242,184,107,.08),rgba(255,255,255,.022));border:1px solid rgba(242,184,107,.13)}
-.forecast-card strong{display:block;margin-top:8px;font:800 2rem "Space Grotesk";color:var(--gold);letter-spacing:-.065em}
-.pipeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
-.pipeline-stage{position:relative;padding:16px;border:1px solid rgba(242,184,107,.11);border-radius:18px;background:rgba(255,255,255,.026);overflow:hidden}
-.pipeline-stage::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--gold),transparent);opacity:.72}
-.pipeline-stage strong{display:block;margin-top:10px;font:800 1.6rem "Space Grotesk";letter-spacing:-.05em}
-.workspace{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-.action-board{display:grid;gap:10px;margin-top:16px}
-.action-card{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:flex-start;padding:14px;border-radius:18px;background:rgba(255,255,255,.026);border:1px solid rgba(242,184,107,.10)}
-.action-card input{margin-top:4px;accent-color:var(--gold)}
-.action-card strong{display:block;margin-top:3px}
-.action-card p{font-size:.9rem;line-height:1.55;margin-top:4px}
-.matrix{display:grid;gap:10px;margin-top:16px}
-.matrix-row{display:grid;grid-template-columns:96px 1fr auto;gap:12px;align-items:center}
-.matrix-row span{font-size:.68rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
-.bar{height:10px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}
-.bar i{display:block;height:100%;width:var(--value,50%);border-radius:inherit;background:linear-gradient(90deg,var(--gold),rgba(242,184,107,.28))}
-.matrix-row strong{font-size:.76rem;color:var(--gold)}
-.quick-tools{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
-.quick-tool{padding:18px;border-radius:20px;border:1px solid rgba(242,184,107,.11);background:rgba(255,255,255,.026)}
-.quick-tool strong{display:block;margin:8px 0 6px}
-.quick-tool p{font-size:.88rem;line-height:1.5}
-.member-os{display:grid;gap:16px}
-.os-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:16px;align-items:stretch}
-.os-copy,.next-move,.os-kpi,.os-note{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.052),rgba(255,255,255,.018));box-shadow:0 24px 70px rgba(0,0,0,.28)}
-.os-copy,.next-move{border-radius:26px;padding:28px}
-.member-os h1{font-size:clamp(2.4rem,5vw,4.8rem);line-height:.92;margin:14px 0}
-.member-os h2{font-size:clamp(1.7rem,3vw,2.45rem);line-height:1;margin:10px 0 12px}
-.next-move{display:flex;flex-direction:column;justify-content:space-between;gap:18px;background:radial-gradient(circle at 20% 0%,rgba(242,184,107,.12),transparent 38%),linear-gradient(180deg,rgba(255,255,255,.058),rgba(255,255,255,.018))}
-.next-move strong{font:800 2rem "Space Grotesk";letter-spacing:-.055em;line-height:1.02;color:var(--gold)}
-.os-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.os-kpi{border-radius:20px;padding:18px}
-.os-kpi small,.target-list small,.unit-grid small{display:block;color:var(--gold);font-size:.62rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-.os-kpi strong,.target-list strong,.unit-grid strong{display:block;margin-top:8px;font:800 1.78rem "Space Grotesk";letter-spacing:-.055em}
-.os-kpi span{display:block;margin-top:6px;color:var(--muted);font-size:.82rem;line-height:1.45}
-.os-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:16px}
-.wide-grid{grid-template-columns:minmax(260px,.8fr) minmax(260px,.95fr) minmax(260px,.85fr)}
-.os-inputs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
-.target-list,.unit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
-.target-list div,.unit-grid div{border:1px solid rgba(242,184,107,.11);border-radius:18px;padding:16px;background:rgba(255,255,255,.028)}
-.os-note{margin-top:16px;border-radius:18px;padding:14px 16px;color:var(--muted);line-height:1.55}
-.funnel{display:grid;gap:13px;margin-top:18px}
-.funnel-row{display:grid;grid-template-columns:92px 52px 1fr;align-items:center;gap:12px}
-.funnel-row span{font-size:.72rem;font-weight:900;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
-.funnel-row strong{font:800 1.2rem "Space Grotesk";color:var(--gold)}
-.funnel-bar{height:12px;border-radius:999px;background:rgba(255,255,255,.065);overflow:hidden}
-.funnel-bar i{display:block;height:100%;width:var(--w,0%);border-radius:inherit;background:linear-gradient(90deg,var(--gold),rgba(242,184,107,.25))}
-.sliders{display:grid;gap:13px;margin-top:16px}
-.sliders label{display:grid;grid-template-columns:108px 1fr;gap:12px;align-items:center;color:var(--muted);font-weight:800;font-size:.86rem}
-.sliders input{accent-color:var(--gold);width:100%}
-.action-board{display:grid;gap:10px;margin-top:16px}
-.action-card{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:flex-start;padding:14px;border-radius:18px;background:rgba(255,255,255,.026);border:1px solid rgba(242,184,107,.10)}
-.action-card input{margin-top:4px;accent-color:var(--gold)}
-.action-card small{display:block;color:var(--gold);font-size:.62rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-.action-card strong{display:block;margin-top:3px}
-.action-card p{font-size:.9rem;line-height:1.55;margin-top:4px}
-.finance-suite{display:grid;gap:16px}
-.finance-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.58fr);gap:16px}
-.finance-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
-.finance-kpi,.finance-tile,.list-item{border:1px solid rgba(242,184,107,.11);border-radius:18px;background:rgba(255,255,255,.028);padding:16px}
-.finance-kpi small,.finance-tile small,.list-item small{display:block;color:var(--gold);font-size:.62rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-.finance-kpi strong,.finance-tile strong{display:block;margin-top:8px;font:800 1.7rem "Space Grotesk";letter-spacing:-.055em}
-.finance-toolmap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-.finance-toolmap div{min-height:130px;border:1px solid rgba(242,184,107,.11);border-radius:18px;background:linear-gradient(180deg,rgba(242,184,107,.055),rgba(255,255,255,.02));padding:16px}
-.finance-toolmap small{display:block;color:var(--gold);font-size:.6rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-.finance-toolmap strong{display:block;margin-top:8px;font:800 1.04rem "Space Grotesk";letter-spacing:-.035em;line-height:1.1}
-.finance-toolmap p{font-size:.82rem;line-height:1.45;margin-top:7px}
-.finance-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.85fr);gap:16px}
-.finance-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
-.finance-list{display:grid;gap:10px;margin-top:16px;max-height:360px;overflow:auto;padding-right:4px}
-.list-item{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
-.list-item strong{display:block}
-.list-item p{font-size:.88rem;line-height:1.45;margin-top:4px}
-.mini-btn{border:1px solid rgba(242,184,107,.2);border-radius:999px;background:rgba(242,184,107,.08);color:var(--text);font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:9px 12px;cursor:pointer}
-.cashflow{display:grid;gap:10px;margin-top:16px}
-.cash-row{display:grid;grid-template-columns:130px 1fr auto;gap:12px;align-items:center}
-.cash-row span{font-size:.7rem;font-weight:900;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
-.cash-track{height:12px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}
-.cash-track i{display:block;height:100%;width:var(--w,1%);background:linear-gradient(90deg,var(--gold),rgba(242,184,107,.28));border-radius:inherit}
-.alert-list{display:grid;gap:10px;margin-top:16px}
-.premium-alert{padding:14px;border-radius:16px;border:1px solid rgba(242,184,107,.13);background:linear-gradient(180deg,rgba(242,184,107,.06),rgba(255,255,255,.02));color:var(--muted);line-height:1.55}
-.sim-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:16px}
-.sim-output{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
-.sim-output div{padding:15px;border-radius:16px;border:1px solid rgba(242,184,107,.11);background:rgba(255,255,255,.028)}
-.sim-output small{display:block;color:var(--gold);font-size:.6rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
-.sim-output strong{display:block;margin-top:6px;font:800 1.55rem "Space Grotesk";letter-spacing:-.05em}
-.executive-report{white-space:pre-wrap;margin-top:16px;padding:16px;border-radius:18px;border:1px solid rgba(242,184,107,.12);background:rgba(0,0,0,.22);color:var(--muted);line-height:1.6}
-@media(max-width:900px){.hero,.grid,.stats,.tool-grid,.kpi-form,.command,.forecast-grid,.pipeline,.workspace,.quick-tools{grid-template-columns:1fr}.topbar{align-items:center;padding:12px 0 22px}.logo img{width:112px}.top-actions{flex-direction:row;align-items:center}.pill,.ghost,.solid{min-height:42px;padding:0 14px}.form-actions .pill,.form-actions .ghost,.form-actions .solid{width:100%}.card{padding:22px;border-radius:22px}.shell{padding-left:18px;padding-right:18px}h1{font-size:3rem}.resource{align-items:flex-start;flex-direction:column}.command-title{display:grid}.score-orbit{width:138px;height:138px}.score-core{width:106px;height:106px}.brief-grid{grid-template-columns:1fr}.matrix-row{grid-template-columns:80px 1fr auto}}
-@media(max-width:1040px){.os-hero,.os-grid,.wide-grid,.os-kpis,.os-inputs{grid-template-columns:1fr 1fr}.wide-grid{grid-template-columns:1fr}.os-inputs{grid-template-columns:1fr 1fr}}
-@media(max-width:1040px){.finance-hero,.finance-layout,.finance-kpis,.finance-form,.sim-grid,.sim-output{grid-template-columns:1fr 1fr}.finance-toolmap{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:720px){.member-os{gap:12px}.os-hero,.os-grid,.wide-grid,.os-kpis,.os-inputs,.target-list,.unit-grid,.quick-tools,.finance-hero,.finance-layout,.finance-kpis,.finance-form,.sim-grid,.sim-output,.finance-toolmap{grid-template-columns:1fr}.os-copy,.next-move{padding:22px;border-radius:22px}.member-os h1{font-size:2.75rem}.member-os h2{font-size:1.85rem}.funnel-row,.cash-row{grid-template-columns:1fr;gap:8px}.sliders label{grid-template-columns:1fr;gap:8px}.quick-tool{padding:16px}.list-item{grid-template-columns:1fr}.finance-list{max-height:none}.finance-toolmap div{min-height:auto}}
+.shell{min-height:100vh;position:relative}
+.topbar{
+  width:min(1180px,calc(100% - 40px));
+  margin:0 auto;
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  position:relative;
+  z-index:2;
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:126px;height:auto;display:block}
+.top-actions{display:flex;gap:10px;align-items:center}
+.btn,.nav-btn{
+  min-height:42px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:0 16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color:var(--text);
+  background:rgba(255,255,255,.035);
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  transition:.2s ease;
+}
+.btn:hover,.nav-btn:hover{border-color:rgba(244,180,93,.42);background:rgba(255,255,255,.065)}
+.btn.primary{
+  border:0;
+  color:#060606;
+  background:linear-gradient(135deg,var(--gold),#f0a13d);
+  box-shadow:0 16px 38px rgba(244,180,93,.22);
+}
+.btn.cyan{border:0;color:#041111;background:linear-gradient(135deg,var(--cyan),#5ff5d5)}
+.card{
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  box-shadow:var(--shadow);
+}
+.login,.locked{
+  width:min(500px,calc(100% - 36px));
+  margin:70px auto 0;
+  padding:34px;
+  position:relative;
+  z-index:2;
+}
+.locked{text-align:center}
+.eyebrow{
+  display:inline-flex;
+  color:var(--gold);
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.055em}
+.login h1,.locked h1{font-size:clamp(2.5rem,8vw,4.1rem);line-height:.92;margin:15px 0 16px}
+h1 span,h2 span{color:var(--gold)}
+p{color:var(--muted);line-height:1.65}
+.field{display:grid;gap:8px}
+.field label{
+  color:var(--gold);
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.field input,.field select,.field textarea{
+  width:100%;
+  min-height:48px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:14px;
+  outline:none;
+  color:var(--text);
+  background:rgba(0,0,0,.24);
+  padding:0 14px;
+  font-weight:750;
+}
+.field textarea{min-height:104px;padding:14px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(53,215,208,.55);box-shadow:0 0 0 4px rgba(53,215,208,.08)}
+.form-stack{display:grid;gap:14px;margin-top:22px}
+.status{min-height:24px;margin-top:14px;color:var(--muted);line-height:1.45}
+.app{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:260px minmax(0,1fr);
+  position:relative;
+  z-index:1;
+}
+.sidebar{
+  position:sticky;
+  top:0;
+  height:100vh;
+  border-right:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(180deg,rgba(8,15,17,.86),rgba(6,8,9,.92));
+  backdrop-filter:blur(18px);
+  padding:22px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.side-logo{padding:6px 8px 14px}
+.side-logo img{width:128px;height:auto}
+.side-search{
+  min-height:42px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  color:var(--muted);
+  background:rgba(255,255,255,.035);
+  display:flex;
+  align-items:center;
+  padding:0 12px;
+  font-size:.83rem;
+}
+.side-nav{display:grid;gap:7px}
+.nav-btn{
+  justify-content:flex-start;
+  border-radius:14px;
+  width:100%;
+  min-height:44px;
+  padding:0 12px;
+  color:rgba(247,241,232,.72);
+  text-transform:none;
+  letter-spacing:0;
+  font-size:.9rem;
+  font-weight:800;
+}
+.nav-btn .dot{
+  width:10px;
+  height:10px;
+  border-radius:4px;
+  background:rgba(255,255,255,.18);
+}
+.nav-btn.active{
+  color:#041111;
+  background:linear-gradient(135deg,var(--cyan),#74ffe4);
+  border-color:transparent;
+}
+.nav-btn.active .dot{background:#041111}
+.side-user{
+  margin-top:auto;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:20px;
+  padding:14px;
+  background:rgba(255,255,255,.035);
+}
+.side-user small{display:block;color:var(--muted);font-size:.76rem;margin-top:4px;word-break:break-word}
+.main{padding:24px 28px 52px;min-width:0}
+.workspace-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:18px;
+}
+.workspace-top h1{
+  font-size:clamp(2rem,4vw,3.8rem);
+  line-height:.95;
+}
+.workspace-top p{margin-top:8px;max-width:660px}
+.period{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:16px;
+  background:rgba(255,255,255,.035);
+  padding:10px 12px;
+}
+.period span{font-size:.72rem;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+.period select{
+  border:0;
+  outline:none;
+  color:var(--text);
+  background:transparent;
+  font-weight:900;
+}
+.app-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.page{display:none}
+.page.active{display:block;animation:softIn .45s ease both}
+@keyframes softIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.overview-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(330px,.65fr);
+  gap:16px;
+}
+.hero-panel{
+  min-height:316px;
+  padding:26px;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 82% 10%,rgba(244,180,93,.18),transparent 34%),
+    linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.022));
+  overflow:hidden;
+  position:relative;
+}
+.hero-panel::after{
+  content:"";
+  position:absolute;
+  width:230px;
+  height:230px;
+  right:-70px;
+  bottom:-80px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(53,215,208,.18),transparent 66%);
+}
+.hero-panel h2{font-size:clamp(2.4rem,5vw,5rem);line-height:.91;margin:16px 0 18px;max-width:780px}
+.hero-panel p{max-width:680px}
+.decision-card{
+  min-height:316px;
+  padding:24px;
+  border-radius:28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background:
+    radial-gradient(circle at 10% 5%,rgba(53,215,208,.12),transparent 34%),
+    linear-gradient(180deg,rgba(255,255,255,.068),rgba(255,255,255,.022));
+}
+.decision-card h3{font-size:2rem;line-height:1;margin-top:12px}
+.signal{
+  display:grid;
+  grid-template-columns:74px 1fr;
+  gap:14px;
+  align-items:center;
+  margin-top:18px;
+}
+.signal-ring{
+  width:74px;
+  aspect-ratio:1;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:conic-gradient(var(--cyan) var(--score,66%),rgba(255,255,255,.08) 0);
+}
+.signal-ring strong{
+  width:54px;
+  aspect-ratio:1;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--cyan);
+  background:#071010;
+  font-family:"Space Grotesk";
+  font-size:1.15rem;
+}
+.kpi-strip{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:16px;
+}
+.kpi{
+  min-height:134px;
+  padding:18px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.09);
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+}
+.kpi small,.metric small,.tool-card small,.data-card small,.table-card small{
+  display:block;
+  color:var(--muted);
+  font-size:.7rem;
+  font-weight:850;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.kpi strong{
+  display:block;
+  margin-top:11px;
+  font-family:"Space Grotesk";
+  font-size:clamp(1.7rem,3vw,2.25rem);
+  line-height:1;
+  letter-spacing:-.06em;
+}
+.kpi em{display:block;margin-top:10px;color:var(--cyan);font-size:.82rem;font-style:normal;font-weight:800}
+.content-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);
+  gap:16px;
+  margin-top:16px;
+}
+.panel{
+  padding:22px;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,.09);
+  background:linear-gradient(180deg,rgba(255,255,255,.052),rgba(255,255,255,.018));
+}
+.panel-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:14px}
+.panel h2{font-size:1.7rem;line-height:1}
+.chart-frame{
+  position:relative;
+  width:100%;
+  height:292px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(255,255,255,.02));
+  overflow:hidden;
+}
+.chart-frame.compact{height:230px}
+.chart-frame canvas{position:absolute;inset:0;width:100%;height:100%}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.input-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.metric,.data-card{
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:18px;
+  padding:16px;
+  background:rgba(255,255,255,.03);
+}
+.metric strong,.data-card strong{
+  display:block;
+  margin-top:7px;
+  font-family:"Space Grotesk";
+  font-size:1.65rem;
+  letter-spacing:-.055em;
+}
+.data-card.accent{background:linear-gradient(135deg,rgba(53,215,208,.14),rgba(255,255,255,.025));border-color:rgba(53,215,208,.24)}
+.task-list,.entity-list,.tool-list{display:grid;gap:10px}
+.task{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:12px;
+  align-items:flex-start;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  background:rgba(255,255,255,.03);
+  padding:13px;
+}
+.task input{margin-top:4px;accent-color:var(--cyan)}
+.task strong{display:block}
+.task span{display:block;margin-top:4px;color:var(--muted);font-size:.88rem;line-height:1.45}
+.table-card{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+  align-items:center;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:17px;
+  padding:13px 14px;
+  background:rgba(255,255,255,.03);
+}
+.table-card strong{display:block;margin-top:5px}
+.table-card p{font-size:.88rem;line-height:1.45;margin-top:4px}
+.mini-btn{
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:999px;
+  color:var(--text);
+  background:rgba(255,255,255,.045);
+  padding:9px 12px;
+  font-size:.66rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.mini-btn.red{color:var(--red);border-color:rgba(255,101,114,.25)}
+.badge{
+  display:inline-flex;
+  min-height:26px;
+  align-items:center;
+  border-radius:999px;
+  padding:0 10px;
+  color:#041111;
+  background:var(--cyan);
+  font-size:.65rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.badge.gold{background:var(--gold);color:#080706}
+.badge.green{background:var(--green);color:#041111}
+.badge.soft{background:rgba(255,255,255,.08);color:var(--muted)}
+.stack{display:grid;gap:12px}
+.section-space{margin-top:16px}
+.briefing{
+  white-space:pre-wrap;
+  min-height:128px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:18px;
+  padding:16px;
+  color:rgba(247,241,232,.8);
+  background:rgba(0,0,0,.2);
+  line-height:1.55;
+}
+.mobile-nav{display:none}
+.material-link{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  padding:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.052),rgba(255,255,255,.018));
+}
+.material-link strong{display:block;font-size:1rem;margin:8px 0 6px}
+.material-link p{font-size:.9rem}
+.split-title{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:14px}
+.negative{color:var(--red)!important}
+.positive{color:var(--green)!important}
+@media(max-width:1180px){
+  .app{grid-template-columns:220px minmax(0,1fr)}
+  .overview-grid,.content-grid{grid-template-columns:1fr}
+  .kpi-strip,.input-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:860px){
+  .topbar{width:calc(100% - 28px);min-height:64px}
+  .logo img{width:108px}
+  .top-actions .btn{min-height:38px;padding:0 12px;font-size:.66rem}
+  .app{display:block}
+  .sidebar{display:none}
+  .main{padding:18px 14px 90px}
+  .workspace-top{align-items:flex-start;flex-direction:column}
+  .app-actions{width:100%;justify-content:space-between}
+  .app-actions .btn{flex:1;min-height:38px}
+  .period{width:100%;justify-content:space-between}
+  .hero-panel,.decision-card,.panel{border-radius:22px;padding:18px}
+  .hero-panel{min-height:auto}
+  .hero-panel h2{font-size:2.8rem}
+  .kpi-strip,.input-grid,.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .chart-frame{height:240px}
+  .chart-frame.compact{height:210px}
+  .panel-head,.split-title{align-items:flex-start;flex-direction:column}
+  .mobile-nav{
+    position:fixed;
+    left:12px;
+    right:12px;
+    bottom:12px;
+    z-index:20;
+    height:58px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:6px;
+    padding:7px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    background:rgba(6,10,11,.86);
+    backdrop-filter:blur(18px);
+    box-shadow:0 20px 60px rgba(0,0,0,.42);
+  }
+  .mobile-nav button{
+    border:0;
+    border-radius:14px;
+    color:rgba(247,241,232,.68);
+    background:transparent;
+    font-size:.62rem;
+    font-weight:900;
+    letter-spacing:.02em;
+  }
+  .mobile-nav button.active{color:#041111;background:var(--cyan)}
+  .login,.locked{margin-top:32px;padding:24px;border-radius:22px}
+}
 </style>
 </head>
 <body>
 <div class="shell">
-<header class="topbar">
-<a class="logo" href="index.html"><img src="/vanta-black-assets/vanta-logo-dark.png" alt="Vanta Black"/></a>
-<div class="top-actions">
-<a class="pill" href="index.html">Site</a>
-<button class="ghost hidden" id="logoutBtn" type="button">Sair</button>
-</div>
+<header class="topbar" id="publicTopbar">
+  <a class="logo" href="index.html"><img src="vanta-black-assets/vanta-logo-dark.png" alt="Vanta Black"/></a>
+  <div class="top-actions">
+    <a class="btn" href="index.html">Site</a>
+    <button class="btn hidden" id="logoutBtn" type="button">Sair</button>
+  </div>
 </header>
 
 <section class="login card" id="loginView">
-<span class="eyebrow">Area exclusiva</span>
-<h1>Entre na sua area premium.</h1>
-<p>Acesse dashboards, materiais, controles e recursos liberados para clientes Vanta.</p>
-<form id="loginForm">
-<div class="field"><label for="email">E-mail</label><input id="email" type="email" autocomplete="email" required/></div>
-<div class="field"><label for="password">Senha</label><input id="password" type="password" autocomplete="current-password" required/></div>
-<div class="form-actions">
-<button class="solid" type="submit">Entrar</button>
-<button class="ghost" id="magicBtn" type="button">Receber link por e-mail</button>
-<button class="ghost" id="resetBtn" type="button">Criar ou trocar senha</button>
-</div>
-<div class="status" id="loginStatus"></div>
-</form>
+  <span class="eyebrow">Area exclusiva</span>
+  <h1>Entre na sua area premium.</h1>
+  <p>Acesse dashboards, simuladores, materiais e controles liberados para clientes Vanta.</p>
+  <form class="form-stack" id="loginForm">
+    <div class="field"><label for="email">E-mail</label><input id="email" type="email" autocomplete="email" required/></div>
+    <div class="field"><label for="password">Senha</label><input id="password" type="password" autocomplete="current-password" required/></div>
+    <button class="btn primary" type="submit">Entrar</button>
+    <button class="btn" id="magicBtn" type="button">Receber link por e-mail</button>
+    <button class="btn" id="resetBtn" type="button">Criar ou trocar senha</button>
+    <div class="status" id="loginStatus"></div>
+  </form>
 </section>
 
 <section class="login card hidden" id="passwordSetupView">
-<span class="eyebrow">Primeiro acesso</span>
-<h1>Crie sua senha de acesso.</h1>
-<p>Escolha uma senha segura para entrar na area premium da Vanta sempre que precisar.</p>
-<form id="passwordSetupForm">
-<div class="field"><label for="newPassword">Nova senha</label><input id="newPassword" type="password" autocomplete="new-password" minlength="8" required/></div>
-<div class="field"><label for="confirmPassword">Confirmar senha</label><input id="confirmPassword" type="password" autocomplete="new-password" minlength="8" required/></div>
-<div class="form-actions">
-<button class="solid" type="submit">Salvar senha e entrar</button>
-</div>
-<div class="status" id="passwordSetupStatus"></div>
-</form>
+  <span class="eyebrow">Primeiro acesso</span>
+  <h1>Crie sua senha.</h1>
+  <p>Escolha uma senha segura para entrar no Business OS da Vanta sempre que precisar.</p>
+  <form class="form-stack" id="passwordSetupForm">
+    <div class="field"><label for="newPassword">Nova senha</label><input id="newPassword" type="password" autocomplete="new-password" minlength="8" required/></div>
+    <div class="field"><label for="confirmPassword">Confirmar senha</label><input id="confirmPassword" type="password" autocomplete="new-password" minlength="8" required/></div>
+    <button class="btn primary" type="submit">Salvar senha e entrar</button>
+    <div class="status" id="passwordSetupStatus"></div>
+  </form>
 </section>
 
 <section class="locked card hidden" id="lockedView">
-<span class="eyebrow">Acesso pendente</span>
-<h1>Acesso ainda nao liberado.</h1>
-<p>Seu login existe, mas seu acesso premium nao esta ativo. Fale com a Vanta para liberar sua conta.</p>
+  <span class="eyebrow">Acesso pendente</span>
+  <h1>Acesso ainda nao liberado.</h1>
+  <p>Seu login existe, mas sua area premium ainda nao esta ativa. Fale com a Vanta para liberar a conta.</p>
 </section>
 
-<main class="dashboard member-os hidden" id="dashboardView">
-<section class="os-hero">
-<div class="os-copy">
-<span class="eyebrow" id="memberPlan">Vanta Premium</span>
-<h1>Central do empresario.</h1>
-<p id="memberIntro">Um painel simples para acompanhar aquisicao, caixa, vendas e as proximas decisoes do seu crescimento.</p>
-</div>
-<div class="next-move">
-<span class="eyebrow">Proxima melhor acao</span>
-<strong id="nextMoveTitle">Preencher os numeros da semana</strong>
-<p id="nextMoveText">Com leads, reunioes, propostas e vendas, o painel calcula gargalo, meta e prioridade.</p>
-</div>
-</section>
+<main class="app hidden" id="dashboardView">
+  <aside class="sidebar">
+    <a class="side-logo" href="index.html"><img src="vanta-black-assets/vanta-logo-dark.png" alt="Vanta Black"/></a>
+    <div class="side-search">Business OS privado</div>
+    <nav class="side-nav" aria-label="Navegacao da area de membros">
+      <button class="nav-btn active" data-page-target="overview" type="button"><span class="dot"></span>Visao geral</button>
+      <button class="nav-btn" data-page-target="finance" type="button"><span class="dot"></span>Financeiro</button>
+      <button class="nav-btn" data-page-target="traffic" type="button"><span class="dot"></span>Trafego</button>
+      <button class="nav-btn" data-page-target="crm" type="button"><span class="dot"></span>CRM</button>
+      <button class="nav-btn" data-page-target="materials" type="button"><span class="dot"></span>Materiais</button>
+    </nav>
+    <div class="side-user">
+      <strong id="sidebarName">Cliente Vanta</strong>
+      <small id="sidebarEmail">preview@vantablack.com</small>
+      <small id="sidebarPlan">Vanta Premium</small>
+    </div>
+  </aside>
 
-<section class="os-kpis">
-<div class="os-kpi"><small>Receita estimada</small><strong id="estimatedRevenue">R$ 0</strong><span id="revenueHint">Baseada nas vendas da semana</span></div>
-<div class="os-kpi"><small>Meta do mes</small><strong id="targetRevenueLabel">R$ 0</strong><span id="targetGap">Defina sua meta</span></div>
-<div class="os-kpi"><small>Custo por lead</small><strong id="cplLabel">R$ 0</strong><span id="budgetHint">Informe verba e leads</span></div>
-<div class="os-kpi"><small>Conversao final</small><strong id="closeRateLabel">0%</strong><span id="closeHint">Vendas / leads</span></div>
-</section>
+  <section class="main">
+    <div class="workspace-top">
+      <div>
+        <span class="eyebrow">Vanta Intelligence</span>
+        <h1 id="workspaceTitle">Dashboard empresarial.</h1>
+        <p id="workspaceSubtitle">Controle caixa, aquisicao, funil e proximas decisoes em um painel simples.</p>
+      </div>
+      <label class="period">
+        <span>Periodo</span>
+        <select id="periodSelect" data-field="period">
+          <option>Ultimos 7 dias</option>
+          <option selected>Mes atual</option>
+          <option>Ultimos 30 dias</option>
+          <option>Trimestre</option>
+        </select>
+      </label>
+      <div class="app-actions">
+        <a class="btn" href="index.html">Site</a>
+        <button class="btn" id="appLogoutBtn" type="button">Sair</button>
+      </div>
+    </div>
 
-<section class="os-grid">
-<div class="card os-control">
-<span class="eyebrow">Painel de controle</span>
-<h2>Dados que importam</h2>
-<p>Atualize uma vez por semana. O painel transforma esses numeros em metas praticas e plano de acao.</p>
-<div class="os-inputs">
-<div class="field"><label>Meta mensal R$</label><input id="targetRevenue" type="number" min="0" placeholder="80000"/></div>
-<div class="field"><label>Ticket medio R$</label><input id="avgTicket" type="number" min="0" placeholder="8000"/></div>
-<div class="field"><label>Verba de trafego R$</label><input id="adBudget" type="number" min="0" placeholder="4000"/></div>
-<div class="field"><label>Leads na semana</label><input id="leadsWeek" type="number" min="0" value="0"/></div>
-<div class="field"><label>Reunioes feitas</label><input id="meetingsWeek" type="number" min="0" value="0"/></div>
-<div class="field"><label>Propostas enviadas</label><input id="proposalsWeek" type="number" min="0" value="0"/></div>
-<div class="field"><label>Vendas fechadas</label><input id="salesWeek" type="number" min="0" value="0"/></div>
-<div class="field"><label>Oportunidades abertas</label><input id="openDeals" type="number" min="0" value="0"/></div>
-</div>
-</div>
+    <section class="page active" data-page="overview">
+      <div class="overview-grid">
+        <div class="hero-panel card">
+          <span class="eyebrow">Painel de decisao</span>
+          <h2>Menos ruido. Mais decisao.</h2>
+          <p id="overviewIntro">O painel transforma os numeros principais em uma leitura objetiva para a semana: caixa, leads, vendas e proxima acao.</p>
+          <div class="kpi-strip">
+            <div class="kpi"><small>Receita</small><strong id="kpiRevenue">R$ 0</strong><em id="revenueHint">Atualize os dados</em></div>
+            <div class="kpi"><small>Lucro estimado</small><strong id="kpiProfit">R$ 0</strong><em id="profitHint">Margem 0%</em></div>
+            <div class="kpi"><small>Leads</small><strong id="kpiLeads">0</strong><em id="leadHint">CPL calculado</em></div>
+            <div class="kpi"><small>Caixa livre</small><strong id="kpiCash">R$ 0</strong><em id="cashHint">Reserva acompanhada</em></div>
+          </div>
+        </div>
 
-<div class="card os-plan">
-<span class="eyebrow">Metas automaticas</span>
-<h2>Numero para perseguir</h2>
-<div class="target-list">
-<div><small>Vendas no mes</small><strong id="neededSales">0</strong></div>
-<div><small>Leads no mes</small><strong id="neededLeads">0</strong></div>
-<div><small>Leads por dia</small><strong id="dailyLeads">0</strong></div>
-<div><small>Reunioes alvo</small><strong id="neededMeetings">0</strong></div>
-</div>
-<div class="os-note" id="goalNarrative">Preencha meta, ticket e conversao real para ver o plano.</div>
-</div>
-</section>
+        <div class="decision-card card">
+          <div>
+            <span class="eyebrow">Proxima melhor acao</span>
+            <h3 id="nextActionTitle">Preencher os numeros do mes</h3>
+            <p id="nextActionText">Com os dados principais, a Vanta identifica o gargalo mais importante.</p>
+          </div>
+          <div class="signal">
+            <div class="signal-ring" id="healthRing"><strong id="healthScore">0</strong></div>
+            <div>
+              <span class="badge" id="healthBadge">Analisando</span>
+              <p id="healthText">Score operacional calculado por caixa, margem e aquisicao.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<section class="os-grid">
-<div class="card">
-<span class="eyebrow">Funil comercial</span>
-<h2>Onde esta vazando</h2>
-<div class="funnel">
-<div class="funnel-row"><span>Leads</span><strong id="funnelLeads">0</strong><div class="funnel-bar"><i id="leadBar"></i></div></div>
-<div class="funnel-row"><span>Reunioes</span><strong id="funnelMeetings">0</strong><div class="funnel-bar"><i id="meetingBar"></i></div></div>
-<div class="funnel-row"><span>Propostas</span><strong id="funnelProposals">0</strong><div class="funnel-bar"><i id="proposalBar"></i></div></div>
-<div class="funnel-row"><span>Vendas</span><strong id="funnelSales">0</strong><div class="funnel-bar"><i id="saleBar"></i></div></div>
-</div>
-<div class="os-note" id="funnelDiagnosis">Preencha o funil para descobrir o gargalo principal.</div>
-</div>
+      <div class="content-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Visao executiva</span>
+              <h2>Receita x gastos</h2>
+            </div>
+            <span class="badge soft" id="financeStatus">Atual</span>
+          </div>
+          <div class="chart-frame"><canvas id="overviewChart"></canvas></div>
+        </section>
 
-<div class="card">
-<span class="eyebrow">Caixa e midia</span>
-<h2>Unit economics</h2>
-<div class="unit-grid">
-<div><small>CPL</small><strong id="unitCpl">R$ 0</strong></div>
-<div><small>CPA</small><strong id="unitCpa">R$ 0</strong></div>
-<div><small>ROAS estimado</small><strong id="unitRoas">0.0x</strong></div>
-<div><small>Margem antes da entrega</small><strong id="unitMargin">R$ 0</strong></div>
-</div>
-<div class="os-note" id="unitAdvice">Quando houver verba e vendas, voce enxerga se a aquisicao esta saudavel.</div>
-</div>
-</section>
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Inputs rapidos</span>
+              <h2>Atualize o mes</h2>
+            </div>
+          </div>
+          <div class="input-grid">
+            <div class="field"><label>Receita recebida</label><input type="number" min="0" data-field="revenue"/></div>
+            <div class="field"><label>Gastos fixos</label><input type="number" min="0" data-field="fixedCosts"/></div>
+            <div class="field"><label>Leads</label><input type="number" min="0" data-field="leads"/></div>
+            <div class="field"><label>Vendas</label><input type="number" min="0" data-field="sales"/></div>
+            <div class="field"><label>Verba de anuncios</label><input type="number" min="0" data-field="adBudget"/></div>
+            <div class="field"><label>Ticket medio</label><input type="number" min="0" data-field="avgTicket"/></div>
+            <div class="field"><label>Contas a receber</label><input type="number" min="0" data-field="receivables"/></div>
+            <div class="field"><label>Reserva desejada</label><input type="number" min="0" data-field="reserveGoal"/></div>
+          </div>
+        </section>
+      </div>
 
-<section class="os-grid wide-grid">
-<div class="card">
-<span class="eyebrow">Diagnostico rapido</span>
-<h2>5 alavancas do negocio</h2>
-<p>Arraste de 1 a 5. O menor ponto vira prioridade do plano.</p>
-<div class="sliders">
-<label>Oferta <input id="leverOffer" data-lever="Oferta" type="range" min="1" max="5" value="3"/></label>
-<label>Pagina <input id="leverPage" data-lever="Pagina" type="range" min="1" max="5" value="3"/></label>
-<label>Trafego <input id="leverTraffic" data-lever="Trafego" type="range" min="1" max="5" value="3"/></label>
-<label>Atendimento <input id="leverSales" data-lever="Atendimento" type="range" min="1" max="5" value="3"/></label>
-<label>Mensuracao <input id="leverData" data-lever="Mensuracao" type="range" min="1" max="5" value="3"/></label>
-</div>
-<div class="os-note" id="leverAdvice">A prioridade aparece aqui.</div>
-</div>
+      <div class="content-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Funil comercial</span>
+              <h2>Onde a venda esta vazando</h2>
+            </div>
+          </div>
+          <div class="chart-frame compact"><canvas id="funnelChart"></canvas></div>
+          <div class="grid-3 section-space">
+            <div class="metric"><small>Reunioes</small><strong id="meetingsLabel">0</strong></div>
+            <div class="metric"><small>Propostas</small><strong id="proposalsLabel">0</strong></div>
+            <div class="metric"><small>Conversao final</small><strong id="closeRateLabel">0%</strong></div>
+          </div>
+        </section>
 
-<div class="card">
-<span class="eyebrow">Plano de 7 dias</span>
-<h2>Execucao objetiva</h2>
-<div class="action-board" id="checklist">
-<label class="action-card"><input type="checkbox" data-check="followup"/><div><small>Hoje</small><strong>Responder todos os leads abertos</strong><p>Sem lead parado sem retorno.</p></div></label>
-<label class="action-card"><input type="checkbox" data-check="proof"/><div><small>Oferta</small><strong>Adicionar uma prova forte na pagina</strong><p>Depoimento, numero, caso ou antes/depois.</p></div></label>
-<label class="action-card"><input type="checkbox" data-check="crm"/><div><small>Vendas</small><strong>Separar oportunidades quentes</strong><p>Liste quem pediu preco, prazo ou proposta.</p></div></label>
-<label class="action-card"><input type="checkbox" data-check="tracking"/><div><small>Dados</small><strong>Conferir origem de cada lead</strong><p>WhatsApp, formulario, anuncio ou indicacao.</p></div></label>
-</div>
-</div>
+        <section class="panel">
+          <div class="split-title">
+            <div>
+              <span class="eyebrow">Plano de 7 dias</span>
+              <h2>3 acoes que importam</h2>
+            </div>
+            <button class="mini-btn" id="resetTasksBtn" type="button">Recalcular</button>
+          </div>
+          <div class="task-list" id="taskList"></div>
+        </section>
+      </div>
+    </section>
 
-<div class="card">
-<span class="eyebrow">CRM rapido</span>
-<h2>Proximas oportunidades</h2>
-<div class="field"><label>Clientes para acionar</label><textarea id="hotList" placeholder="Ex: Maria - pediu proposta, chamar sexta."></textarea></div>
-<div class="field"><label>Observacoes da semana</label><textarea id="weekNotes" placeholder="O que funcionou, objeções, ideias e gargalos."></textarea></div>
-</div>
-</section>
+    <section class="page" data-page="finance">
+      <div class="content-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Controle financeiro</span>
+              <h2>Caixa, lucro e ponto de equilibrio</h2>
+            </div>
+            <button class="btn cyan" id="copyBriefBtn" type="button">Copiar briefing</button>
+          </div>
+          <div class="grid-4">
+            <div class="data-card accent"><small>Lucro</small><strong id="financeProfit">R$ 0</strong></div>
+            <div class="data-card"><small>Margem</small><strong id="financeMargin">0%</strong></div>
+            <div class="data-card"><small>Ponto de equilibrio</small><strong id="breakEvenLabel">R$ 0</strong></div>
+            <div class="data-card"><small>Caixa livre</small><strong id="freeCashLabel">R$ 0</strong></div>
+          </div>
+          <div class="chart-frame section-space"><canvas id="financeChart"></canvas></div>
+        </section>
 
-<section class="finance-suite">
-<div class="finance-hero">
-<div class="card">
-<span class="eyebrow">Dashboard financeiro empresarial</span>
-<h2>Controle de caixa, equipe e lucro</h2>
-<p>Use como uma central simples de gestao: entradas, gastos, salarios, metas, alertas e decisoes antes de contratar ou investir mais.</p>
-<div class="finance-kpis">
-<div class="finance-kpi"><small>Faturamento</small><strong id="finRevenueLabel">R$ 0</strong></div>
-<div class="finance-kpi"><small>Custos totais</small><strong id="finCostsLabel">R$ 0</strong></div>
-<div class="finance-kpi"><small>Lucro estimado</small><strong id="finProfitLabel">R$ 0</strong></div>
-<div class="finance-kpi"><small>Margem de lucro</small><strong id="finMarginLabel">0%</strong></div>
-</div>
-</div>
-<div class="card">
-<span class="eyebrow">Leitura CFO (diretor financeiro)</span>
-<h2>Resumo executivo</h2>
-<p id="financialSummary">Preencha os dados financeiros para receber uma leitura automatica.</p>
-<button class="solid" id="copyReportBtn" type="button">Copiar relatorio</button>
-</div>
-</div>
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Dados do mes</span>
+              <h2>Base financeira</h2>
+            </div>
+          </div>
+          <div class="stack">
+            <div class="field"><label>Receita recebida</label><input type="number" min="0" data-field="revenue"/></div>
+            <div class="field"><label>Contas a receber</label><input type="number" min="0" data-field="receivables"/></div>
+            <div class="field"><label>Gastos fixos</label><input type="number" min="0" data-field="fixedCosts"/></div>
+            <div class="field"><label>Gastos variaveis</label><input type="number" min="0" data-field="variableCosts"/></div>
+            <div class="field"><label>Retirada dos socios</label><input type="number" min="0" data-field="ownerPay"/></div>
+            <div class="field"><label>Impostos %</label><input type="number" min="0" max="100" data-field="taxRate"/></div>
+          </div>
+        </section>
+      </div>
 
-<div class="card">
-<span class="eyebrow">10 ferramentas inclusas</span>
-<h2>Uma central financeira que parece consultoria</h2>
-<div class="finance-toolmap">
-<div><small>01</small><strong>Fluxo de caixa</strong><p>Entradas, saidas, saldo previsto e leitura do mes.</p></div>
-<div><small>02</small><strong>Controle de gastos</strong><p>Despesas por categoria, recorrencia e status de pagamento.</p></div>
-<div><small>03</small><strong>Funcionarios e salarios</strong><p>Cadastro de equipe, cargos, tipo de contrato e folha total.</p></div>
-<div><small>04</small><strong>Impostos e pro-labore</strong><p>Percentual de impostos e retirada do dono dentro da conta.</p></div>
-<div><small>05</small><strong>Margem de lucro</strong><p>Lucro estimado e margem em porcentagem para decisao rapida.</p></div>
-<div><small>06</small><strong>Reserva de caixa</strong><p>Compara saldo previsto com a reserva minima desejada.</p></div>
-<div><small>07</small><strong>Ponto de equilibrio</strong><p>Mostra quanto a empresa precisa faturar para cobrir custos.</p></div>
-<div><small>08</small><strong>Simulador de decisao</strong><p>Testa contratar, aumentar trafego ou assumir novo custo.</p></div>
-<div><small>09</small><strong>Mini Meta Ads simulador</strong><p>Projeta visitas, leads, CPL (custo por lead) e vendas.</p></div>
-<div><small>10</small><strong>Relatorio executivo</strong><p>Gera um resumo copiavel para reuniao, socio ou gestor.</p></div>
-</div>
-</div>
+      <div class="content-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Funcionarios</span>
+              <h2>Folha salarial</h2>
+            </div>
+          </div>
+          <div class="input-grid">
+            <div class="field"><label>Nome</label><input id="employeeName" type="text" placeholder="Ex: Ana"/></div>
+            <div class="field"><label>Cargo</label><input id="employeeRole" type="text" placeholder="Ex: Vendas"/></div>
+            <div class="field"><label>Salario</label><input id="employeeSalary" type="number" min="0" placeholder="3500"/></div>
+            <div class="field"><label>Status</label><select id="employeeStatus"><option>Ativo</option><option>Temporario</option><option>Pausado</option></select></div>
+          </div>
+          <button class="btn primary section-space" id="addEmployeeBtn" type="button">Cadastrar funcionario</button>
+          <div class="entity-list section-space" id="employeeList"></div>
+        </section>
 
-<div class="finance-layout">
-<div class="card">
-<span class="eyebrow">Fluxo de caixa</span>
-<h2>Entradas e saidas do mes</h2>
-<div class="finance-form">
-<div class="field"><label>Faturamento recebido R$</label><input id="finRevenue" type="number" min="0" placeholder="85000"/></div>
-<div class="field"><label>Entradas previstas R$</label><input id="finReceivables" type="number" min="0" placeholder="15000"/></div>
-<div class="field"><label>Impostos %</label><input id="finTaxRate" type="number" min="0" max="100" placeholder="12"/></div>
-<div class="field"><label>Pro-labore R$</label><input id="finOwnerPay" type="number" min="0" placeholder="8000"/></div>
-<div class="field"><label>Meta de lucro %</label><input id="finProfitGoal" type="number" min="0" max="100" placeholder="25"/></div>
-<div class="field"><label>Reserva desejada R$</label><input id="finReserveGoal" type="number" min="0" placeholder="20000"/></div>
-</div>
-<div class="cashflow">
-<div class="cash-row"><span>Entradas</span><div class="cash-track"><i id="cashInBar"></i></div><strong id="cashInLabel">R$ 0</strong></div>
-<div class="cash-row"><span>Saidas</span><div class="cash-track"><i id="cashOutBar"></i></div><strong id="cashOutLabel">R$ 0</strong></div>
-<div class="cash-row"><span>Saldo previsto</span><div class="cash-track"><i id="cashBalanceBar"></i></div><strong id="cashBalanceLabel">R$ 0</strong></div>
-</div>
-</div>
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Gastos</span>
+              <h2>Despesas controladas</h2>
+            </div>
+          </div>
+          <div class="input-grid">
+            <div class="field"><label>Descricao</label><input id="expenseName" type="text" placeholder="Ex: Software"/></div>
+            <div class="field"><label>Categoria</label><select id="expenseCategory"><option>Marketing</option><option>Trafego pago</option><option>Software</option><option>Operacao</option><option>Impostos</option><option>Outros</option></select></div>
+            <div class="field"><label>Valor</label><input id="expenseValue" type="number" min="0" placeholder="497"/></div>
+            <div class="field"><label>Status</label><select id="expenseStatus"><option>Pago</option><option>Pendente</option><option>Recorrente</option></select></div>
+          </div>
+          <button class="btn primary section-space" id="addExpenseBtn" type="button">Cadastrar gasto</button>
+          <div class="entity-list section-space" id="expenseList"></div>
+        </section>
+      </div>
 
-<div class="card">
-<span class="eyebrow">Indicadores inteligentes</span>
-<h2>Saude financeira</h2>
-<div class="target-list">
-<div><small>Folha / faturamento</small><strong id="payrollRatioLabel">0%</strong></div>
-<div><small>Marketing / faturamento</small><strong id="marketingRatioLabel">0%</strong></div>
-<div><small>Ponto de equilibrio</small><strong id="breakEvenLabel">R$ 0</strong></div>
-<div><small>Reserva de caixa</small><strong id="reserveStatusLabel">R$ 0</strong></div>
-</div>
-<div class="alert-list" id="premiumAlerts"></div>
-</div>
-</div>
+      <section class="panel section-space">
+        <div class="panel-head">
+          <div>
+            <span class="eyebrow">Briefing executivo</span>
+            <h2>Resumo para decisao</h2>
+          </div>
+        </div>
+        <div class="briefing" id="executiveBrief"></div>
+      </section>
+    </section>
 
-<div class="finance-layout">
-<div class="card">
-<span class="eyebrow">Cadastro de funcionarios</span>
-<h2>Equipe e salarios</h2>
-<div class="finance-form">
-<div class="field"><label>Nome</label><input id="employeeName" type="text" placeholder="Ex: Ana Souza"/></div>
-<div class="field"><label>Cargo</label><input id="employeeRole" type="text" placeholder="Vendas"/></div>
-<div class="field"><label>Salario R$</label><input id="employeeSalary" type="number" min="0" placeholder="3500"/></div>
-<div class="field"><label>Tipo</label><select id="employeeType"><option>CLT</option><option>PJ</option><option>Freelancer</option><option>Comissao</option></select></div>
-<div class="field"><label>Status</label><select id="employeeStatus"><option>Ativo</option><option>Inativo</option></select></div>
-<div class="field"><label>&nbsp;</label><button class="solid" id="addEmployeeBtn" type="button">Adicionar</button></div>
-</div>
-<div class="finance-list" id="employeeList"></div>
-</div>
+    <section class="page" data-page="traffic">
+      <div class="content-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Mini Meta Ads simulador</span>
+              <h2>Verba, visitas, leads e vendas</h2>
+            </div>
+            <span class="badge gold">Estimativa</span>
+          </div>
+          <div class="chart-frame"><canvas id="trafficChart"></canvas></div>
+          <div class="grid-4 section-space">
+            <div class="metric"><small>Visitas</small><strong id="trafficVisits">0</strong></div>
+            <div class="metric"><small>Leads</small><strong id="trafficLeads">0</strong></div>
+            <div class="metric"><small>CPL (custo por lead)</small><strong id="trafficCpl">R$ 0</strong></div>
+            <div class="metric"><small>ROAS (retorno sobre anuncios)</small><strong id="trafficRoas">0.0x</strong></div>
+          </div>
+        </section>
 
-<div class="card">
-<span class="eyebrow">Controle de gastos</span>
-<h2>Despesas e vencimentos</h2>
-<div class="finance-form">
-<div class="field"><label>Gasto</label><input id="expenseName" type="text" placeholder="Ex: Software CRM"/></div>
-<div class="field"><label>Categoria</label><select id="expenseCategory"><option>Marketing</option><option>Equipe</option><option>Software</option><option>Impostos</option><option>Aluguel</option><option>Fornecedores</option><option>Trafego pago</option><option>Outros</option></select></div>
-<div class="field"><label>Valor R$</label><input id="expenseValue" type="number" min="0" placeholder="497"/></div>
-<div class="field"><label>Tipo</label><select id="expenseRecurrence"><option>Recorrente</option><option>Pontual</option></select></div>
-<div class="field"><label>Status</label><select id="expenseStatus"><option>Pendente</option><option>Pago</option></select></div>
-<div class="field"><label>&nbsp;</label><button class="solid" id="addExpenseBtn" type="button">Adicionar</button></div>
-</div>
-<div class="finance-list" id="expenseList"></div>
-</div>
-</div>
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Cenario de trafego</span>
+              <h2>Parametros</h2>
+            </div>
+          </div>
+          <div class="stack">
+            <div class="field"><label>Verba de anuncios</label><input type="number" min="0" data-field="adBudget"/></div>
+            <div class="field"><label>CPC (custo por clique)</label><input type="number" min="0" step="0.01" data-field="trafficCpc"/></div>
+            <div class="field"><label>Conversao da pagina %</label><input type="number" min="0" max="100" step="0.1" data-field="landingRate"/></div>
+            <div class="field"><label>Lead vira venda %</label><input type="number" min="0" max="100" step="0.1" data-field="saleRate"/></div>
+            <div class="field"><label>Ticket medio</label><input type="number" min="0" data-field="avgTicket"/></div>
+          </div>
+          <div class="briefing section-space" id="trafficAdvice"></div>
+        </section>
+      </div>
+    </section>
 
-<div class="finance-layout">
-<div class="card">
-<span class="eyebrow">Simulador de decisao</span>
-<h2>Posso contratar ou investir mais?</h2>
-<div class="finance-form">
-<div class="field"><label>Novo salario/custo R$</label><input id="hireCost" type="number" min="0" placeholder="4500"/></div>
-<div class="field"><label>Aumento em trafego R$</label><input id="extraAds" type="number" min="0" placeholder="2000"/></div>
-<div class="field"><label>Receita extra esperada R$</label><input id="extraRevenue" type="number" min="0" placeholder="12000"/></div>
-</div>
-<div class="os-note" id="decisionAdvice">Preencha os cenarios para validar a decisao antes de comprometer o caixa.</div>
-</div>
+    <section class="page" data-page="crm">
+      <div class="content-grid">
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">CRM simples</span>
+              <h2>Oportunidades abertas</h2>
+            </div>
+          </div>
+          <div class="input-grid">
+            <div class="field"><label>Cliente</label><input id="dealName" type="text" placeholder="Nome do lead"/></div>
+            <div class="field"><label>Etapa</label><select id="dealStage"><option>Lead novo</option><option>Reuniao marcada</option><option>Proposta enviada</option><option>Follow-up</option></select></div>
+            <div class="field"><label>Valor estimado</label><input id="dealValue" type="number" min="0" placeholder="8000"/></div>
+            <div class="field"><label>Proxima acao</label><input id="dealNext" type="text" placeholder="Enviar proposta"/></div>
+          </div>
+          <button class="btn primary section-space" id="addDealBtn" type="button">Cadastrar oportunidade</button>
+          <div class="entity-list section-space" id="dealList"></div>
+        </section>
 
-<div class="card">
-<span class="eyebrow">Metas financeiras</span>
-<h2>Lucro, gastos e seguranca</h2>
-<div class="target-list">
-<div><small>Meta de lucro</small><strong id="profitGoalLabel">0%</strong></div>
-<div><small>Reducao recomendada</small><strong id="cutSuggestionLabel">R$ 0</strong></div>
-<div><small>Faturamento minimo</small><strong id="minimumRevenueLabel">R$ 0</strong></div>
-<div><small>Espaco para investir</small><strong id="investmentRoomLabel">R$ 0</strong></div>
-</div>
-</div>
-</div>
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Pipeline</span>
+              <h2>Controle de vendas</h2>
+            </div>
+          </div>
+          <div class="chart-frame compact"><canvas id="crmChart"></canvas></div>
+          <div class="grid-2 section-space">
+            <div class="data-card"><small>Valor aberto</small><strong id="openPipelineValue">R$ 0</strong></div>
+            <div class="data-card"><small>Oportunidades</small><strong id="openDealsLabel">0</strong></div>
+          </div>
+        </section>
+      </div>
+    </section>
 
-<div class="card">
-<span class="eyebrow">Mini Meta Ads simulador</span>
-<h2>Simulacao de trafego, visitas e leads</h2>
-<p>Estime resultado antes de investir. CPC significa custo por clique. CPL significa custo por lead.</p>
-<div class="sim-grid">
-<div class="field"><label>Verba R$</label><input id="trafficBudget" type="number" min="0" placeholder="3000"/></div>
-<div class="field"><label>CPC (custo por clique) R$</label><input id="trafficCpc" type="number" min="0" step="0.01" placeholder="1.80"/></div>
-<div class="field"><label>Conversao da pagina %</label><input id="trafficLandingRate" type="number" min="0" max="100" placeholder="4"/></div>
-<div class="field"><label>Lead vira venda %</label><input id="trafficSalesRate" type="number" min="0" max="100" placeholder="10"/></div>
-</div>
-<div class="sim-output">
-<div><small>Visitas estimadas</small><strong id="trafficVisitsLabel">0</strong></div>
-<div><small>Leads estimados</small><strong id="trafficLeadsLabel">0</strong></div>
-<div><small>CPL (custo por lead)</small><strong id="trafficCplLabel">R$ 0</strong></div>
-<div><small>Vendas estimadas</small><strong id="trafficSalesLabel">0</strong></div>
-</div>
-<div class="os-note" id="trafficAdvice">Preencha a verba e o CPC (custo por clique) para simular.</div>
-</div>
+    <section class="page" data-page="materials">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="eyebrow">Biblioteca Vanta</span>
+            <h2>Materiais exclusivos</h2>
+          </div>
+        </div>
+        <div class="grid-3">
+          <a class="material-link" href="checklist-vanta-black.html"><small>Checklist</small><strong>Auditoria da pagina</strong><p>Revise oferta, clareza, prova e CTA (chamada para acao).</p></a>
+          <a class="material-link" href="versao-trafego-pago.html"><small>Aquisicao</small><strong>Plano de trafego pago</strong><p>Estruture testes, criativos e mensuracao antes de escalar.</p></a>
+          <a class="material-link" href="recursos.html"><small>Recursos</small><strong>Central de apoio</strong><p>Modelos, perguntas frequentes e proximos passos.</p></a>
+          <a class="material-link" href="ofertas.html"><small>Evolucao</small><strong>Planos Vanta</strong><p>Veja como evoluir sua estrutura quando chegar a hora.</p></a>
+          <a class="material-link" href="metodo.html"><small>Metodo</small><strong>Como a Vanta pensa</strong><p>Entenda posicionamento, presenca, aquisicao e conversao.</p></a>
+          <a class="material-link" href="index.html"><small>Site</small><strong>Voltar para a landing</strong><p>Acesse a pagina principal da Vanta Black.</p></a>
+        </div>
+      </div>
+    </section>
+  </section>
 
-<div class="card">
-<span class="eyebrow">Exportacao simples</span>
-<h2>Relatorio mensal</h2>
-<div class="executive-report" id="executiveReport">Preencha os dados para gerar um relatorio executivo copiavel.</div>
-</div>
-</section>
-
-<section class="card wide">
-<span class="eyebrow">Central premium</span>
-<h2>Ferramentas e materiais</h2>
-<div class="quick-tools">
-<a class="quick-tool" href="checklist-vanta-black.html"><small>Auditoria</small><strong>Checklist da primeira dobra</strong><p>Revise clareza, autoridade e CTA.</p></a>
-<a class="quick-tool" href="versao-trafego-pago.html"><small>Aquisicao</small><strong>Plano de trafego pago</strong><p>Prepare campanha, criativos e mensuracao.</p></a>
-<a class="quick-tool" href="recursos.html"><small>Recursos</small><strong>Calculadoras e FAQ</strong><p>Use materiais para tomada de decisao.</p></a>
-<a class="quick-tool" href="ofertas.html"><small>Evolucao</small><strong>Planos Vanta</strong><p>Veja proximos niveis de estrutura digital.</p></a>
-</div>
-</section>
+  <nav class="mobile-nav" aria-label="Navegacao mobile">
+    <button class="active" data-page-target="overview" type="button">Geral</button>
+    <button data-page-target="finance" type="button">Caixa</button>
+    <button data-page-target="traffic" type="button">Ads</button>
+    <button data-page-target="crm" type="button">CRM</button>
+    <button data-page-target="materials" type="button">Links</button>
+  </nav>
 </main>
 </div>
+
 <script type="module">
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const $ = (id) => document.getElementById(id);
-const stateKey = "vanta-member-dashboard";
+const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
+const stateKey = "vanta-business-os-v3";
 let supabase;
 let authIntent = {};
-let financeState = { employees: [], expenses: [] };
+let appState = defaultState();
 
+function defaultState(){
+  return {
+    period:"Mes atual",
+    profile:{ name:"Cliente Vanta", email:"preview@vantablack.com", company:"Empresa em analise", plan:"Vanta Premium" },
+    revenue:85000,
+    totalCosts:48500,
+    fixedCosts:12000,
+    variableCosts:8500,
+    payroll:17000,
+    ownerPay:9000,
+    taxRate:12,
+    receivables:12000,
+    reserveGoal:20000,
+    leads:148,
+    meetings:43,
+    proposals:19,
+    sales:8,
+    adBudget:4500,
+    avgTicket:8000,
+    trafficCpc:1.8,
+    landingRate:4,
+    saleRate:10,
+    tasks:{},
+    employees:[
+      { name:"Ana Souza", role:"Vendas", salary:3800, status:"Ativo" },
+      { name:"Lucas Lima", role:"Operacao", salary:4200, status:"Ativo" }
+    ],
+    expenses:[
+      { name:"Meta Ads", category:"Trafego pago", value:4500, status:"Recorrente" },
+      { name:"Ferramentas", category:"Software", value:697, status:"Pago" },
+      { name:"Contabilidade", category:"Impostos", value:600, status:"Pago" }
+    ],
+    deals:[
+      { name:"Clinca Prime", stage:"Proposta enviada", value:12000, next:"Follow-up hoje" },
+      { name:"Construtora Atlas", stage:"Reuniao marcada", value:8500, next:"Preparar diagnostico" },
+      { name:"Dra. Marina", stage:"Lead novo", value:7000, next:"Responder WhatsApp" }
+    ]
+  };
+}
+
+function money(value){
+  return Number(value || 0).toLocaleString("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0});
+}
+function number(value){
+  return Number(value || 0).toLocaleString("pt-BR");
+}
+function escapeHtml(value){
+  return String(value || "").replace(/[&<>"']/g, (char)=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[char]));
+}
 function setStatus(text){ $("loginStatus").textContent = text || ""; }
 function setPasswordStatus(text){ $("passwordSetupStatus").textContent = text || ""; }
-function money(value){ return Number(value || 0).toLocaleString("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0}); }
 function memberRedirectUrl(){
   if(location.protocol === "file:") return "https://vantablack.netlify.app/membros.html";
   return `${location.origin}${location.pathname}`;
@@ -501,21 +940,19 @@ function memberRedirectUrl(){
 function getAuthIntent(){
   const search = new URLSearchParams(location.search);
   const hash = new URLSearchParams(location.hash.replace(/^#/,""));
-  return {
-    type: search.get("type") || hash.get("type") || "",
-    code: search.get("code") || "",
-    accessToken: hash.get("access_token") || ""
-  };
+  return { type: search.get("type") || hash.get("type") || "", code: search.get("code") || "", accessToken: hash.get("access_token") || "" };
 }
 function cleanAuthUrl(){
-  if(location.protocol !== "file:" && (location.search || location.hash)){
-    history.replaceState({}, document.title, location.pathname);
-  }
+  if(location.protocol !== "file:" && (location.search || location.hash)) history.replaceState({}, document.title, location.pathname);
 }
 function isPasswordSetupIntent(){
   return ["invite","recovery"].includes(String(authIntent.type || "").toLowerCase());
 }
-
+function isLocalPreview(){
+  const params = new URLSearchParams(location.search);
+  const localHost = ["localhost","127.0.0.1","::1"].includes(location.hostname);
+  return location.protocol === "file:" || (localHost && params.get("preview") === "1");
+}
 async function loadConfig(){
   const response = await fetch("/api/config");
   if(!response.ok) throw new Error("Configuracao da area de membros nao encontrada.");
@@ -524,302 +961,354 @@ async function loadConfig(){
   return config;
 }
 
-function saveLocal(){
-  const inputIds = ["targetRevenue","avgTicket","adBudget","leadsWeek","meetingsWeek","proposalsWeek","salesWeek","openDeals","leverOffer","leverPage","leverTraffic","leverSales","leverData","finRevenue","finReceivables","finTaxRate","finOwnerPay","finProfitGoal","finReserveGoal","hireCost","extraAds","extraRevenue","trafficBudget","trafficCpc","trafficLandingRate","trafficSalesRate"];
-  const textIds = ["hotList","weekNotes"];
-  const data = {
-    inputs:Object.fromEntries(inputIds.map(id=>[id,$(id).value])),
-    texts:Object.fromEntries(textIds.map(id=>[id,$(id).value])),
-    finance:financeState,
-    checks:[...document.querySelectorAll("[data-check]")].filter(i=>i.checked).map(i=>i.dataset.check)
+function saveState(){
+  localStorage.setItem(stateKey, JSON.stringify(appState));
+}
+function restoreState(){
+  const saved = JSON.parse(localStorage.getItem(stateKey) || "{}");
+  appState = { ...defaultState(), ...saved, profile:{...defaultState().profile, ...(saved.profile || {})} };
+  ["employees","expenses","deals"].forEach(key=>{ if(!Array.isArray(appState[key])) appState[key] = defaultState()[key]; });
+}
+function bindInputs(){
+  $$("[data-field]").forEach(input=>{
+    const field = input.dataset.field;
+    if(input.type === "number") input.value = appState[field] ?? 0;
+    else input.value = appState[field] ?? "";
+    input.addEventListener("input", ()=>{
+      appState[field] = input.type === "number" ? Number(input.value || 0) : input.value;
+      if(field === "totalCosts") syncCostPartsFromTotal();
+      renderAll();
+    });
+    input.addEventListener("change", ()=>{
+      appState[field] = input.type === "number" ? Number(input.value || 0) : input.value;
+      renderAll();
+    });
+  });
+}
+function syncBoundInputs(){
+  $$("[data-field]").forEach(input=>{
+    const field = input.dataset.field;
+    const value = appState[field] ?? "";
+    if(document.activeElement !== input) input.value = value;
+  });
+}
+function syncCostPartsFromTotal(){
+  const subtotal = appState.fixedCosts + appState.variableCosts + appState.payroll + appState.ownerPay + taxValue();
+  if(!subtotal && appState.totalCosts){
+    appState.fixedCosts = Math.round(appState.totalCosts * .28);
+    appState.variableCosts = Math.round(appState.totalCosts * .22);
+    appState.payroll = Math.round(appState.totalCosts * .32);
+    appState.ownerPay = Math.round(appState.totalCosts * .18);
+  }
+}
+
+function payrollValue(){
+  return appState.employees.filter(item=>item.status !== "Pausado").reduce((sum,item)=>sum + Number(item.salary || 0),0) || Number(appState.payroll || 0);
+}
+function expenseValue(){
+  return appState.expenses.reduce((sum,item)=>sum + Number(item.value || 0),0);
+}
+function taxValue(){
+  return Number(appState.revenue || 0) * (Number(appState.taxRate || 0) / 100);
+}
+function costs(){
+  const detailed = Number(appState.fixedCosts || 0) + Number(appState.variableCosts || 0) + payrollValue() + Number(appState.ownerPay || 0) + taxValue() + expenseValue();
+  return detailed || Number(appState.totalCosts || 0);
+}
+function profit(){
+  return Number(appState.revenue || 0) - costs();
+}
+function margin(){
+  return appState.revenue ? profit() / appState.revenue : 0;
+}
+function freeCash(){
+  return Number(appState.revenue || 0) + Number(appState.receivables || 0) - costs();
+}
+function trafficNumbers(){
+  const budget = Number(appState.adBudget || 0);
+  const cpc = Number(appState.trafficCpc || 0);
+  const visits = budget && cpc ? Math.floor(budget / cpc) : 0;
+  const leads = Math.floor(visits * (Number(appState.landingRate || 0) / 100));
+  const sales = Math.floor(leads * (Number(appState.saleRate || 0) / 100));
+  const revenue = sales * Number(appState.avgTicket || 0);
+  return { visits, leads, sales, revenue, cpl: leads ? budget / leads : 0, roas: budget ? revenue / budget : 0 };
+}
+function healthScore(){
+  const marginScore = Math.max(0, Math.min(35, Math.round(margin() * 100)));
+  const cashScore = freeCash() >= appState.reserveGoal ? 30 : Math.max(0, Math.round((freeCash() / Math.max(appState.reserveGoal,1)) * 30));
+  const acquisitionScore = appState.leads && appState.sales ? Math.min(25, Math.round((appState.sales / appState.leads) * 300)) : 0;
+  const pipelineScore = appState.deals.length ? 10 : 0;
+  return Math.max(0, Math.min(100, marginScore + cashScore + acquisitionScore + pipelineScore));
+}
+function nextAction(){
+  const close = appState.leads ? appState.sales / appState.leads : 0;
+  if(freeCash() < 0) return ["Proteger caixa agora", "As saidas superam as entradas. Revise gastos pendentes antes de assumir novo compromisso."];
+  if(margin() < .15) return ["Aumentar margem", "Lucro abaixo do ideal. Ajuste precificacao, reduza custos ou melhore ticket medio."];
+  if(appState.leads && close < .04) return ["Corrigir conversao", "Ha leads entrando, mas poucos viram venda. Revise atendimento, proposta e follow-up."];
+  if(appState.adBudget < appState.revenue * .05) return ["Testar aquisicao previsivel", "A verba de anuncios esta baixa para crescimento. Rode um teste pequeno com meta clara de CPL."];
+  return ["Escalar com controle", "Os indicadores estao saudaveis. Aumente volume aos poucos sem perder margem e qualidade."];
+}
+function recommendedTasks(){
+  const action = nextAction()[0];
+  if(action.includes("caixa")) return [
+    ["Revisar saidas", "Liste gastos pendentes e corte o que nao gera venda ou operacao."],
+    ["Cobrar recebiveis", "Acione clientes com pagamento aberto ainda hoje."],
+    ["Congelar decisoes novas", "Evite contratar ou aumentar verba ate o caixa ficar positivo."]
+  ];
+  if(action.includes("margem")) return [
+    ["Auditar precos", "Compare ticket medio, custo de entrega e margem por servico."],
+    ["Separar custos", "Diferencie gasto fixo, variavel, folha e marketing."],
+    ["Criar meta minima", "Defina faturamento minimo para bater a margem desejada."]
+  ];
+  if(action.includes("conversao")) return [
+    ["Responder leads quentes", "Nenhum lead deve ficar sem retorno por mais de 1 hora comercial."],
+    ["Revisar proposta", "Inclua prova, prazo, proximo passo e condicao de fechamento."],
+    ["Padronizar follow-up", "Crie uma sequencia de 3 mensagens para propostas abertas."]
+  ];
+  return [
+    ["Testar 3 criativos", "Uma dor, um desejo e uma prova social para validar o anuncio."],
+    ["Medir CPL", "CPL (custo por lead) precisa aparecer antes de aumentar verba."],
+    ["Reuniao de decisao", "No fim da semana, decidir escalar, pausar ou ajustar."]
+  ];
+}
+
+function renderAll(){
+  appState.totalCosts = costs();
+  const score = healthScore();
+  const [title,text] = nextAction();
+  const traffic = trafficNumbers();
+  const closeRate = appState.leads ? appState.sales / appState.leads : 0;
+
+  $("sidebarName").textContent = appState.profile.company || appState.profile.name || "Cliente Vanta";
+  $("sidebarEmail").textContent = appState.profile.email || "";
+  $("sidebarPlan").textContent = appState.profile.plan || "Vanta Premium";
+  $("overviewIntro").textContent = `${appState.profile.company || appState.profile.name || "Sua empresa"}, veja o que importa agora: caixa, aquisicao, vendas e a proxima decisao.`;
+  $("kpiRevenue").textContent = money(appState.revenue);
+  $("kpiProfit").textContent = money(profit());
+  $("kpiProfit").classList.toggle("negative", profit() < 0);
+  $("kpiProfit").classList.toggle("positive", profit() >= 0);
+  $("kpiLeads").textContent = number(appState.leads);
+  $("kpiCash").textContent = money(freeCash());
+  $("kpiCash").classList.toggle("negative", freeCash() < 0);
+  $("revenueHint").textContent = appState.sales ? `${appState.sales} vendas no periodo` : "Sem vendas informadas";
+  $("profitHint").textContent = `Margem ${Math.round(margin() * 100)}%`;
+  $("leadHint").textContent = appState.leads ? `CPL ${money(appState.adBudget / Math.max(appState.leads,1))}` : "Sem leads informados";
+  $("cashHint").textContent = freeCash() >= appState.reserveGoal ? "Reserva protegida" : `Faltam ${money(Math.max(0,appState.reserveGoal - freeCash()))}`;
+  $("nextActionTitle").textContent = title;
+  $("nextActionText").textContent = text;
+  $("healthScore").textContent = score;
+  $("healthRing").style.setProperty("--score", `${score}%`);
+  $("healthBadge").textContent = score >= 75 ? "Saudavel" : score >= 50 ? "Atenção" : "Prioridade";
+  $("healthBadge").className = `badge ${score >= 75 ? "green" : score >= 50 ? "gold" : ""}`;
+  $("healthText").textContent = score >= 75 ? "Base boa para escalar com controle." : score >= 50 ? "Ha um ponto de melhoria claro antes de escalar." : "Resolva caixa, margem ou conversao antes de crescer.";
+  $("financeStatus").textContent = profit() >= 0 ? "Positivo" : "Ajustar";
+  $("financeStatus").className = `badge ${profit() >= 0 ? "green" : "gold"}`;
+  $("meetingsLabel").textContent = number(appState.meetings);
+  $("proposalsLabel").textContent = number(appState.proposals);
+  $("closeRateLabel").textContent = `${Math.round(closeRate * 100)}%`;
+  $("financeProfit").textContent = money(profit());
+  $("financeMargin").textContent = `${Math.round(margin() * 100)}%`;
+  $("breakEvenLabel").textContent = money(costs());
+  $("freeCashLabel").textContent = money(freeCash());
+  $("trafficVisits").textContent = number(traffic.visits);
+  $("trafficLeads").textContent = number(traffic.leads);
+  $("trafficCpl").textContent = money(traffic.cpl);
+  $("trafficRoas").textContent = `${traffic.roas.toFixed(1)}x`;
+  $("trafficAdvice").textContent = traffic.leads
+    ? `Com ${money(appState.adBudget)}, o simulador projeta ${number(traffic.visits)} visitas, ${number(traffic.leads)} leads, ${traffic.sales} vendas e ${money(traffic.revenue)} em receita potencial. Use como previsao, nao promessa.`
+    : "Preencha verba, CPC (custo por clique) e conversoes para simular.";
+  $("executiveBrief").textContent = [
+    "Briefing executivo Vanta",
+    `Receita: ${money(appState.revenue)} | Custos: ${money(costs())} | Lucro: ${money(profit())}`,
+    `Margem: ${Math.round(margin() * 100)}% | Caixa livre: ${money(freeCash())}`,
+    `Leads: ${number(appState.leads)} | Vendas: ${number(appState.sales)} | Conversao final: ${Math.round(closeRate * 100)}%`,
+    `Leitura: ${text}`
+  ].join("\n");
+  renderTasks();
+  renderEmployees();
+  renderExpenses();
+  renderDeals();
+  syncBoundInputs();
+  saveState();
+  drawCharts();
+}
+
+function renderTasks(){
+  const tasks = recommendedTasks();
+  $("taskList").innerHTML = tasks.map((task,index)=>{
+    const key = `${task[0]}-${index}`;
+    return `<label class="task">
+      <input type="checkbox" data-task="${escapeHtml(key)}" ${appState.tasks[key] ? "checked" : ""}/>
+      <span><strong>${escapeHtml(task[0])}</strong><span>${escapeHtml(task[1])}</span></span>
+    </label>`;
+  }).join("");
+}
+function renderEmployees(){
+  $("employeeList").innerHTML = appState.employees.length ? appState.employees.map((item,index)=>`
+    <article class="table-card">
+      <div><small>${escapeHtml(item.status)}</small><strong>${escapeHtml(item.name)}</strong><p>${escapeHtml(item.role)} - ${money(item.salary)}</p></div>
+      <button class="mini-btn red" data-remove-employee="${index}" type="button">Excluir</button>
+    </article>`).join("") : `<p>Nenhum funcionario cadastrado.</p>`;
+}
+function renderExpenses(){
+  $("expenseList").innerHTML = appState.expenses.length ? appState.expenses.map((item,index)=>`
+    <article class="table-card">
+      <div><small>${escapeHtml(item.category)} - ${escapeHtml(item.status)}</small><strong>${escapeHtml(item.name)}</strong><p>${money(item.value)}</p></div>
+      <button class="mini-btn red" data-remove-expense="${index}" type="button">Excluir</button>
+    </article>`).join("") : `<p>Nenhum gasto cadastrado.</p>`;
+}
+function renderDeals(){
+  const openValue = appState.deals.reduce((sum,item)=>sum + Number(item.value || 0),0);
+  $("openPipelineValue").textContent = money(openValue);
+  $("openDealsLabel").textContent = number(appState.deals.length);
+  $("dealList").innerHTML = appState.deals.length ? appState.deals.map((item,index)=>`
+    <article class="table-card">
+      <div><small>${escapeHtml(item.stage)}</small><strong>${escapeHtml(item.name)}</strong><p>${money(item.value)} - ${escapeHtml(item.next)}</p></div>
+      <button class="mini-btn red" data-remove-deal="${index}" type="button">Excluir</button>
+    </article>`).join("") : `<p>Nenhuma oportunidade aberta.</p>`;
+}
+
+function setupCanvas(canvas){
+  const rect = canvas.getBoundingClientRect();
+  const dpr = Math.max(1, window.devicePixelRatio || 1);
+  const width = Math.max(1, rect.width);
+  const height = Math.max(1, rect.height);
+  canvas.width = Math.max(1, Math.floor(width * dpr));
+  canvas.height = Math.max(1, Math.floor(height * dpr));
+  const ctx = canvas.getContext("2d");
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  return { ctx, width, height };
+}
+function drawArea(canvas, values, color = "#f4b45d"){
+  const {ctx,width,height} = setupCanvas(canvas);
+  ctx.clearRect(0,0,width,height);
+  if(width < 80 || height < 80) return;
+  const pad = 28;
+  const max = Math.max(...values,1);
+  const min = Math.min(...values,0);
+  const range = Math.max(1,max-min);
+  ctx.strokeStyle = "rgba(255,255,255,.07)";
+  ctx.lineWidth = 1;
+  for(let i=0;i<4;i++){
+    const y = pad + ((height - pad*2) / 3) * i;
+    ctx.beginPath(); ctx.moveTo(pad,y); ctx.lineTo(width-pad,y); ctx.stroke();
+  }
+  const points = values.map((value,index)=>[
+    pad + ((width - pad*2) / Math.max(values.length-1,1)) * index,
+    height - pad - (((value-min) / range) * (height - pad*2))
+  ]);
+  ctx.beginPath();
+  points.forEach(([x,y],i)=> i ? ctx.lineTo(x,y) : ctx.moveTo(x,y));
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  ctx.lineTo(width-pad,height-pad);
+  ctx.lineTo(pad,height-pad);
+  ctx.closePath();
+  const gradient = ctx.createLinearGradient(0,pad,0,height-pad);
+  gradient.addColorStop(0,`${color}55`);
+  gradient.addColorStop(1,`${color}00`);
+  ctx.fillStyle = gradient;
+  ctx.fill();
+}
+function drawBars(canvas, values, labels, colors){
+  const {ctx,width,height} = setupCanvas(canvas);
+  ctx.clearRect(0,0,width,height);
+  if(width < 80 || height < 80) return;
+  const pad = 26;
+  const max = Math.max(...values,1);
+  const gap = 14;
+  const barW = (width - pad*2 - gap*(values.length-1)) / values.length;
+  values.forEach((value,index)=>{
+    const h = Math.max(8, ((height - pad*2) * value) / max);
+    const x = pad + index * (barW + gap);
+    const y = height - pad - h;
+    const gradient = ctx.createLinearGradient(0,y,0,height-pad);
+    gradient.addColorStop(0,colors[index] || varGold());
+    gradient.addColorStop(1,"rgba(255,255,255,.08)");
+    roundRect(ctx,x,y,barW,h,12);
+    ctx.fillStyle = gradient;
+    ctx.fill();
+    ctx.fillStyle = "rgba(247,241,232,.58)";
+    ctx.font = "700 11px Inter";
+    ctx.textAlign = "center";
+    ctx.fillText(labels[index] || "", x + barW/2, height - 8);
+  });
+}
+function roundRect(ctx,x,y,w,h,r){
+  const radius = Math.min(r,w/2,h/2);
+  ctx.beginPath();
+  ctx.moveTo(x+radius,y);
+  ctx.arcTo(x+w,y,x+w,y+h,radius);
+  ctx.arcTo(x+w,y+h,x,y+h,radius);
+  ctx.arcTo(x,y+h,x,y,radius);
+  ctx.arcTo(x,y,x+w,y,radius);
+  ctx.closePath();
+}
+function varGold(){ return getComputedStyle(document.documentElement).getPropertyValue("--gold").trim() || "#f4b45d"; }
+function drawCharts(){
+  if(!$("dashboardView").classList.contains("hidden")){
+    const revenueSeries = [appState.revenue*.62, appState.revenue*.72, appState.revenue*.68, appState.revenue*.81, appState.revenue*.9, appState.revenue];
+    drawArea($("overviewChart"), revenueSeries, "#f4b45d");
+    drawBars($("funnelChart"), [appState.leads,appState.meetings,appState.proposals,appState.sales], ["Leads","Reun.","Prop.","Venda"], ["#35d7d0","#f4b45d","#ff704d","#27df8b"]);
+    drawBars($("financeChart"), [appState.revenue,costs(),Math.max(profit(),0),Math.max(freeCash(),0)], ["Receita","Custos","Lucro","Caixa"], ["#35d7d0","#ff704d","#27df8b","#f4b45d"]);
+    const traffic = trafficNumbers();
+    drawBars($("trafficChart"), [traffic.visits,traffic.leads,traffic.sales], ["Visitas","Leads","Vendas"], ["#35d7d0","#f4b45d","#27df8b"]);
+    drawBars($("crmChart"), [
+      appState.deals.filter(d=>d.stage === "Lead novo").length,
+      appState.deals.filter(d=>d.stage === "Reuniao marcada").length,
+      appState.deals.filter(d=>d.stage === "Proposta enviada").length,
+      appState.deals.filter(d=>d.stage === "Follow-up").length
+    ], ["Lead","Reun.","Prop.","Follow"], ["#35d7d0","#f4b45d","#ff704d","#27df8b"]);
+  }
+}
+
+function showPage(page){
+  $$("[data-page]").forEach(section=>section.classList.toggle("active", section.dataset.page === page));
+  $$("[data-page-target]").forEach(button=>button.classList.toggle("active", button.dataset.pageTarget === page));
+  const titles = {
+    overview:["Dashboard empresarial.","Controle caixa, aquisicao, funil e proximas decisoes em um painel simples."],
+    finance:["Financeiro.","Veja lucro, custos, folha, despesas e briefing executivo."],
+    traffic:["Simulador de trafego.","Projete verba, visitas, leads, vendas e ROAS (retorno sobre anuncios)."],
+    crm:["CRM comercial.","Organize oportunidades, etapas e proximas acoes."],
+    materials:["Materiais exclusivos.","Acesse recursos incluidos na area de membros."]
   };
-  localStorage.setItem(stateKey,JSON.stringify(data));
+  $("workspaceTitle").textContent = titles[page][0];
+  $("workspaceSubtitle").textContent = titles[page][1];
+  requestAnimationFrame(drawCharts);
+  setTimeout(drawCharts, 80);
 }
 
-function restoreLocal(){
-  const data = JSON.parse(localStorage.getItem(stateKey) || "{}");
-  const legacy = data.inputs || data;
-  const textLegacy = data.texts || {};
-  financeState = data.finance || financeState;
-  ["targetRevenue","avgTicket","adBudget","leadsWeek","meetingsWeek","proposalsWeek","salesWeek","openDeals","leverOffer","leverPage","leverTraffic","leverSales","leverData","finRevenue","finReceivables","finTaxRate","finOwnerPay","finProfitGoal","finReserveGoal","hireCost","extraAds","extraRevenue","trafficBudget","trafficCpc","trafficLandingRate","trafficSalesRate"].forEach(id=>{ if(legacy[id]) $(id).value=legacy[id]; });
-  ["hotList","weekNotes"].forEach(id=>{ if(textLegacy[id]) $(id).value=textLegacy[id]; });
-  (data.checks || []).forEach(key=>{ const input=document.querySelector(`[data-check="${key}"]`); if(input) input.checked=true; });
-  renderFinanceLists();
-}
-
-function escapeHtml(value){
-  return String(value || "").replace(/[&<>"']/g, (char)=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[char]));
-}
-
-function renderFinanceLists(){
-  const employeeList = $("employeeList");
-  const expenseList = $("expenseList");
-  if(employeeList){
-    employeeList.innerHTML = financeState.employees.length ? financeState.employees.map((item,index)=>`
-      <div class="list-item">
-        <div><small>${escapeHtml(item.type)} - ${escapeHtml(item.status)}</small><strong>${escapeHtml(item.name)}</strong><p>${escapeHtml(item.role)} - ${money(item.salary)}</p></div>
-        <button class="mini-btn" data-remove-employee="${index}" type="button">Remover</button>
-      </div>`).join("") : `<div class="os-note">Nenhum funcionario cadastrado ainda.</div>`;
-  }
-  if(expenseList){
-    expenseList.innerHTML = financeState.expenses.length ? financeState.expenses.map((item,index)=>`
-      <div class="list-item">
-        <div><small>${escapeHtml(item.category)} - ${escapeHtml(item.status)}</small><strong>${escapeHtml(item.name)}</strong><p>${escapeHtml(item.recurrence)} - ${money(item.value)}</p></div>
-        <button class="mini-btn" data-remove-expense="${index}" type="button">Remover</button>
-      </div>`).join("") : `<div class="os-note">Nenhum gasto cadastrado ainda.</div>`;
-  }
-}
-
-function updateFinancialDashboard(){
-  const revenue = Number($("finRevenue").value || 0);
-  const receivables = Number($("finReceivables").value || 0);
-  const taxRate = Number($("finTaxRate").value || 0);
-  const ownerPay = Number($("finOwnerPay").value || 0);
-  const profitGoal = Number($("finProfitGoal").value || 0);
-  const reserveGoal = Number($("finReserveGoal").value || 0);
-  const payroll = financeState.employees.filter(item=>item.status === "Ativo").reduce((sum,item)=>sum + Number(item.salary || 0),0);
-  const expenses = financeState.expenses.reduce((sum,item)=>sum + Number(item.value || 0),0);
-  const marketing = financeState.expenses.filter(item=>["Marketing","Trafego pago"].includes(item.category)).reduce((sum,item)=>sum + Number(item.value || 0),0);
-  const taxes = revenue * (taxRate / 100);
-  const costs = payroll + expenses + taxes + ownerPay;
-  const profit = revenue - costs;
-  const margin = revenue ? profit / revenue : 0;
-  const cashIn = revenue + receivables;
-  const cashOut = costs;
-  const balance = cashIn - cashOut;
-  const payrollRatio = revenue ? payroll / revenue : 0;
-  const marketingRatio = revenue ? marketing / revenue : 0;
-  const minimumRevenue = profitGoal < 100 ? Math.ceil(costs / Math.max(1 - (profitGoal / 100), .05)) : costs;
-  const cutSuggestion = revenue && profitGoal ? Math.max(0, Math.ceil(costs - (revenue * (1 - profitGoal / 100)))) : 0;
-  const investmentRoom = Math.max(0, profit - reserveGoal);
-  const maxCash = Math.max(cashIn, cashOut, Math.abs(balance), 1);
-
-  $("finRevenueLabel").textContent = money(revenue);
-  $("finCostsLabel").textContent = money(costs);
-  $("finProfitLabel").textContent = money(profit);
-  $("finMarginLabel").textContent = `${Math.round(margin * 100)}%`;
-  $("cashInLabel").textContent = money(cashIn);
-  $("cashOutLabel").textContent = money(cashOut);
-  $("cashBalanceLabel").textContent = money(balance);
-  $("cashInBar").style.setProperty("--w", `${Math.max(3, Math.round((cashIn / maxCash) * 100))}%`);
-  $("cashOutBar").style.setProperty("--w", `${Math.max(3, Math.round((cashOut / maxCash) * 100))}%`);
-  $("cashBalanceBar").style.setProperty("--w", `${Math.max(3, Math.round((Math.abs(balance) / maxCash) * 100))}%`);
-  $("payrollRatioLabel").textContent = `${Math.round(payrollRatio * 100)}%`;
-  $("marketingRatioLabel").textContent = `${Math.round(marketingRatio * 100)}%`;
-  $("breakEvenLabel").textContent = money(costs);
-  $("reserveStatusLabel").textContent = money(Math.max(0,balance));
-  $("profitGoalLabel").textContent = `${profitGoal || 0}%`;
-  $("cutSuggestionLabel").textContent = money(cutSuggestion);
-  $("minimumRevenueLabel").textContent = money(minimumRevenue);
-  $("investmentRoomLabel").textContent = money(investmentRoom);
-
-  const alerts = [];
-  if(revenue && payrollRatio > .35) alerts.push("A folha salarial esta acima de 35% do faturamento. Revise capacidade, produtividade ou ticket medio.");
-  if(revenue && marketingRatio < .05) alerts.push("Marketing esta abaixo de 5% do faturamento. Para crescer, talvez falte aquisicao previsivel.");
-  if(profit < 0) alerts.push("Risco de caixa negativo: as saidas estao maiores que o faturamento recebido.");
-  if(revenue && profitGoal && margin < profitGoal / 100) alerts.push(`Margem abaixo da meta de ${profitGoal}%. Corte custos ou aumente faturamento minimo para ${money(minimumRevenue)}.`);
-  if(balance < reserveGoal) alerts.push(`Reserva abaixo do desejado. Faltam ${money(Math.max(0,reserveGoal - balance))} para a seguranca definida.`);
-  if(!alerts.length) alerts.push("Financeiro saudavel no cenario atual. Continue acompanhando gastos, margem e previsibilidade.");
-  $("premiumAlerts").innerHTML = alerts.map(alert=>`<div class="premium-alert">${escapeHtml(alert)}</div>`).join("");
-
-  const hireCost = Number($("hireCost").value || 0);
-  const extraAds = Number($("extraAds").value || 0);
-  const extraRevenue = Number($("extraRevenue").value || 0);
-  const scenarioProfit = profit + extraRevenue - hireCost - extraAds;
-  $("decisionAdvice").textContent = (hireCost || extraAds || extraRevenue)
-    ? scenarioProfit >= Math.max(0,reserveGoal * .2)
-      ? `Cenario aprovado com cautela: lucro projetado ficaria em ${money(scenarioProfit)}.`
-      : `Cenario arriscado: lucro projetado ficaria em ${money(scenarioProfit)}. Ajuste custo ou aumente receita esperada.`
-    : "Preencha os cenarios para validar a decisao antes de comprometer o caixa.";
-
-  const trafficBudget = Number($("trafficBudget").value || 0);
-  const trafficCpc = Number($("trafficCpc").value || 0);
-  const landingRate = Number($("trafficLandingRate").value || 0) / 100;
-  const salesRate = Number($("trafficSalesRate").value || 0) / 100;
-  const visits = trafficBudget && trafficCpc ? Math.floor(trafficBudget / trafficCpc) : 0;
-  const trafficLeads = Math.floor(visits * landingRate);
-  const trafficCpl = trafficLeads ? trafficBudget / trafficLeads : 0;
-  const trafficSales = Math.floor(trafficLeads * salesRate);
-  $("trafficVisitsLabel").textContent = visits.toLocaleString("pt-BR");
-  $("trafficLeadsLabel").textContent = trafficLeads.toLocaleString("pt-BR");
-  $("trafficCplLabel").textContent = money(trafficCpl);
-  $("trafficSalesLabel").textContent = trafficSales;
-  $("trafficAdvice").textContent = trafficLeads ? `Com ${money(trafficBudget)}, o simulador estima ${trafficLeads} leads e ${trafficSales} vendas. Use como previsao, nao promessa.` : "Preencha verba, CPC (custo por clique) e conversao para simular.";
-
-  const report = [
-    "Relatorio executivo Vanta",
-    `Faturamento recebido: ${money(revenue)}`,
-    `Custos totais: ${money(costs)} | Lucro estimado: ${money(profit)} | Margem: ${Math.round(margin * 100)}%`,
-    `Folha salarial: ${money(payroll)} (${Math.round(payrollRatio * 100)}% do faturamento)`,
-    `Marketing e trafego: ${money(marketing)} (${Math.round(marketingRatio * 100)}% do faturamento)`,
-    `Ponto de equilibrio: ${money(costs)} | Faturamento minimo para meta: ${money(minimumRevenue)}`,
-    `Simulador de trafego: ${visits.toLocaleString("pt-BR")} visitas, ${trafficLeads} leads, CPL (custo por lead) ${money(trafficCpl)}`,
-    `Leitura CFO (diretor financeiro): ${alerts[0]}`
-  ].join("\\n");
-  $("executiveReport").textContent = report;
-  $("financialSummary").textContent = alerts[0];
-}
-
-function updateCalculators(){
-  const targetRevenue = Number($("targetRevenue").value || 0);
-  const ticket = Number($("avgTicket").value || 0);
-  const adBudget = Number($("adBudget").value || 0);
-  const weeklyLeads = Number($("leadsWeek").value || 0);
-  const meetings = Number($("meetingsWeek").value || 0);
-  const proposals = Number($("proposalsWeek").value || 0);
-  const sales = Number($("salesWeek").value || 0);
-  const openDeals = Number($("openDeals").value || 0);
-  const monthlyLeads = weeklyLeads * 4;
-  const monthlySales = sales * 4;
-  const estimatedRevenue = monthlySales * ticket;
-  const finalClose = weeklyLeads ? sales / weeklyLeads : 0;
-  const leadToMeeting = weeklyLeads ? meetings / weeklyLeads : 0;
-  const meetingToProposal = meetings ? proposals / meetings : 0;
-  const proposalToSale = proposals ? sales / proposals : 0;
-  const safeClose = Math.max(finalClose || .08, .04);
-  const neededSales = targetRevenue && ticket ? Math.ceil(targetRevenue / ticket) : 0;
-  const neededLeads = neededSales ? Math.ceil(neededSales / safeClose) : 0;
-  const neededMeetings = neededLeads ? Math.ceil(neededLeads * Math.max(leadToMeeting || .35, .18)) : 0;
-  const dailyLeads = neededLeads ? Math.ceil(neededLeads / 22) : 0;
-  const cpl = monthlyLeads && adBudget ? adBudget / monthlyLeads : 0;
-  const cpa = monthlySales && adBudget ? adBudget / monthlySales : 0;
-  const roas = estimatedRevenue && adBudget ? estimatedRevenue / adBudget : 0;
-  const margin = estimatedRevenue - adBudget;
-
-  $("estimatedRevenue").textContent = money(estimatedRevenue);
-  $("targetRevenueLabel").textContent = money(targetRevenue);
-  $("targetGap").textContent = targetRevenue ? (estimatedRevenue >= targetRevenue ? "No ritmo para bater a meta" : `${money(targetRevenue - estimatedRevenue)} para buscar`) : "Defina sua meta";
-  $("cplLabel").textContent = money(cpl);
-  $("budgetHint").textContent = monthlyLeads ? `${monthlyLeads} leads projetados no mes` : "Informe verba e leads";
-  $("closeRateLabel").textContent = `${Math.round(finalClose * 100)}%`;
-  $("closeHint").textContent = weeklyLeads ? `${sales} vendas em ${weeklyLeads} leads` : "Vendas / leads";
-  $("neededSales").textContent = neededSales;
-  $("neededLeads").textContent = neededLeads;
-  $("dailyLeads").textContent = dailyLeads;
-  $("neededMeetings").textContent = neededMeetings;
-  $("goalNarrative").textContent = neededLeads ? `Para buscar ${money(targetRevenue)}, mire em ${neededLeads} leads no mes, ${dailyLeads} por dia util.` : "Preencha meta e ticket para gerar metas comerciais.";
-
-  $("funnelLeads").textContent = weeklyLeads;
-  $("funnelMeetings").textContent = meetings;
-  $("funnelProposals").textContent = proposals;
-  $("funnelSales").textContent = sales;
-  const base = Math.max(weeklyLeads, meetings, proposals, sales, 1);
-  [["leadBar", weeklyLeads],["meetingBar", meetings],["proposalBar", proposals],["saleBar", sales]].forEach(([id,value])=>$(id).style.setProperty("--w", `${Math.max(3, Math.round((value / base) * 100))}%`));
-
-  $("unitCpl").textContent = money(cpl);
-  $("unitCpa").textContent = money(cpa);
-  $("unitRoas").textContent = `${roas.toFixed(1)}x`;
-  $("unitMargin").textContent = money(margin);
-  $("unitAdvice").textContent = roas ? (roas >= 3 ? "A aquisicao parece saudavel. Escale com controle de qualidade." : "Retorno apertado. Antes de aumentar verba, melhore oferta, pagina ou fechamento.") : "Quando houver verba e vendas, voce enxerga se a aquisicao esta saudavel.";
-
-  let funnelDiagnosis = "Preencha o funil para descobrir o gargalo principal.";
-  if(weeklyLeads && leadToMeeting < .25) funnelDiagnosis = "Gargalo: muitos leads nao viram conversa. Revise velocidade de resposta e qualificacao.";
-  else if(meetings && meetingToProposal < .45) funnelDiagnosis = "Gargalo: reunioes nao estao virando proposta. Revise roteiro, oferta e proximo passo.";
-  else if(proposals && proposalToSale < .25) funnelDiagnosis = "Gargalo: proposta nao esta fechando. Trabalhe follow-up, prova e urgencia.";
-  else if(sales) funnelDiagnosis = "Funil com movimento. Agora a prioridade e aumentar volume sem perder qualidade.";
-  $("funnelDiagnosis").textContent = funnelDiagnosis;
-
-  const levers = [
-    ["Oferta", Number($("leverOffer").value), "Reescreva promessa, publico, resultado e prova principal."],
-    ["Pagina", Number($("leverPage").value), "Simplifique primeira dobra, CTA e argumentos de confianca."],
-    ["Trafego", Number($("leverTraffic").value), "Teste criativos por dor, desejo e prova social."],
-    ["Atendimento", Number($("leverSales").value), "Reduza tempo de resposta e padronize follow-up."],
-    ["Mensuracao", Number($("leverData").value), "Registre origem, status e proximo passo de cada lead."]
-  ].sort((a,b)=>a[1]-b[1]);
-  $("leverAdvice").textContent = `Prioridade: ${levers[0][0]}. ${levers[0][2]}`;
-
-  let title = "Preencher os numeros da semana";
-  let text = "Com leads, reunioes, propostas e vendas, o painel calcula gargalo, meta e prioridade.";
-  if(openDeals > 0 && sales === 0){ title = "Atacar oportunidades abertas"; text = `Voce tem ${openDeals} oportunidades abertas. Priorize follow-up antes de buscar mais leads.`; }
-  else if(weeklyLeads && leadToMeeting < .25){ title = "Melhorar resposta aos leads"; text = "O primeiro vazamento esta entre lead e reuniao. Velocidade e abordagem importam aqui."; }
-  else if(proposals && proposalToSale < .25){ title = "Fechar propostas paradas"; text = "Ajuste prova, condicao e follow-up das propostas enviadas."; }
-  else if(sales > 0){ title = "Escalar o que ja converte"; text = "Ha vendas no funil. Proteja a qualidade e aumente volume com teste controlado."; }
-  $("nextMoveTitle").textContent = title;
-  $("nextMoveText").textContent = text;
-  updateFinancialDashboard();
-  saveLocal();
-}
-
-function showLocalPreview(){
-  $("memberPlan").textContent = "Preview Vanta";
-  $("memberIntro").textContent = "Modo de analise local: veja a experiencia do cliente com dados de exemplo.";
+function showApp(profile = {}){
+  appState.profile = { ...appState.profile, ...profile };
+  $("publicTopbar").classList.add("hidden");
   $("loginView").classList.add("hidden");
   $("passwordSetupView").classList.add("hidden");
   $("lockedView").classList.add("hidden");
   $("dashboardView").classList.remove("hidden");
-  $("logoutBtn").classList.add("hidden");
-
-  const defaults = {
-    targetRevenue:"80000",
-    avgTicket:"8000",
-    adBudget:"4500",
-    leadsWeek:"32",
-    meetingsWeek:"11",
-    proposalsWeek:"6",
-    salesWeek:"2",
-    openDeals:"8",
-    leverOffer:"4",
-    leverPage:"3",
-    leverTraffic:"3",
-    leverSales:"2",
-    leverData:"2",
-    finRevenue:"85000",
-    finReceivables:"12000",
-    finTaxRate:"12",
-    finOwnerPay:"9000",
-    finProfitGoal:"25",
-    finReserveGoal:"20000",
-    hireCost:"4500",
-    extraAds:"2000",
-    extraRevenue:"12000",
-    trafficBudget:"3000",
-    trafficCpc:"1.80",
-    trafficLandingRate:"4",
-    trafficSalesRate:"10"
-  };
-  Object.entries(defaults).forEach(([id,value])=>{
-    if($(id) && !$(id).value) $(id).value = value;
-  });
-  if(!$("hotList").value){
-    $("hotList").value = "Lead A - pediu proposta\nLead B - respondeu no WhatsApp\nLead C - marcar reuniao";
-  }
-  if(!$("weekNotes").value){
-    $("weekNotes").value = "Observar objeções sobre prazo e reforçar prova social antes da proposta.";
-  }
-  if(!financeState.employees.length){
-    financeState.employees = [
-      { name:"Ana Souza", role:"Vendas", salary:3800, type:"CLT", status:"Ativo" },
-      { name:"Lucas Lima", role:"Operacao", salary:4200, type:"PJ", status:"Ativo" }
-    ];
-  }
-  if(!financeState.expenses.length){
-    financeState.expenses = [
-      { name:"Meta Ads", category:"Trafego pago", value:4500, recurrence:"Recorrente", status:"Pendente" },
-      { name:"Ferramentas", category:"Software", value:697, recurrence:"Recorrente", status:"Pago" },
-      { name:"Contabilidade", category:"Impostos", value:600, recurrence:"Recorrente", status:"Pago" }
-    ];
-  }
-  renderFinanceLists();
-  updateCalculators();
+  $("logoutBtn").classList.remove("hidden");
+  bindInputs();
+  renderAll();
 }
-
+function showLocalPreview(){
+  restoreState();
+  showApp({ name:"Preview Vanta", email:"preview@vantablack.com", company:"Empresa Exemplo", plan:"Vanta Core" });
+}
 function showPasswordSetup(session){
   $("loginView").classList.add("hidden");
   $("lockedView").classList.add("hidden");
   $("dashboardView").classList.add("hidden");
   $("passwordSetupView").classList.remove("hidden");
   $("logoutBtn").classList.remove("hidden");
-  $("newPassword").focus();
   if(session?.user?.email) $("email").value = session.user.email;
+  $("newPassword").focus();
 }
-
 async function showDashboard(session){
   const { data: profile, error } = await supabase
     .from("profiles")
     .select("email,full_name,company,plan,access_status")
     .eq("id", session.user.id)
     .single();
-
   if(error || !profile || profile.access_status !== "active"){
     $("loginView").classList.add("hidden");
     $("passwordSetupView").classList.add("hidden");
@@ -828,21 +1317,17 @@ async function showDashboard(session){
     $("logoutBtn").classList.remove("hidden");
     return;
   }
-
-  $("memberPlan").textContent = profile.plan || "Vanta Premium";
-  $("memberIntro").textContent = `${profile.company || profile.full_name || profile.email}, acompanhe aqui as metas, oportunidades e proximas acoes do seu crescimento.`;
-  $("loginView").classList.add("hidden");
-  $("passwordSetupView").classList.add("hidden");
-  $("lockedView").classList.add("hidden");
-  $("dashboardView").classList.remove("hidden");
-  $("logoutBtn").classList.remove("hidden");
-  restoreLocal();
-  updateCalculators();
+  restoreState();
+  showApp({
+    name: profile.full_name || profile.email,
+    email: profile.email || session.user.email,
+    company: profile.company || profile.full_name || profile.email,
+    plan: profile.plan || "Vanta Premium"
+  });
 }
-
 async function boot(){
   try{
-    if(location.protocol === "file:"){
+    if(isLocalPreview()){
       showLocalPreview();
       return;
     }
@@ -850,9 +1335,7 @@ async function boot(){
     authIntent = getAuthIntent();
     supabase = createClient(config.supabaseUrl, config.supabaseAnonKey);
     supabase.auth.onAuthStateChange((event, session)=>{
-      if(session && (event === "PASSWORD_RECOVERY" || isPasswordSetupIntent())){
-        showPasswordSetup(session);
-      }
+      if(session && (event === "PASSWORD_RECOVERY" || isPasswordSetupIntent())) showPasswordSetup(session);
     });
     if(authIntent.code){
       const { error } = await supabase.auth.exchangeCodeForSession(authIntent.code);
@@ -860,13 +1343,10 @@ async function boot(){
     }
     const { data } = await supabase.auth.getSession();
     if(data.session){
-      if(isPasswordSetupIntent()){
-        showPasswordSetup(data.session);
-      }else{
-        await showDashboard(data.session);
-      }
+      if(isPasswordSetupIntent()) showPasswordSetup(data.session);
+      else await showDashboard(data.session);
     }else if(isPasswordSetupIntent()){
-      setStatus("O link de convite expirou ou nao abriu corretamente. Peça para a Vanta reenviar o acesso.");
+      setStatus("O link de convite expirou ou nao abriu corretamente. Peca para a Vanta reenviar o acesso.");
     }
     if(authIntent.accessToken || authIntent.code) cleanAuthUrl();
   }catch(error){
@@ -874,36 +1354,91 @@ async function boot(){
   }
 }
 
+document.addEventListener("click", (event)=>{
+  const pageButton = event.target.closest("[data-page-target]");
+  if(pageButton) showPage(pageButton.dataset.pageTarget);
+
+  const task = event.target.closest("[data-task]");
+  if(task){
+    appState.tasks[task.dataset.task] = task.checked;
+    saveState();
+  }
+
+  const employeeIndex = event.target.dataset.removeEmployee;
+  if(employeeIndex !== undefined){
+    appState.employees.splice(Number(employeeIndex),1);
+    renderAll();
+  }
+  const expenseIndex = event.target.dataset.removeExpense;
+  if(expenseIndex !== undefined){
+    appState.expenses.splice(Number(expenseIndex),1);
+    renderAll();
+  }
+  const dealIndex = event.target.dataset.removeDeal;
+  if(dealIndex !== undefined){
+    appState.deals.splice(Number(dealIndex),1);
+    renderAll();
+  }
+});
+
+$("resetTasksBtn").addEventListener("click", ()=>{
+  appState.tasks = {};
+  renderAll();
+});
+$("addEmployeeBtn").addEventListener("click", ()=>{
+  const name = $("employeeName").value.trim();
+  const salary = Number($("employeeSalary").value || 0);
+  if(!name || !salary) return;
+  appState.employees.push({ name, role:$("employeeRole").value.trim() || "Sem cargo", salary, status:$("employeeStatus").value });
+  ["employeeName","employeeRole","employeeSalary"].forEach(id=>$(id).value = "");
+  renderAll();
+});
+$("addExpenseBtn").addEventListener("click", ()=>{
+  const name = $("expenseName").value.trim();
+  const value = Number($("expenseValue").value || 0);
+  if(!name || !value) return;
+  appState.expenses.push({ name, category:$("expenseCategory").value, value, status:$("expenseStatus").value });
+  ["expenseName","expenseValue"].forEach(id=>$(id).value = "");
+  renderAll();
+});
+$("addDealBtn").addEventListener("click", ()=>{
+  const name = $("dealName").value.trim();
+  const value = Number($("dealValue").value || 0);
+  if(!name) return;
+  appState.deals.push({ name, stage:$("dealStage").value, value, next:$("dealNext").value.trim() || "Definir proxima acao" });
+  ["dealName","dealValue","dealNext"].forEach(id=>$(id).value = "");
+  renderAll();
+});
+$("copyBriefBtn").addEventListener("click", async ()=>{
+  const text = $("executiveBrief").textContent;
+  try{
+    await navigator.clipboard.writeText(text);
+    $("copyBriefBtn").textContent = "Copiado";
+    setTimeout(()=>$("copyBriefBtn").textContent = "Copiar briefing",1300);
+  }catch(error){
+    alert(text);
+  }
+});
+
 $("loginForm").addEventListener("submit", async (event)=>{
   event.preventDefault();
   setStatus("Entrando...");
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email:$("email").value,
-    password:$("password").value
-  });
+  const { data, error } = await supabase.auth.signInWithPassword({ email:$("email").value, password:$("password").value });
   if(error){ setStatus(error.message); return; }
   await showDashboard(data.session);
 });
-
 $("magicBtn").addEventListener("click", async ()=>{
   if(!supabase || !$("email").value){ setStatus("Informe seu e-mail primeiro."); return; }
   setStatus("Enviando link...");
-  const { error } = await supabase.auth.signInWithOtp({
-    email:$("email").value,
-    options:{ emailRedirectTo: memberRedirectUrl() }
-  });
+  const { error } = await supabase.auth.signInWithOtp({ email:$("email").value, options:{ emailRedirectTo: memberRedirectUrl() } });
   setStatus(error ? error.message : "Link enviado. Confira seu e-mail.");
 });
-
 $("resetBtn").addEventListener("click", async ()=>{
   if(!supabase || !$("email").value){ setStatus("Informe seu e-mail primeiro."); return; }
   setStatus("Enviando link para criar ou trocar senha...");
-  const { error } = await supabase.auth.resetPasswordForEmail($("email").value,{
-    redirectTo: memberRedirectUrl()
-  });
+  const { error } = await supabase.auth.resetPasswordForEmail($("email").value,{ redirectTo: memberRedirectUrl() });
   setStatus(error ? error.message : "Link enviado. Abra o e-mail e crie sua senha.");
 });
-
 $("passwordSetupForm").addEventListener("submit", async (event)=>{
   event.preventDefault();
   const password = $("newPassword").value;
@@ -915,82 +1450,20 @@ $("passwordSetupForm").addEventListener("submit", async (event)=>{
   if(error){ setPasswordStatus(error.message); return; }
   cleanAuthUrl();
   const { data } = await supabase.auth.getSession();
-  if(data.session){
-    await showDashboard(data.session);
-  }else{
-    setPasswordStatus("Senha criada. Agora faca login com seu e-mail e senha.");
-  }
+  if(data.session) await showDashboard(data.session);
+  else setPasswordStatus("Senha criada. Agora faca login com seu e-mail e senha.");
 });
-
-$("logoutBtn").addEventListener("click", async ()=>{
-  await supabase.auth.signOut();
+async function logout(){
+  if(supabase) await supabase.auth.signOut();
   location.reload();
-});
-
-function addEmployee(){
-  const name = $("employeeName").value.trim();
-  const salary = Number($("employeeSalary").value || 0);
-  if(!name || !salary) return;
-  financeState.employees.push({
-    name,
-    role:$("employeeRole").value.trim() || "Sem cargo",
-    salary,
-    type:$("employeeType").value,
-    status:$("employeeStatus").value
-  });
-  ["employeeName","employeeRole","employeeSalary"].forEach(id=>$(id).value="");
-  renderFinanceLists();
-  updateCalculators();
 }
+$("logoutBtn").addEventListener("click", logout);
+$("appLogoutBtn").addEventListener("click", logout);
 
-function addExpense(){
-  const name = $("expenseName").value.trim();
-  const value = Number($("expenseValue").value || 0);
-  if(!name || !value) return;
-  financeState.expenses.push({
-    name,
-    category:$("expenseCategory").value,
-    value,
-    recurrence:$("expenseRecurrence").value,
-    status:$("expenseStatus").value
-  });
-  ["expenseName","expenseValue"].forEach(id=>$(id).value="");
-  renderFinanceLists();
-  updateCalculators();
-}
-
-$("addEmployeeBtn").addEventListener("click", addEmployee);
-$("addExpenseBtn").addEventListener("click", addExpense);
-$("copyReportBtn").addEventListener("click", async ()=>{
-  const text = $("executiveReport").textContent;
-  try{
-    await navigator.clipboard.writeText(text);
-    $("financialSummary").textContent = "Relatorio copiado para a area de transferencia.";
-  }catch(error){
-    $("financialSummary").textContent = text;
-  }
+window.addEventListener("resize", ()=>{
+  requestAnimationFrame(drawCharts);
+  setTimeout(drawCharts, 80);
 });
-
-document.addEventListener("click", (event)=>{
-  const employeeIndex = event.target.dataset.removeEmployee;
-  const expenseIndex = event.target.dataset.removeExpense;
-  if(employeeIndex !== undefined){
-    financeState.employees.splice(Number(employeeIndex),1);
-    renderFinanceLists();
-    updateCalculators();
-  }
-  if(expenseIndex !== undefined){
-    financeState.expenses.splice(Number(expenseIndex),1);
-    renderFinanceLists();
-    updateCalculators();
-  }
-});
-
-["targetRevenue","avgTicket","adBudget","leadsWeek","meetingsWeek","proposalsWeek","salesWeek","openDeals","leverOffer","leverPage","leverTraffic","leverSales","leverData"].forEach(id=>$(id).addEventListener("input",updateCalculators));
-["finRevenue","finReceivables","finTaxRate","finOwnerPay","finProfitGoal","finReserveGoal","hireCost","extraAds","extraRevenue","trafficBudget","trafficCpc","trafficLandingRate","trafficSalesRate"].forEach(id=>$(id).addEventListener("input",updateCalculators));
-["hotList","weekNotes"].forEach(id=>$(id).addEventListener("input",saveLocal));
-document.querySelectorAll("[data-check]").forEach(input=>input.addEventListener("change",updateCalculators));
-
 boot();
 </script>
 </body>

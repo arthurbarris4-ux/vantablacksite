@@ -10,10 +10,31 @@ export default async function handler(request) {
 
   const body = await request.json().catch(() => ({}));
   const id = String(body.id || "").trim();
+  const action = String(body.action || "").trim();
   const accessStatus = String(body.accessStatus || "").trim();
   const plan = String(body.plan || "").trim();
 
   if (!id) return json({ error: "ID do membro não informado." }, 400);
+
+  if (action === "delete") {
+    const { error: profileError } = await auth.supabase
+      .from("profiles")
+      .delete()
+      .eq("id", id);
+
+    if (profileError) return json({ error: profileError.message }, 400);
+
+    const { error: authError } = await auth.supabase.auth.admin.deleteUser(id);
+    if (authError) {
+      return json({
+        ok: true,
+        warning: "Perfil removido, mas o login do Supabase nao foi apagado automaticamente.",
+        details: authError.message
+      });
+    }
+
+    return json({ ok: true, deleted: true });
+  }
 
   const patch = { updated_at: new Date().toISOString() };
   if (accessStatus) patch.access_status = accessStatus;
