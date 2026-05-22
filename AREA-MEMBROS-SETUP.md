@@ -29,6 +29,18 @@ where email = 'arthurbarris4@gmail.com';
 
 Importante: a senha nao fica no codigo do site.
 
+## 2.1. Configurar URLs de autenticacao
+
+No Supabase, va em **Authentication > URL Configuration**:
+
+```txt
+Site URL=https://seusite.netlify.app
+Redirect URLs=https://seusite.netlify.app/membros.html
+Redirect URLs=https://seusite.netlify.app/admin.html
+```
+
+Se voce estiver usando dominio proprio, use o dominio proprio no lugar do subdominio da Netlify.
+
 ## 3. Configurar variaveis na Netlify
 
 No projeto da Netlify, va em:

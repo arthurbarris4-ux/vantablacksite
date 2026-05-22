@@ -5,7 +5,7 @@ create table if not exists public.profiles (
   company text,
   plan text default 'Vanta Core',
   role text default 'member' check (role in ('admin', 'member')),
-  access_status text default 'active' check (access_status in ('active', 'paused', 'cancelled')),
+  access_status text default 'paused' check (access_status in ('active', 'paused', 'cancelled')),
   created_at timestamptz default now(),
   updated_at timestamptz default now()
 );
@@ -49,7 +49,7 @@ begin
     coalesce(new.raw_user_meta_data->>'full_name', ''),
     coalesce(new.raw_user_meta_data->>'company', ''),
     coalesce(new.raw_user_meta_data->>'plan', 'Vanta Core'),
-    coalesce(new.raw_user_meta_data->>'access_status', 'active'),
+    coalesce(new.raw_user_meta_data->>'access_status', 'paused'),
     'member'
   )
   on conflict (id) do update set
