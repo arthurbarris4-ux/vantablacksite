@@ -1,0 +1,3772 @@
+﻿<!DOCTYPE html>
+
+<html data-theme="dark" lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5MK9HPHX');
+</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Vanta Black | Landing Pages Premium, Tráfego e Aquisição</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;800&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#050505;
+  --bg2:#070707;
+  --card:#0B0B0B;
+  --card2:#111111;
+  --gold:#F2B86B;
+  --gold2:#D89A52;
+  --goldSoft:rgba(242,184,107,.10);
+  --text:#F4F0E7;
+  --muted:rgba(244,240,231,.62);
+  --muted2:rgba(244,240,231,.38);
+  --line:rgba(242,184,107,.105);
+  --soft:rgba(255,255,255,.026);
+  --shadow:rgba(0,0,0,.52);
+  --green:#25D366;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+html[data-theme="light"]{
+  --bg:#F3EDE1;
+  --bg2:#FBF6EC;
+  --card:#FFF9EF;
+  --card2:#EDE3D4;
+  --text:#17130D;
+  --muted:rgba(23,19,13,.62);
+  --muted2:rgba(23,19,13,.42);
+  --line:rgba(86,58,25,.14);
+  --soft:rgba(20,15,8,.035);
+  --shadow:rgba(70,47,20,.12);
+}
+
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  font-family:Inter,sans-serif;
+  color:var(--text);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  transition:background .45s var(--ease),color .45s var(--ease);
+}
+a{text-decoration:none;color:inherit}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.028;
+  z-index:99999;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.bg-grid{
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  background-image:
+    linear-gradient(rgba(242,184,107,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(242,184,107,.022) 1px,transparent 1px);
+  background-size:84px 84px;
+  mask-image:radial-gradient(circle at center,black 14%,transparent 86%);
+  animation:gridDrift 42s linear infinite;
+}
+@keyframes gridDrift{to{background-position:72px 72px}}
+.bg-orbs{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(242,184,107,.055),transparent 26%),
+    radial-gradient(circle at 82% 16%,rgba(216,154,82,.035),transparent 30%),
+    radial-gradient(circle at 56% 92%,rgba(242,184,107,.035),transparent 38%);
+}
+.bg-vanta{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.bg-vanta h1{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:22vw;
+  font-weight:800;
+  letter-spacing:-.06em;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(242,184,107,.028);
+  animation:pulseText 12s ease-in-out infinite;
+}
+@keyframes pulseText{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.02);opacity:.82}}
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:78px;
+  padding:0 clamp(20px,5vw,72px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  z-index:999;
+  transition:.4s var(--ease);
+}
+header.scrolled{
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+  height:68px;
+}
+.logo{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:1.42rem;
+  font-weight:800;
+  letter-spacing:.24em;
+}
+.logo span{color:var(--gold)}
+nav{display:flex;gap:1.45rem;align-items:center}
+nav a{
+  font-size:.64rem;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted2);
+  transition:.35s;
+}
+nav a:hover{color:var(--gold)}
+
+.header-actions{display:flex;gap:.7rem;align-items:center}
+.theme-toggle{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.035);
+  color:var(--gold);
+  cursor:pointer;
+  font-weight:900;
+  transition:.35s var(--ease);
+}
+.theme-toggle:hover{transform:translateY(-2px);background:rgba(242,184,107,.08)}
+
+.btn-nav,.btn-primary,.btn-dark{
+  padding:.92rem 1.48rem;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#111;
+  font-size:.66rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  transition:.45s var(--ease);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:0;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22);
+}
+.btn-nav:hover,.btn-primary:hover,.btn-dark:hover{
+  transform:translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.24),
+    0 10px 22px rgba(242,184,107,.085);
+}
+.btn-secondary{
+  padding:1rem 1.7rem;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.018);
+  color:var(--text);
+  font-weight:800;
+  font-size:.7rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  backdrop-filter:blur(12px);
+  transition:.45s;
+}
+.btn-secondary:hover{
+  border-color:rgba(242,184,107,.26);
+  background:rgba(242,184,107,.045);
+  transform:translateY(-2px);
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 430px;
+  gap:5rem;
+  align-items:center;
+  padding:150px clamp(20px,5vw,72px) 100px;
+  position:relative;
+}
+.hero-left{max-width:790px;z-index:2}
+.tag{
+  font-size:.62rem;
+  font-weight:900;
+  letter-spacing:.34em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:1.6rem;
+}
+.hero h1{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:clamp(3.25rem,7vw,7.2rem);
+  line-height:.9;
+  letter-spacing:-.07em;
+  margin-bottom:1.55rem;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{
+  font-size:1rem;
+  line-height:1.95;
+  color:var(--muted);
+  max-width:590px;
+  font-weight:400;
+}
+.hero-actions{display:flex;gap:1rem;margin-top:2.05rem;flex-wrap:wrap}
+.hero-note{
+  display:flex;
+  gap:1rem;
+  margin-top:1.3rem;
+  flex-wrap:wrap;
+  color:var(--muted2);
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+/* IPHONE MOCKUP */
+.hero-right{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:2;
+  perspective:1200px;
+}
+.iphone-wrap{
+  width:342px;
+  height:704px;
+  transform-style:preserve-3d;
+  animation:floatPhone 6s ease-in-out infinite;
+  transition:transform .18s ease-out;
+}
+@keyframes floatPhone{0%,100%{translate:0 0}50%{translate:0 -16px}}
+.iphone{
+  width:100%;
+  height:100%;
+  padding:13px;
+  border-radius:58px;
+  background:linear-gradient(135deg,#282828 0%,#080808 48%,#202020 100%);
+  box-shadow:0 34px 90px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.10);
+  position:relative;
+  overflow:hidden;
+}
+.iphone::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:58px;
+  background:linear-gradient(115deg,rgba(255,255,255,.12),transparent 28%,transparent 72%,rgba(242,184,107,.10));
+  pointer-events:none;
+}
+.island{
+  position:absolute;
+  top:25px;
+  left:50%;
+  transform:translateX(-50%);
+  width:118px;
+  height:35px;
+  border-radius:999px;
+  background:#000;
+  z-index:10;
+  box-shadow:0 1px 3px rgba(0,0,0,.8);
+}
+.screen{
+  width:100%;
+  height:100%;
+  border-radius:46px;
+  overflow:hidden;
+  position:relative;
+  background:
+    radial-gradient(circle at 30% 4%,rgba(242,184,107,.20),transparent 28%),
+    linear-gradient(180deg,#111,#050505);
+  border:1px solid rgba(255,255,255,.05);
+}
+.screen-content{padding:72px 22px 34px;height:100%;display:flex;flex-direction:column;position:relative;z-index:12}
+.screen-kicker{
+  font-size:.57rem;
+  color:var(--gold);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.screen-title{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:1.85rem;
+  letter-spacing:-.055em;
+  line-height:1;
+  margin-top:.8rem;
+}
+.screen-title span{color:var(--gold)}
+.screen-desc{font-size:.78rem;line-height:1.65;color:rgba(255,255,255,.56);margin-top:.8rem}
+.phone-mode-switch{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:6px;
+  margin-top:1rem;
+  padding:5px;
+  border:1px solid rgba(242,184,107,.13);
+  border-radius:999px;
+  background:rgba(255,255,255,.035);
+}
+.phone-mode-switch button{
+  min-width:0;
+  min-height:30px;
+  border:0;
+  border-radius:999px;
+  background:transparent;
+  color:rgba(255,255,255,.56);
+  font-size:.48rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background .25s ease,color .25s ease,transform .25s ease;
+}
+.phone-mode-switch button.active,
+.phone-mode-switch button:hover{
+  background:linear-gradient(135deg,rgba(242,184,107,.95),rgba(215,155,61,.95));
+  color:#090909;
+}
+.phone-mode-switch button:active{
+  transform:scale(.96);
+}
+.phone-card{
+  margin-top:1.1rem;
+  padding:16px;
+  border-radius:26px;
+  background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
+  border:1px solid rgba(242,184,107,.12);
+}
+.phone-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.phone-row small{font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42);font-weight:900}
+.live{
+  padding:.42rem .7rem;
+  background:rgba(37,211,102,.11);
+  color:#25D366;
+  border-radius:999px;
+  font-size:.5rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.metric{padding:13px;border-radius:18px;background:#111;border:1px solid rgba(255,255,255,.045)}
+.metric strong{display:block;font-family:"Space Grotesk",sans-serif;font-size:1.28rem;color:var(--gold)}
+.metric span{font-size:.5rem;text-transform:uppercase;letter-spacing:.13em;color:rgba(255,255,255,.42)}
+.phone-preview{
+  margin-top:.85rem;
+  flex:1;
+  min-height:0;
+  padding:14px 15px;
+  border-radius:26px;
+  background:radial-gradient(circle at 20% 20%,rgba(242,184,107,.15),transparent 42%),linear-gradient(135deg,#151515,#080808);
+  border:1px solid rgba(242,184,107,.15);
+  overflow:hidden;
+}
+.phone-preview small{font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:900}
+.phone-preview h3{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:1.18rem;
+  line-height:1.08;
+  letter-spacing:-.04em;
+  margin-top:.62rem;
+  max-width:245px;
+}
+.phone-preview p{
+  font-size:.64rem;
+  line-height:1.45;
+  margin-top:.5rem;
+  color:rgba(255,255,255,.50);
+  max-width:245px;
+}
+.chart{
+  margin-top:.7rem;
+  height:48px;
+  border-radius:16px;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(180deg,rgba(242,184,107,.12),transparent),repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 28px);
+}
+.chart::after{content:"";position:absolute;left:-10%;bottom:18px;width:130%;height:35px;border-bottom:2px solid var(--gold);border-radius:50%;transform:rotate(-4deg);animation:chartMove 5s ease-in-out infinite}
+@keyframes chartMove{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-4deg) translateY(-8px)}}
+.phone-ai-shell{
+  margin-top:1rem;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  flex:1;
+  min-height:0;
+}
+.phone-ai-status{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:11px 13px;
+  border-radius:20px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(242,184,107,.13);
+}
+.phone-ai-status span{
+  font-size:.52rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.46);
+  font-weight:900;
+}
+.phone-ai-status strong{
+  padding:.38rem .62rem;
+  border-radius:999px;
+  background:rgba(37,211,102,.13);
+  color:#25D366;
+  font-size:.48rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.phone-chat{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  flex:1;
+  min-height:176px;
+  overflow:auto;
+  padding-right:2px;
+  scrollbar-width:none;
+}
+.phone-chat::-webkit-scrollbar{display:none}
+.phone-bubble{
+  width:fit-content;
+  max-width:92%;
+  padding:10px 12px;
+  border-radius:17px;
+  font-size:.67rem;
+  line-height:1.45;
+  color:rgba(255,255,255,.76);
+  box-shadow:0 16px 30px rgba(0,0,0,.18);
+}
+.phone-bubble.ai{
+  align-self:flex-start;
+  background:linear-gradient(135deg,rgba(255,255,255,.085),rgba(255,255,255,.035));
+  border:1px solid rgba(242,184,107,.13);
+}
+.phone-bubble.user{
+  align-self:flex-end;
+  background:linear-gradient(135deg,rgba(242,184,107,.96),rgba(217,157,66,.96));
+  color:#080808;
+  font-weight:800;
+}
+.phone-bubble.typing{
+  color:rgba(255,255,255,.48);
+}
+.phone-quick-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+}
+.phone-quick-grid button{
+  min-height:34px;
+  border:1px solid rgba(242,184,107,.15);
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
+  color:rgba(255,255,255,.7);
+  font-size:.52rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+.phone-quick-grid button:hover{
+  background:rgba(242,184,107,.14);
+  color:#fff;
+}
+.phone-ai-form{
+  display:flex;
+  gap:7px;
+}
+.phone-ai-form input{
+  min-width:0;
+  flex:1;
+  height:38px;
+  border:1px solid rgba(242,184,107,.16);
+  border-radius:999px;
+  background:rgba(0,0,0,.28);
+  color:#fff;
+  padding:0 13px;
+  font-size:.68rem;
+  outline:none;
+}
+.phone-ai-form input::placeholder{color:rgba(255,255,255,.34)}
+.phone-ai-form button{
+  width:38px;
+  height:38px;
+  border:0;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),#d89c3f);
+  color:#090909;
+  font-weight:950;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+
+/* Cinematic first impression */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(110deg,transparent 0 36%,rgba(242,184,107,.11) 48%,transparent 62%),
+    radial-gradient(circle at 76% 34%,rgba(242,184,107,.16),transparent 28%);
+  opacity:0;
+  transform:translateX(-14%);
+  animation:vantaLightSweep 1.35s cubic-bezier(.2,.7,.2,1) .1s forwards;
+}
+.hero-left .tag,
+.hero-left h1,
+.hero-left p,
+.hero-actions,
+.hero-note{
+  opacity:0;
+  transform:translateY(22px);
+  animation:vantaRise .82s cubic-bezier(.2,.7,.2,1) forwards;
+}
+.hero-left .tag{animation-delay:.08s}
+.hero-left h1{animation-delay:.18s}
+.hero-left p{animation-delay:.32s}
+.hero-actions{animation-delay:.46s}
+.hero-note{animation-delay:.58s}
+.hero-right{
+  opacity:0;
+  transform:translateX(28px) scale(.98);
+  animation:vantaPhoneEnter .95s cubic-bezier(.2,.7,.2,1) .38s forwards;
+}
+.hero-right .iphone{
+  opacity:0;
+  transform:translateX(22px) scale(.985);
+  animation:vantaPhoneEnter .95s cubic-bezier(.2,.7,.2,1) .38s forwards;
+}
+.iphone::before{
+  content:"";
+  position:absolute;
+  inset:16px;
+  border-radius:48px;
+  pointer-events:none;
+  background:linear-gradient(115deg,transparent 0 34%,rgba(255,255,255,.22) 44%,transparent 55%);
+  transform:translateX(-120%);
+  animation:vantaGlassSweep 2.2s ease-in-out 1.1s both;
+  z-index:6;
+}
+@keyframes vantaRise{
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes vantaPhoneEnter{
+  to{opacity:1;transform:translateX(0) scale(1)}
+}
+@keyframes vantaLightSweep{
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes vantaGlassSweep{
+  0%{transform:translateX(-120%);opacity:0}
+  28%{opacity:.72}
+  62%{opacity:.18}
+  100%{transform:translateX(120%);opacity:0}
+}
+@media (prefers-reduced-motion: reduce), (max-width:780px){
+  .hero::before,
+  .hero-left .tag,
+  .hero-left h1,
+  .hero-left p,
+  .hero-actions,
+  .hero-note,
+  .hero-right,
+  .hero-right .iphone,
+  .iphone::before{
+    animation:none!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+}
+
+/* COMMON */
+section{padding:86px clamp(20px,5vw,72px);position:relative}
+.section-head{max-width:850px;margin:0 auto 3rem;text-align:center}
+.section-head span,.eyebrow{
+  font-size:.65rem;
+  text-transform:uppercase;
+  letter-spacing:.24em;
+  font-weight:900;
+  color:var(--gold);
+}
+.section-head h2{
+  margin-top:1rem;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:clamp(2.45rem,5vw,4.95rem);
+  line-height:.94;
+  letter-spacing:-.065em;
+}
+.section-head h2 em{font-style:normal;color:var(--gold)}
+.section-head p{
+  margin-top:1.05rem;
+  line-height:1.85;
+  color:var(--muted);
+  font-weight:400;
+}
+
+.card,.market,.offer,.step-box,.feature,.proof-card,.before-after-card,.faq-item{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01)),
+    var(--card);
+  border:1px solid var(--line);
+  border-radius:32px;
+  box-shadow:
+    0 24px 70px var(--shadow),
+    inset 0 1px 0 rgba(255,255,255,.035);
+  transition:.55s var(--ease);
+  backdrop-filter:blur(14px);
+}
+.card:hover,.market:hover,.offer:hover,.step-box:hover,.feature:hover,.proof-card:hover,.before-after-card:hover,.faq-item:hover{
+  transform:translateY(-3px);
+  border-color:rgba(242,184,107,.18);
+}
+
+/* BRAND STRIP */
+.brand-section{padding-top:35px;padding-bottom:76px}
+.logo-box{
+  max-width:1120px;
+  height:190px;
+  margin:42px auto 0;
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:0;
+  overflow:hidden;
+  position:relative;
+  background:rgba(255,255,255,.014);
+}
+.logo-box::before,.logo-box::after{
+  content:"";
+  position:absolute;
+  top:0;
+  width:210px;
+  height:100%;
+  z-index:3;
+  pointer-events:none;
+}
+.logo-box::before{left:0;background:linear-gradient(90deg,var(--bg) 0%,color-mix(in srgb,var(--bg) 82%,transparent) 42%,transparent)}
+.logo-box::after{right:0;background:linear-gradient(270deg,var(--bg) 0%,color-mix(in srgb,var(--bg) 82%,transparent) 42%,transparent)}
+.logo-box .center-focus{display:none;}
+.logo-track{
+  height:100%;
+  display:flex;
+  gap:132px;
+  width:max-content;
+  animation:scroll 44s linear infinite;
+  align-items:center;
+  will-change:transform;
+}
+.logo-track img{
+  height:126px;
+  max-width:330px;
+  width:auto;
+  object-fit:contain;
+  opacity:.36;
+  filter:blur(1.6px) saturate(.72);
+  transform:scale(.84);
+  transition:.45s cubic-bezier(.16,1,.3,1);
+}
+.logo-track img.is-center{
+  opacity:1;
+  filter:blur(0) saturate(1.02);
+  transform:scale(1.18);
+}
+.logo-track img:hover{
+  opacity:1;
+  filter:blur(0) saturate(1.05) drop-shadow(0 0 12px rgba(242,184,107,.055));
+}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* PROBLEM */
+.problem-wrap{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:stretch}
+.problem-copy{padding:38px}
+.problem-copy h3{font-family:"Space Grotesk";font-size:clamp(2.2rem,4vw,4rem);line-height:1;letter-spacing:-.055em}
+.problem-copy h3 em{font-style:normal;color:var(--gold)}
+.problem-copy p{margin-top:1rem;color:var(--muted);line-height:1.85}
+.problem-list{display:grid;gap:1rem}
+.feature{padding:1.4rem}
+.feature small,.market small,.offer small{font-family:"Space Grotesk",sans-serif;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-weight:900;font-size:.66rem}
+.feature h3,.market h3,.offer h3{font-family:"Space Grotesk",sans-serif;font-size:1.55rem;letter-spacing:-.04em;margin:.55rem 0}
+.feature p,.market p,.offer p,.offer li,.market li{color:var(--muted);line-height:1.7;font-size:.9rem}
+
+/* BEFORE AFTER */
+.before-after{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.before-after-card{padding:34px}
+.before-after-card h3{font-family:"Space Grotesk";font-size:2rem;letter-spacing:-.04em;margin-bottom:1rem}
+.before-after-card.after h3{color:var(--gold)}
+.before-after-card ul{list-style:none;display:grid;gap:.8rem}
+.before-after-card li{color:var(--muted);line-height:1.65}
+.before-after-card li::before{content:"•";color:var(--gold);margin-right:.55rem}
+
+/* MARKETS */
+.market-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.market{padding:1.75rem}
+.market ul,.offer ul{list-style:none;margin-top:1rem}
+.market li,.offer li{margin:.45rem 0}
+.market li::before,.offer li::before{content:"•";color:var(--gold);margin-right:.55rem}
+
+/* PROOF */
+.proof-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
+.proof-card{padding:34px}
+.proof-card h3{font-family:"Space Grotesk";font-size:2.2rem;line-height:1;letter-spacing:-.05em}
+.proof-card h3 em{font-style:normal;color:var(--gold)}
+.proof-card p{margin-top:1rem;color:var(--muted);line-height:1.8}
+.proof-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.proof-metric strong{display:block;font-family:"Space Grotesk";font-size:2.1rem;color:var(--gold)}
+.proof-metric span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2)}
+
+/* OFFERS */
+.offers-section{
+  padding-top:110px;
+  padding-bottom:120px;
+  background:
+    radial-gradient(circle at 50% 8%,rgba(242,184,107,.055),transparent 30%),
+    linear-gradient(180deg,transparent,rgba(255,255,255,.012),transparent);
+}
+.offers-section .section-head{
+  margin-bottom:4.5rem;
+}
+.offers{
+  max-width:1180px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:1.05rem;
+  align-items:stretch;
+}
+.offer{
+  position:relative;
+  min-height:560px;
+  padding:1.65rem;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  border-radius:34px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.014)),
+    rgba(8,8,8,.88);
+  border:1px solid rgba(242,184,107,.12);
+  box-shadow:
+    0 28px 80px rgba(0,0,0,.36),
+    inset 0 1px 0 rgba(255,255,255,.045);
+  backdrop-filter:blur(18px);
+}
+html[data-theme="light"] .offer{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.42)),
+    var(--card);
+  box-shadow:
+    0 24px 70px rgba(78,50,20,.12),
+    inset 0 1px 0 rgba(255,255,255,.8);
+}
+.offer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% -8%,rgba(242,184,107,.10),transparent 34%);
+  opacity:.58;
+}
+.offer::after{
+  content:"";
+  position:absolute;
+  left:1.4rem;
+  right:1.4rem;
+  top:5.55rem;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(242,184,107,.18),transparent);
+  opacity:.55;
+}
+.offer>*{position:relative;z-index:2}
+.offer small{
+  display:block;
+  font-family:"Space Grotesk",sans-serif;
+  color:var(--gold);
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:900;
+  font-size:.62rem;
+}
+.offer h3{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:1.45rem;
+  line-height:1.02;
+  letter-spacing:-.045em;
+  margin:1rem 0 1.65rem;
+  min-height:48px;
+}
+.offer p{
+  color:var(--muted);
+  line-height:1.72;
+  font-size:.9rem;
+  min-height:92px;
+  margin:0;
+}
+.offer ul{
+  list-style:none;
+  display:grid;
+  gap:.72rem;
+  margin:1.45rem 0 1.7rem;
+  flex:1;
+}
+.offer li{
+  color:var(--muted);
+  line-height:1.55;
+  font-size:.86rem;
+  margin:0;
+}
+.offer li::before{
+  content:"✓";
+  color:var(--gold);
+  margin-right:.58rem;
+  font-weight:900;
+}
+.price{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:2.45rem;
+  line-height:.95;
+  letter-spacing:-.06em;
+  color:var(--gold);
+  margin-top:auto;
+}
+.obs{
+  color:var(--muted2);
+  font-size:.72rem;
+  margin:.35rem 0 1rem;
+}
+.offer a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:44px;
+  text-align:center;
+  border-radius:999px;
+  border:1px solid rgba(242,184,107,.22);
+  background:rgba(255,255,255,.018);
+  color:var(--text);
+  padding:.86rem;
+  font-size:.6rem;
+  font-weight:900;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  transition:.38s var(--ease);
+}
+.offer a:hover{
+  transform:translateY(-2px);
+  border-color:rgba(242,184,107,.38);
+  background:rgba(242,184,107,.08);
+}
+.offer.featured{
+  transform:translateY(-16px);
+  border-color:rgba(242,184,107,.28);
+  background:
+    linear-gradient(180deg,rgba(242,184,107,.10),rgba(255,255,255,.018) 48%,rgba(255,255,255,.012)),
+    rgba(9,8,6,.92);
+  box-shadow:
+    0 36px 105px rgba(0,0,0,.44),
+    0 0 0 1px rgba(242,184,107,.055),
+    inset 0 1px 0 rgba(255,255,255,.055);
+}
+html[data-theme="light"] .offer.featured{
+  transform:translateY(-16px);
+  border-color:rgba(242,184,107,.28);
+  background:
+    linear-gradient(180deg,rgba(242,184,107,.10),rgba(255,255,255,.018) 48%,rgba(255,255,255,.012)),
+    rgba(9,8,6,.92);
+  box-shadow:
+    0 36px 105px rgba(0,0,0,.44),
+    0 0 0 1px rgba(242,184,107,.055),
+    inset 0 1px 0 rgba(255,255,255,.055);
+}
+.offer.featured::before{
+  background:
+    linear-gradient(110deg,transparent 0%,rgba(255,216,159,.06) 38%,rgba(255,216,159,.12) 50%,rgba(255,216,159,.05) 62%,transparent 100%),
+    radial-gradient(circle at 50% -6%,rgba(242,184,107,.13),transparent 40%);
+  background-size:220% 100%,auto;
+  animation:offerShine 12s ease-in-out infinite;
+  opacity:.72;
+}
+@keyframes offerShine{
+  0%,100%{background-position:180% 0,0 0}
+  50%{background-position:0% 0,0 0}
+}
+.offer.featured::after{
+  background:linear-gradient(90deg,transparent,rgba(255,216,159,.36),transparent);
+}
+.offer.featured .price{
+  font-size:2.75rem;
+}
+.offer.featured a{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  border-color:transparent;
+  color:#111;
+}
+.offer.featured a:hover{
+  box-shadow:0 12px 28px rgba(242,184,107,.12);
+}
+.offer .recommended{
+  position:absolute;
+  top:1.35rem;
+  right:1.35rem;
+  z-index:3;
+  padding:.45rem .72rem;
+  border-radius:999px;
+  background:rgba(242,184,107,.10);
+  border:1px solid rgba(242,184,107,.22);
+  color:var(--gold);
+  font-size:.48rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+/* METHOD */
+.method-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.step-box{text-align:center;padding:1.6rem 1.15rem}
+.num{width:52px;height:52px;border-radius:50%;border:1px solid rgba(242,184,107,.26);display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:"Space Grotesk";font-weight:900;margin:0 auto 1rem}
+.step-box h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:.6rem}
+.step-box p{color:var(--muted);font-size:.85rem;line-height:1.6}
+
+/* FAQ */
+.faq{max-width:930px;margin:auto;display:grid;gap:.8rem}
+.faq-item{padding:1.35rem 1.55rem}
+.faq-item h3{font-size:1rem;margin-bottom:.45rem}
+.faq-item p{color:var(--muted);line-height:1.7;font-size:.92rem}
+
+/* CTA */
+.cta-minimal{
+  position:relative;
+  padding:120px clamp(20px,5vw,72px);
+  text-align:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(242,184,107,.10), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,.015), transparent 45%),
+    var(--bg);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.cta-minimal::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg, transparent, rgba(242,184,107,.055), transparent);
+  opacity:.22;
+}
+.cta-minimal-inner{position:relative;z-index:2;max-width:860px;margin:auto}
+.cta-minimal span{display:block;margin-bottom:1.2rem;font-size:.68rem;font-weight:900;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.cta-minimal h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.6rem,6vw,5.8rem);line-height:.95;letter-spacing:-.06em}
+.cta-minimal h2 em{display:block;font-style:normal;color:var(--gold)}
+.cta-minimal p{max-width:620px;margin:1.6rem auto 0;color:var(--muted);font-size:1rem;line-height:1.8}
+.cta-minimal-actions{margin-top:2.2rem}
+
+/* FOOTER */
+footer{
+  position:relative;
+  overflow:hidden;
+  padding:84px clamp(20px,5vw,72px) 34px;
+  background:
+    radial-gradient(125% 125% at 50% 0%, rgba(242,184,107,.055) 0%, transparent 46%),
+    var(--bg2);
+}
+.footer-wrap{max-width:1120px;margin:auto;position:relative;z-index:2}
+.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr 1fr;gap:2.4rem}
+.footer-brand h2{font-family:"Space Grotesk";font-size:clamp(2.6rem,5vw,5.4rem);line-height:.9;letter-spacing:-.06em}
+.footer-brand h2 em{font-style:normal;color:var(--gold)}
+.footer-brand p{margin-top:1rem;max-width:430px;color:var(--muted);line-height:1.8}
+.footer-col h4{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.footer-col a,.footer-col span{display:block;color:var(--muted);font-size:.92rem;margin:.7rem 0;transition:.3s}
+.footer-col a:hover{color:var(--gold);transform:translateX(3px)}
+.footer-hover{
+  height:190px;
+  margin:42px 0 -52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:auto;
+}
+.footer-hover svg{width:100%;height:100%;max-width:980px}
+.footer-bottom{
+  margin-top:2rem;
+  padding-top:1rem;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:1rem;
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--muted2);
+}
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.36rem;
+  color:white;
+  font-weight:900;
+  z-index:9999;
+  box-shadow:0 8px 18px rgba(37,211,102,.10);
+  transition:.4s;
+}
+.whatsapp:hover{transform:translateY(-3px) scale(1.03)}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:1150px){
+  .hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 430px;
+  gap:5rem;
+  align-items:center;
+  padding:150px clamp(20px,5vw,72px) 100px;
+  position:relative;
+}
+  .hero-right{display:none}
+  .problem-wrap,.proof-grid{grid-template-columns:1fr}
+  .market-grid{grid-template-columns:1fr}
+  .offers{grid-template-columns:repeat(2,1fr);max-width:760px}
+  .offer.featured{
+  transform:translateY(-16px);
+  border-color:rgba(242,184,107,.28);
+  background:
+    linear-gradient(180deg,rgba(242,184,107,.10),rgba(255,255,255,.018) 48%,rgba(255,255,255,.012)),
+    rgba(9,8,6,.92);
+  box-shadow:
+    0 36px 105px rgba(0,0,0,.44),
+    0 0 0 1px rgba(242,184,107,.055),
+    inset 0 1px 0 rgba(255,255,255,.055);
+}
+  .method-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:780px){
+  nav{display:none}
+  header{padding:0 18px}
+  .btn-nav{display:none}
+  .theme-toggle{width:44px;height:44px}
+  .hero h1{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:clamp(3.25rem,7vw,7.2rem);
+  line-height:.9;
+  letter-spacing:-.07em;
+  margin-bottom:1.55rem;
+}
+  .hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 430px;
+  gap:5rem;
+  align-items:center;
+  padding:150px clamp(20px,5vw,72px) 100px;
+  position:relative;
+}
+  .hero-actions a{width:100%;justify-content:center}
+  section{padding:68px 20px}
+  .brand-section{padding-top:20px}
+  .logo-track img{
+  height:126px;
+  max-width:330px;
+  width:auto;
+  object-fit:contain;
+  opacity:.36;
+  filter:blur(1.6px) saturate(.72);
+  transform:scale(.84);
+  transition:.45s cubic-bezier(.16,1,.3,1);
+}
+  .before-after,.offers,.method-grid,.proof-metrics{grid-template-columns:1fr}
+  .offer.featured{
+  transform:translateY(-16px);
+  border-color:rgba(242,184,107,.28);
+  background:
+    linear-gradient(180deg,rgba(242,184,107,.10),rgba(255,255,255,.018) 48%,rgba(255,255,255,.012)),
+    rgba(9,8,6,.92);
+  box-shadow:
+    0 36px 105px rgba(0,0,0,.44),
+    0 0 0 1px rgba(242,184,107,.055),
+    inset 0 1px 0 rgba(255,255,255,.055);
+}
+  .offer{min-height:auto}
+  .cta-minimal{padding:90px 20px}
+  .cta-minimal h2{font-size:3rem}
+  .cta-minimal .btn-primary{width:100%}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-hover{display:none}
+  .footer-bottom{flex-direction:column}
+}
+
+.logo-img{
+  display:flex;
+  align-items:center;
+  width:142px;
+  height:42px;
+}
+.logo-img img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+.logo-light-mode{display:none!important}
+html[data-theme="light"] .logo-dark-mode{display:none!important}
+html[data-theme="light"] .logo-light-mode{display:block!important}
+html[data-theme="dark"] .logo-dark-mode{display:block!important}
+html[data-theme="dark"] .logo-light-mode{display:none!important}
+
+html[data-theme="light"] body{background:#F3EDE1}
+html[data-theme="light"] .bg-grid{
+  background-image:
+    linear-gradient(rgba(86,58,25,.075) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(86,58,25,.075) 1px,transparent 1px);
+}
+html[data-theme="light"] .bg-vanta h1{-webkit-text-stroke:1px rgba(86,58,25,.045)}
+html[data-theme="light"] header.scrolled{background:rgba(243,237,225,.88)}
+html[data-theme="light"] .btn-secondary{
+  background:rgba(23,19,13,.035);
+  border-color:rgba(86,58,25,.18);
+}
+html[data-theme="light"] .card,
+html[data-theme="light"] .market,
+html[data-theme="light"] .offer,
+html[data-theme="light"] .step-box,
+html[data-theme="light"] .feature,
+html[data-theme="light"] .proof-card,
+html[data-theme="light"] .before-after-card,
+html[data-theme="light"] .faq-item{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.42)),
+    var(--card);
+  color:var(--text);
+  border-color:rgba(86,58,25,.14);
+  box-shadow:
+    0 22px 62px rgba(70,47,20,.10),
+    inset 0 1px 0 rgba(255,255,255,.72);
+}
+html[data-theme="light"] .logo-box{
+  background:rgba(255,255,255,.34);
+  border-color:rgba(86,58,25,.16);
+}
+html[data-theme="light"] .logo-box::before{
+  background:linear-gradient(90deg,var(--bg) 0%,rgba(243,237,225,.82) 42%,transparent);
+}
+html[data-theme="light"] .logo-box::after{
+  background:linear-gradient(270deg,var(--bg) 0%,rgba(243,237,225,.82) 42%,transparent);
+}
+
+/* Keep the phone interface dark and readable in both modes */
+.screen,
+.screen *{color:#F7F4EC}
+.screen{
+  background:
+    radial-gradient(circle at 30% 4%,rgba(242,184,107,.18),transparent 28%),
+    linear-gradient(180deg,#12110F,#050505)!important;
+}
+.screen-kicker,
+.phone-preview small{color:#F2B86B!important}
+.screen-title{color:rgba(247,244,236,.92)!important}
+.screen-title span{color:#F2B86B!important}
+.screen-desc,
+.phone-preview p{
+  font-size:.64rem;
+  line-height:1.45;
+  margin-top:.5rem;
+  color:rgba(255,255,255,.50);
+  max-width:245px;
+}
+.phone-card,
+.phone-preview,
+.metric{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.022)),
+    #0B0B0B!important;
+  border-color:rgba(242,184,107,.15)!important;
+}
+.phone-row small,
+.metric span{color:rgba(247,244,236,.46)!important}
+.metric strong{color:#F2B86B!important}
+html[data-theme="light"] .iphone{
+  background:linear-gradient(135deg,#2B2A27 0%,#0A0A0A 48%,#27231C 100%);
+  box-shadow:0 28px 80px rgba(70,47,20,.22), inset 0 1px 0 rgba(255,255,255,.08);
+}
+html[data-theme="light"] .phone-preview h3{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:1.18rem;
+  line-height:1.08;
+  letter-spacing:-.04em;
+  margin-top:.62rem;
+  max-width:245px;
+}
+html[data-theme="light"] .offer.featured{
+  background:
+    linear-gradient(180deg,rgba(242,184,107,.23),rgba(255,255,255,.70) 48%,rgba(255,255,255,.50)),
+    var(--card);
+}
+html[data-theme="light"] .offer a{
+  background:rgba(23,19,13,.025);
+  color:var(--text);
+}
+html[data-theme="light"] .offer.featured a{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  color:#111;
+}
+html[data-theme="light"] .footer-col a,
+html[data-theme="light"] .footer-col span{color:rgba(23,19,13,.62)}
+html[data-theme="light"] .footer-bottom{color:rgba(23,19,13,.44)}
+
+@media(max-width:780px){
+  .logo-img{width:118px;height:36px}
+}
+
+
+/* Checkout integration refinements */
+.offer a[target="_blank"]::after{
+  content:"↗";
+  margin-left:.45rem;
+  font-size:.72rem;
+  opacity:.72;
+}
+.offer.featured{
+  transform:translateY(-16px);
+}
+@media(max-width:1150px){
+  .offer.featured{transform:none}
+}
+
+
+/* Mobile UX correction */
+@media(max-width:780px){
+  html,body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+  body{
+    font-size:16px;
+  }
+
+  header{
+    height:72px;
+    padding:0 22px;
+    background:color-mix(in srgb,var(--bg) 82%,transparent);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(242,184,107,.08);
+  }
+
+  header.scrolled{
+    height:68px;
+  }
+
+  .logo-img{
+    width:122px!important;
+    height:auto!important;
+  }
+
+  .theme-toggle{
+    width:48px;
+    height:48px;
+    flex:0 0 48px;
+  }
+
+  .hero{
+    display:block;
+    min-height:auto;
+    padding:118px 22px 72px;
+    text-align:left;
+  }
+
+  .hero-left{
+    max-width:100%;
+  }
+
+  .tag{
+    font-size:.58rem;
+    letter-spacing:.32em;
+    margin-bottom:1.2rem;
+    line-height:1.6;
+    max-width:220px;
+  }
+
+  .hero h1{
+    font-size:clamp(3.15rem,15vw,4.65rem);
+    line-height:.92;
+    letter-spacing:-.07em;
+    max-width:100%;
+    margin-bottom:1.25rem;
+    word-break:normal;
+    overflow-wrap:normal;
+  }
+
+  .hero p{
+    max-width:100%;
+    width:100%;
+    font-size:1rem;
+    line-height:1.72;
+    color:var(--muted);
+    display:block;
+    white-space:normal;
+    word-break:normal;
+    overflow-wrap:break-word;
+  }
+
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:.85rem;
+    margin-top:1.8rem;
+  }
+
+  .hero-actions a,
+  .btn-primary,
+  .btn-secondary{
+    width:100%;
+    min-height:52px;
+    justify-content:center;
+    text-align:center;
+  }
+
+  .hero-note{
+    margin-top:1.35rem;
+    gap:.55rem;
+    font-size:.62rem;
+    line-height:1.7;
+  }
+
+  section{
+    padding:72px 22px;
+  }
+
+  .section-head{
+    text-align:left;
+    margin-bottom:2.4rem;
+  }
+
+  .section-head h2{
+    font-size:clamp(2.55rem,12vw,3.55rem);
+    line-height:.96;
+    letter-spacing:-.06em;
+  }
+
+  .section-head p{
+    font-size:.96rem;
+    line-height:1.7;
+  }
+
+  .logo-box{
+    height:150px;
+    border-radius:26px;
+    margin-top:28px;
+  }
+
+  .logo-box::before,
+  .logo-box::after{
+    width:70px;
+  }
+
+  .logo-track{
+    gap:84px;
+    animation:scroll 44s linear infinite!important;
+  }
+
+  .logo-track img{
+    height:88px!important;
+    max-width:220px!important;
+  }
+
+  .problem-copy,
+  .proof-card,
+  .before-after-card{
+    padding:28px 22px;
+  }
+
+  .problem-copy h3{
+    font-size:clamp(2.35rem,11vw,3.2rem);
+  }
+
+  .feature,
+  .market,
+  .faq-item,
+  .step-box{
+    padding:1.35rem;
+    border-radius:26px;
+  }
+
+  .before-after{
+    gap:.9rem;
+  }
+
+  .market-grid,
+  .offers,
+  .method-grid,
+  .proof-metrics,
+  .proof-grid,
+  .problem-wrap{
+    grid-template-columns:1fr!important;
+  }
+
+  .offers-section{
+    padding-top:78px;
+    padding-bottom:86px;
+  }
+
+  .offer{
+    min-height:auto;
+    padding:1.45rem;
+    border-radius:28px;
+  }
+
+  .offer h3{
+    min-height:auto;
+    font-size:1.55rem;
+    margin-bottom:1.2rem;
+  }
+
+  .offer p{
+    min-height:auto;
+    font-size:.94rem;
+    line-height:1.65;
+  }
+
+  .offer ul{
+    margin:1.25rem 0 1.45rem;
+  }
+
+  .offer.featured{
+    transform:none!important;
+  }
+
+  .price{
+    font-size:2.35rem;
+  }
+
+  .cta-minimal{
+    padding:86px 22px;
+    text-align:left;
+  }
+
+  .cta-minimal-inner{
+    max-width:100%;
+  }
+
+  .cta-minimal h2{
+    font-size:clamp(2.65rem,12vw,3.6rem);
+    line-height:.96;
+  }
+
+  .cta-minimal p{
+    margin-left:0;
+    margin-right:0;
+  }
+
+  footer{
+    padding:72px 22px 30px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr!important;
+    gap:2rem;
+  }
+
+  .footer-brand h2{
+    font-size:clamp(2.55rem,12vw,3.7rem);
+  }
+
+  .footer-bottom{
+    align-items:flex-start;
+  }
+
+  .whatsapp{
+    width:54px;
+    height:54px;
+    right:18px;
+    bottom:18px;
+    font-size:1.22rem;
+  }
+}
+
+@media(max-width:390px){
+  .hero h1{
+    font-size:3.05rem;
+  }
+
+  .hero p{
+    font-size:.95rem;
+    line-height:1.68;
+  }
+
+  section{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .hero{
+    padding-left:18px;
+    padding-right:18px;
+  }
+}
+
+
+/* Performance pass: lighter animations, same visual direction */
+.bg-grid{
+  animation:none!important;
+  transform:none!important;
+}
+.bg-vanta h1{
+  animation:none!important;
+}
+.logo-track{
+  animation:scroll 44s linear infinite!important;
+  will-change:transform;
+}
+.offer.featured::before{
+  animation:none!important;
+}
+.chart::after{
+  animation:none!important;
+}
+.iphone-wrap{
+  animation:none!important;
+}
+.reveal{
+  transition:opacity .42s ease, transform .42s ease!important;
+}
+.card,.market,.offer,.step-box,.feature,.proof-card,.before-after-card,.faq-item,
+.btn-nav,.btn-primary,.btn-dark,.btn-secondary,.whatsapp,.logo-track img{
+  transition:transform .22s ease, opacity .22s ease, border-color .22s ease, background .22s ease, box-shadow .22s ease!important;
+}
+.card:hover,.market:hover,.offer:hover,.step-box:hover,.feature:hover,.proof-card:hover,.before-after-card:hover,.faq-item:hover{
+  transform:none!important;
+}
+.offer:hover{
+  transform:none!important;
+}
+.offer.featured{
+  transform:none!important;
+}
+.offer{
+  backdrop-filter:none!important;
+}
+.card,.market,.offer,.step-box,.feature,.proof-card,.before-after-card,.faq-item{
+  backdrop-filter:none!important;
+}
+
+/* Mobile performance: disable continuous and hover-like effects */
+@media(max-width:780px){
+  *{
+    scroll-behavior:auto!important;
+  }
+
+  body::before{
+    display:none!important;
+  }
+
+  .bg-grid{
+    background-size:96px 96px!important;
+    opacity:.65;
+  }
+
+  .bg-orbs{
+    opacity:.55;
+  }
+
+  .bg-vanta{
+    display:none!important;
+  }
+
+  .logo-track{
+    animation:scroll 44s linear infinite!important;
+  }
+
+  .logo-track img{
+    filter:none!important;
+    opacity:.58!important;
+    transform:scale(.92)!important;
+  }
+
+  .logo-track img.is-center{
+    filter:none!important;
+    opacity:1!important;
+    transform:scale(1.08)!important;
+  }
+
+  .offer::before,
+  .offer::after,
+  .card::before,
+  .market::before,
+  .feature::before,
+  .proof-card::before{
+    animation:none!important;
+  }
+
+  .offer,
+  .card,
+  .market,
+  .step-box,
+  .feature,
+  .proof-card,
+  .before-after-card,
+  .faq-item{
+    box-shadow:0 14px 38px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.035)!important;
+  }
+
+  .offer.featured{
+    box-shadow:0 18px 48px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.045)!important;
+  }
+
+  .whatsapp{
+    box-shadow:0 8px 18px rgba(37,211,102,.12)!important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,
+  *::before,
+  *::after{
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important;
+  }
+}
+
+
+/* Final performance and mobile refinements */
+.whatsapp svg{
+  width:26px;
+  height:26px;
+  display:block;
+}
+
+.bg-grid,
+.bg-vanta h1,
+.offer.featured::before,
+.chart::after,
+.iphone-wrap{
+  animation:none!important;
+}
+
+.logo-track{
+  animation:scroll 44s linear infinite!important;
+  will-change:transform;
+}
+
+.reveal{
+  transition:opacity .42s ease, transform .42s ease!important;
+}
+
+.card,.market,.offer,.step-box,.feature,.proof-card,.before-after-card,.faq-item{
+  backdrop-filter:none!important;
+}
+
+.card:hover,.market:hover,.offer:hover,.step-box:hover,.feature:hover,.proof-card:hover,.before-after-card:hover,.faq-item:hover{
+  transform:none!important;
+}
+
+.offer a[target="_blank"]::after{
+  content:"↗";
+  margin-left:.45rem;
+  font-size:.72rem;
+  opacity:.72;
+}
+
+@media(max-width:780px){
+  html,body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+  body::before{
+    display:none!important;
+  }
+
+  header{
+    height:72px;
+    padding:0 22px;
+    background:color-mix(in srgb,var(--bg) 82%,transparent);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(242,184,107,.08);
+  }
+
+  .hero{
+    display:block;
+    min-height:auto;
+    padding:118px 22px 72px;
+    text-align:left;
+  }
+
+  .hero h1{
+    font-size:clamp(3.15rem,15vw,4.65rem);
+    line-height:.92;
+    letter-spacing:-.07em;
+    max-width:100%;
+    margin-bottom:1.25rem;
+  }
+
+  .hero p{
+    max-width:100%;
+    width:100%;
+    font-size:1rem;
+    line-height:1.72;
+    white-space:normal;
+    word-break:normal;
+    overflow-wrap:break-word;
+  }
+
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:.85rem;
+    margin-top:1.8rem;
+  }
+
+  .hero-actions a,
+  .btn-primary,
+  .btn-secondary{
+    width:100%;
+    min-height:52px;
+    justify-content:center;
+    text-align:center;
+  }
+
+  .bg-vanta{
+    display:none!important;
+  }
+
+  .logo-track img{
+    filter:none!important;
+    opacity:.58!important;
+    transform:scale(.92)!important;
+  }
+
+  .logo-track img.is-center{
+    filter:none!important;
+    opacity:1!important;
+    transform:scale(1.08)!important;
+  }
+
+  .offer,
+  .card,
+  .market,
+  .step-box,
+  .feature,
+  .proof-card,
+  .before-after-card,
+  .faq-item{
+    box-shadow:0 14px 38px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.035)!important;
+  }
+
+  .offer.featured{
+    transform:none!important;
+    box-shadow:0 18px 48px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.045)!important;
+  }
+
+  .whatsapp{
+    width:54px;
+    height:54px;
+    right:18px;
+    bottom:18px;
+  }
+
+  .whatsapp svg{
+    width:24px;
+    height:24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important;
+  }
+}
+
+
+.whatsapp{
+  font-size:0!important;
+}
+.whatsapp-icon{
+  width:26px!important;
+  height:26px!important;
+  display:block!important;
+}
+
+
+/* Diagnóstico vai para Tally; WhatsApp flutuante usa ícone real */
+.whatsapp{
+  font-size:0!important;
+  background:#25D366!important;
+}
+.whatsapp img{
+  width:34px!important;
+  height:34px!important;
+  display:block!important;
+  object-fit:contain!important;
+}
+@media(max-width:780px){
+  .whatsapp img{
+    width:32px!important;
+    height:32px!important;
+  }
+}
+
+
+/* WhatsApp floating button with embedded PNG */
+.whatsapp{
+  position:fixed!important;
+  right:22px!important;
+  bottom:22px!important;
+  width:58px!important;
+  height:58px!important;
+  border-radius:50%!important;
+  background:#25D366!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  z-index:99999!important;
+  box-shadow:0 8px 18px rgba(37,211,102,.12)!important;
+  transition:transform .22s ease, box-shadow .22s ease!important;
+  font-size:0!important;
+  line-height:0!important;
+  overflow:hidden!important;
+}
+.whatsapp:hover{
+  transform:translateY(-3px) scale(1.03)!important;
+}
+.whatsapp-png-icon{
+  display:block!important;
+  width:34px!important;
+  height:34px!important;
+  object-fit:contain!important;
+  pointer-events:none!important;
+}
+.whatsapp svg,
+.whatsapp::before,
+.whatsapp::after{
+  display:none!important;
+  content:none!important;
+}
+@media(max-width:780px){
+  .whatsapp{
+    width:54px!important;
+    height:54px!important;
+    right:18px!important;
+    bottom:18px!important;
+  }
+  .whatsapp-png-icon{
+    width:32px!important;
+    height:32px!important;
+  }
+}
+
+</style>
+<style id="vanta-mobile-ux-final">
+@media (max-width: 768px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    padding-bottom: 86px !important;
+  }
+
+  section, header, footer, main, .container, .wrapper, .content {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  img, video, canvas, svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  h1 {
+    font-size: clamp(36px, 11vw, 58px) !important;
+    line-height: .95 !important;
+    letter-spacing: -0.05em !important;
+  }
+
+  h2 {
+    font-size: clamp(28px, 8vw, 42px) !important;
+    line-height: 1.03 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  h3 {
+    font-size: clamp(20px, 6vw, 28px) !important;
+    line-height: 1.12 !important;
+  }
+
+  p, li {
+    font-size: 15.5px !important;
+    line-height: 1.55 !important;
+  }
+
+  a, button {
+    min-height: 48px !important;
+    touch-action: manipulation;
+  }
+
+  .hero, [class*="hero"], [id*="hero"] {
+    min-height: auto !important;
+    padding-top: 92px !important;
+    padding-bottom: 56px !important;
+  }
+
+  nav, .nav, header {
+    max-width: 100vw !important;
+  }
+
+  nav a, .nav a {
+    font-size: 12px !important;
+  }
+
+  .grid, [class*="grid"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .card, [class*="card"], [class*="plan"], [class*="pricing"], [class*="offer"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  [class*="pricing"], [id*="pricing"], [class*="offer"], [id*="offer"] {
+    scroll-margin-top: 92px !important;
+  }
+
+  .btn, .button, button, a[class*="btn"], a[class*="button"] {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  table {
+    display: block !important;
+    overflow-x: auto !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  h1 {
+    font-size: clamp(34px, 12vw, 48px) !important;
+  }
+
+  .hide-mobile, .desktop-only {
+    display: none !important;
+  }
+}
+
+.vanta-mobile-sticky-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .vanta-mobile-sticky-cta {
+    position: fixed;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f2bd63, #d79b3d);
+    color: #070707 !important;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    box-shadow: 0 18px 40px rgba(0,0,0,.45), 0 0 24px rgba(242,189,99,.25);
+  }
+}
+</style>
+<link href="/vanta-black-assets/vanta-favicon.png" rel="icon" sizes="32x32" type="image/png"/><link href="/vanta-black-assets/vanta-favicon.png" rel="icon" sizes="48x48" type="image/png"/><link href="/vanta-black-assets/vanta-favicon.png" rel="icon" sizes="64x64" type="image/png"/><link href="/vanta-black-assets/vanta-favicon.png" rel="icon" sizes="128x128" type="image/png"/><link href="/vanta-black-assets/vanta-favicon.png" rel="icon" sizes="192x192" type="image/png"/><link href="/vanta-black-assets/vanta-favicon.png" rel="icon" sizes="512x512" type="image/png"/><link href="/vanta-black-assets/vanta-favicon.png" rel="shortcut icon" sizes="32x32" type="image/png"/><link href="/vanta-black-assets/vanta-favicon.png" rel="apple-touch-icon" sizes="180x180" type="image/png"/>
+<style id="vanta-hero-safe-align">
+/* HERO — ajuste seguro: não muda tamanho, não comprime, não altera grid */
+.hero .eyebrow,
+.hero h1,
+.hero p,
+.hero .hero-actions,
+.hero .hero-tags,
+.hero .tags {
+  margin-left: 0 !important;
+}
+
+.hero h1 {
+  margin-top: 0 !important;
+}
+
+.hero .hero-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+}
+
+.hero .hero-tags,
+.hero .tags {
+  display: flex !important;
+  align-items: center !important;
+  gap: 22px !important;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .hero .hero-actions a,
+  .hero .hero-actions button {
+    width: 100% !important;
+  }
+}
+</style>
+<style id="vanta-eyebrow-perfect-align">
+/* Alinha o V de VANTA com o E de Empresas */
+.hero .eyebrow,
+.hero small:first-child,
+.hero .subtitle-top{
+padding-left: 18px !important;
+}
+</style>
+<style id="vanta-conversion-plugins-css">
+.vanta-exit-popup{
+  position:fixed;
+  inset:0;
+  z-index:9999999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:22px;
+  background:rgba(0,0,0,.74);
+  backdrop-filter: blur(10px);
+}
+.vanta-exit-popup.is-visible{
+  display:flex;
+}
+.vanta-exit-card{
+  width:min(520px,100%);
+  border:1px solid rgba(215,166,79,.35);
+  border-radius:28px;
+  padding:34px;
+  background:#090909;
+  box-shadow:0 30px 90px rgba(0,0,0,.6);
+  position:relative;
+}
+.vanta-exit-close{
+  position:absolute;
+  top:16px;
+  right:18px;
+  background:transparent;
+  border:0;
+  color:#fff;
+  font-size:28px;
+  cursor:pointer;
+}
+.vanta-exit-card h3{
+  font-size:30px;
+  line-height:1;
+  margin:0 0 14px;
+  letter-spacing:-.03em;
+}
+.vanta-exit-card p{
+  opacity:.76;
+  line-height:1.6;
+  margin:0 0 24px;
+}
+.vanta-exit-card a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  border-radius:999px;
+  text-decoration:none;
+  background:linear-gradient(135deg,#f2bd63,#d79b3d);
+  color:#070707!important;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:13px;
+}
+.vanta-mobile-sticky-cta{
+  display:none;
+}
+@media(max-width:768px){
+  body{padding-bottom:88px!important;}
+  .vanta-mobile-sticky-cta{
+    position:fixed;
+    left:14px;
+    right:14px;
+    bottom:14px;
+    z-index:999999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:56px;
+    border-radius:999px;
+    text-decoration:none!important;
+    background:linear-gradient(135deg,#f2bd63,#d79b3d);
+    color:#070707!important;
+    font-weight:900;
+    font-size:13px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    box-shadow:0 18px 44px rgba(0,0,0,.45),0 0 26px rgba(242,189,99,.22);
+  }
+}
+</style>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "wtq4reesvs");
+</script>
+<!-- End Microsoft Clarity -->
+<meta content="A Vanta Black cria landing pages premium, estrutura de aquisição e campanhas para empresas que precisam transmitir autoridade, confiança e valor antes da primeira conversa." name="description"/><meta content="index, follow" name="robots"/><meta content="Vanta Black" name="author"/><meta content="#050505" name="theme-color"/><meta content="website" property="og:type"/><meta content="Vanta Black" property="og:site_name"/><meta content="Vanta Black | Landing Pages Premium, Tráfego e Aquisição" property="og:title"/><meta content="A Vanta Black cria landing pages premium, estrutura de aquisição e campanhas para empresas que precisam transmitir autoridade, confiança e valor antes da primeira conversa." property="og:description"/><meta content="https://vantablack.com.br/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://vantablack.com.br/vanta-black-assets/vanta-logo-dark.png" property="og:image"/><meta content="https://vantablack.com.br/vanta-black-assets/vanta-logo-dark.png" name="twitter:image"/><meta content="Vanta Black | Landing Pages Premium, Tráfego e Aquisição" name="twitter:title"/><meta content="A Vanta Black cria landing pages premium, estrutura de aquisição e campanhas para empresas que precisam transmitir autoridade, confiança e valor antes da primeira conversa." name="twitter:description"/><link href="https://vantablack.com.br/" rel="canonical"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Vanta Black",
+  "url": "https://vantablack.com.br/",
+  "sameAs": [
+    "https://www.instagram.com/vantablackstd"
+  ],
+  "description": "A Vanta Black cria landing pages premium, estrutura de aquisição e campanhas para empresas que precisam transmitir autoridade, confiança e valor antes da primeira conversa.",
+  "areaServed": "BR",
+  "serviceType": [
+    "Landing pages premium",
+    "Tráfego pago",
+    "Aquisição digital",
+    "Estratégia de conversão"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "START",
+      "price": "697",
+      "priceCurrency": "BRL"
+    },
+    {
+      "@type": "Offer",
+      "name": "VANTA CORE",
+      "price": "1497",
+      "priceCurrency": "BRL"
+    },
+    {
+      "@type": "Offer",
+      "name": "VANTA ASCENSION",
+      "price": "1997",
+      "priceCurrency": "BRL"
+    },
+    {
+      "@type": "Offer",
+      "name": "VANTA GROWTH",
+      "price": "997",
+      "priceCurrency": "BRL"
+    }
+  ]
+}</script>
+<style id="vanta-seo-instagram-css">
+.brand-logo-text{
+  display:inline-block;
+  font:inherit;
+}
+.vanta-instagram-footer{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  padding:18px 0 6px;
+}
+.vanta-instagram-footer a{
+  color:rgba(242,189,99,.9)!important;
+  text-decoration:none!important;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.vanta-instagram-footer a:hover{
+  color:#f2bd63!important;
+}
+</style>
+<style id="vanta-cleanup">
+section{
+  padding-top:64px !important;
+  padding-bottom:64px !important;
+}
+p{
+  max-width:720px;
+}
+.vanta-contact-instagram{
+  display:flex;
+  justify-content:center;
+  padding:28px 0 40px;
+}
+.vanta-contact-instagram a{
+  color:#f2bd63;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+@media(max-width:768px){
+  section{
+    padding-top:44px !important;
+    padding-bottom:44px !important;
+  }
+}
+</style>
+<style id="vanta-wa-clean-css">
+.vanta-wa-clean{
+  position:fixed;
+  right:18px;
+  bottom:22px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  z-index:999999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#25d366;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+  transition:transform .2s ease;
+}
+.vanta-wa-clean:hover{
+  transform:scale(1.06);
+}
+.vanta-wa-clean svg{
+  width:30px;
+  height:30px;
+  fill:#fff;
+}
+@media(max-width:768px){
+  .vanta-wa-clean{
+    width:54px;
+    height:54px;
+    right:14px;
+    bottom:16px;
+  }
+}
+
+.vanta-wa-clean{
+  background:#25d366 !important;
+}
+.vanta-wa-clean svg{
+  width:28px;
+  height:28px;
+}
+
+.vanta-wa-clean{
+    width:62px !important;
+    height:62px !important;
+    border-radius:50% !important;
+    background:#18d26b !important;
+    box-shadow:0 10px 30px rgba(24,210,107,.35) !important;
+}
+.vanta-wa-clean svg{
+    width:26px !important;
+    height:26px !important;
+}
+</style>
+<style id="remove-mobile-diagnostico">
+@media(max-width:768px){
+  .sticky-diagnostico,
+  .mobile-diagnostico,
+  .diagnostico-mobile,
+  .fixed-diagnostico,
+  [class*="diagnostico"]{
+    display:none !important;
+  }
+}
+</style>
+<style id="remove-sticky-diagnostico-final">
+@media(max-width:768px){
+  .vanta-mobile-sticky-cta,
+  a.vanta-mobile-sticky-cta,
+  [class*="sticky"][href*="wa.me"],
+  [class*="fixed"][href*="wa.me"]{
+    display:none !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+}
+</style>
+
+<style id="vanta-clean-but-keep-offers">
+@media(max-width:768px){
+  section{
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
+
+  h1{
+    font-size:clamp(44px,11vw,68px) !important;
+    line-height:.94 !important;
+  }
+
+  h2{
+    font-size:clamp(30px,8vw,44px) !important;
+    line-height:1 !important;
+  }
+
+  p, li{
+    font-size:15px !important;
+    line-height:1.5 !important;
+  }
+
+  [class*="pricing"],
+  [class*="offer"],
+  [class*="plan"],
+  [id*="oferta"],
+  [id*="plano"]{
+    display:block !important;
+    visibility:visible !important;
+  }
+
+  .vanta-wa-clean{
+    width:56px !important;
+    height:56px !important;
+    right:14px !important;
+    bottom:16px !important;
+  }
+}
+</style>
+<style id="vanta-objections-css">
+.objections-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  max-width:1120px;
+  margin:34px auto 0;
+  padding:0 24px;
+}
+.objection-card{
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border-radius:18px;
+  padding:28px;
+  min-height:240px;
+}
+.objection-card small{
+  color:var(--gold);
+  font-weight:900;
+  letter-spacing:.16em;
+}
+.objection-card h3{
+  margin:18px 0 12px;
+  font-size:1.25rem;
+}
+.objection-card p{
+  color:var(--muted);
+  line-height:1.6;
+}
+@media(max-width:900px){
+  .objections-grid{
+    grid-template-columns:1fr;
+    padding:0 20px;
+  }
+  .objection-card{
+    min-height:0;
+  }
+}
+</style>
+<style id="vanta-growth-additions-css">
+.vanta-growth-section{
+  position:relative;
+}
+.vanta-growth-wrap{
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 24px;
+}
+.vanta-growth-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  margin-top:30px;
+}
+.vanta-panel,
+.vanta-faq-list details{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  padding:26px;
+}
+.vanta-panel{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+}
+.vanta-home-offers{
+  max-width:980px!important;
+  grid-template-columns:repeat(2,minmax(280px,1fr))!important;
+}
+.vanta-home-offers .offer{
+  min-height:auto;
+}
+.vanta-home-offers .offer.featured .recommended{
+  position:static;
+  display:inline-flex;
+  width:max-content;
+  margin:0 0 16px;
+}
+.vanta-home-offers .offer small{
+  display:block;
+}
+.vanta-panel small{
+  color:var(--gold);
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.vanta-panel h3{
+  margin:14px 0 10px;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:1.35rem;
+  letter-spacing:-.035em;
+}
+.vanta-panel p,
+.vanta-panel li,
+.vanta-faq-list p{
+  color:var(--muted);
+  line-height:1.62;
+  font-size:.94rem;
+}
+.vanta-panel ul{
+  list-style:none;
+  display:grid;
+  gap:10px;
+  margin-top:16px;
+}
+.vanta-panel li::before{
+  content:"";
+  display:inline-block;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--gold);
+  margin-right:10px;
+  transform:translateY(-1px);
+}
+.vanta-calc-layout{
+  display:grid;
+  grid-template-columns:1fr .9fr;
+  gap:22px;
+  align-items:stretch;
+  margin-top:30px;
+}
+.vanta-input-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:20px;
+}
+.vanta-input-field{
+  display:grid;
+  gap:8px;
+}
+.vanta-input-field label{
+  color:var(--text);
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.vanta-input-field input{
+  width:100%;
+  min-height:52px;
+  border:1px solid rgba(242,184,107,.25);
+  border-radius:12px;
+  background:rgba(255,255,255,.045);
+  color:var(--text);
+  padding:0 14px;
+  font:700 1rem Inter,sans-serif;
+  outline:none;
+}
+.vanta-input-field input:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(242,184,107,.14);
+}
+.vanta-calc-result{
+  display:grid;
+  align-content:center;
+  gap:14px;
+}
+.vanta-calc-result strong{
+  display:block;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:clamp(2.3rem,5vw,4.5rem);
+  line-height:.9;
+  color:var(--gold);
+  letter-spacing:-.06em;
+}
+.vanta-calc-result span{
+  color:var(--muted);
+  line-height:1.55;
+}
+.vanta-actions-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+.vanta-outline-action,
+.vanta-solid-action{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:50px;
+  border-radius:999px;
+  padding:0 22px;
+  text-decoration:none!important;
+  font-weight:900;
+  font-size:.78rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.vanta-solid-action{
+  background:linear-gradient(135deg,#f2bd63,#d79b3d);
+  color:#070707!important;
+}
+.vanta-outline-action{
+  border:1px solid rgba(242,184,107,.38);
+  color:var(--text)!important;
+  background:rgba(255,255,255,.035);
+}
+.vanta-faq-list{
+  display:grid;
+  gap:12px;
+  max-width:930px;
+  margin:30px auto 0;
+}
+.vanta-faq-list summary{
+  cursor:pointer;
+  color:var(--text);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:1.08rem;
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+.vanta-faq-list p{
+  margin-top:14px;
+}
+.vanta-share-panel{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-top:28px;
+}
+.vanta-share-panel p{
+  margin:0;
+}
+.vanta-mobile-actionbar{
+  display:none;
+}
+@media(max-width:900px){
+  .vanta-growth-grid,
+  .vanta-calc-layout,
+  .vanta-input-grid,
+  .vanta-home-offers{
+    grid-template-columns:1fr;
+  }
+}
+@media(max-width:768px){
+  body{padding-bottom:92px!important;}
+  .vanta-growth-wrap{padding:0 20px;}
+  .vanta-panel,
+  .vanta-faq-list details{
+    padding:22px;
+    border-radius:16px;
+  }
+  .vanta-actions-row a,
+  .vanta-actions-row button{
+    width:100%;
+  }
+  .vanta-share-panel{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .vanta-mobile-actionbar{
+    position:fixed;
+    left:12px;
+    right:12px;
+    bottom:12px;
+    z-index:1000000;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    padding:10px;
+    border:1px solid rgba(242,184,107,.25);
+    border-radius:18px;
+    background:rgba(8,8,8,.92);
+    backdrop-filter:blur(16px);
+    box-shadow:0 18px 50px rgba(0,0,0,.48);
+  }
+  .vanta-mobile-actionbar a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    border-radius:12px;
+    text-decoration:none!important;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+  }
+  .vanta-mobile-actionbar a:first-child{
+    background:#18d26b;
+    color:#05140a!important;
+  }
+  .vanta-mobile-actionbar a:last-child{
+    background:linear-gradient(135deg,#f2bd63,#d79b3d);
+    color:#070707!important;
+  }
+  .vanta-wa-clean{
+    display:none!important;
+  }
+}
+</style>
+<style id="vanta-reveal-fallback">
+.reveal,
+.reveal:not(.visible){
+  opacity:1 !important;
+  transform:none !important;
+}
+</style>
+<style id="vanta-premium-mobile-flow">
+html{
+  scroll-behavior:smooth!important;
+  scroll-padding-top:88px;
+}
+main{
+  overflow:hidden;
+}
+main > section{
+  position:relative!important;
+  isolation:isolate;
+  overflow:hidden;
+  padding-top:clamp(86px,8vw,132px)!important;
+  padding-bottom:clamp(86px,8vw,132px)!important;
+}
+main > section > *{
+  position:relative;
+  z-index:1;
+}
+main > section::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:clamp(78px,9vw,132px);
+  pointer-events:none;
+  z-index:0;
+  background:
+    linear-gradient(180deg,transparent 0%,color-mix(in srgb,var(--bg) 78%,transparent) 74%,var(--bg) 100%);
+}
+.hero{
+  padding-top:clamp(132px,11vw,170px)!important;
+  padding-bottom:clamp(96px,8vw,130px)!important;
+}
+.brand-section,
+.vanta-growth-section{
+  background:
+    radial-gradient(circle at 50% 0%,rgba(242,184,107,.045),transparent 34%),
+    linear-gradient(180deg,rgba(255,255,255,.012),transparent 44%,rgba(255,255,255,.01));
+}
+.offers-section{
+  border:0!important;
+  background:
+    radial-gradient(circle at 50% 6%,rgba(242,184,107,.075),transparent 32%),
+    linear-gradient(180deg,rgba(242,184,107,.018),rgba(255,255,255,.012) 48%,transparent);
+}
+.cta-minimal{
+  border:0!important;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(242,184,107,.11),transparent 36%),
+    linear-gradient(180deg,rgba(255,255,255,.018),rgba(255,255,255,.006) 54%,transparent),
+    var(--bg)!important;
+}
+.section-head{
+  margin-bottom:clamp(2.3rem,4.5vw,4.4rem)!important;
+}
+.reveal,
+.reveal:not(.visible){
+  opacity:0!important;
+  transform:translateY(26px) scale(.992)!important;
+  transition:opacity .78s var(--ease),transform .78s var(--ease)!important;
+}
+.reveal.visible{
+  opacity:1!important;
+  transform:none!important;
+}
+.vanta-panel,
+.offer,
+.cta-minimal-inner,
+.logo-box{
+  transition:transform .45s var(--ease),border-color .45s var(--ease),box-shadow .45s var(--ease),background .45s var(--ease)!important;
+}
+.phone-quick-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+}
+.phone-quick-grid button{
+  width:auto!important;
+}
+.phone-ai-form button{
+  width:38px!important;
+  min-width:38px!important;
+  flex:0 0 38px!important;
+}
+
+@media(max-width:900px){
+  html{
+    scroll-padding-top:76px;
+  }
+  body{
+    padding-bottom:92px!important;
+  }
+  header{
+    height:70px!important;
+    padding:0 18px!important;
+  }
+  header.scrolled{
+    height:64px!important;
+  }
+  .logo-img{
+    width:116px!important;
+    height:auto!important;
+  }
+  .theme-toggle{
+    width:44px!important;
+    height:44px!important;
+    min-height:44px!important;
+  }
+  .hero{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:38px!important;
+    min-height:auto!important;
+    padding:calc(98px + env(safe-area-inset-top)) 18px 74px!important;
+    text-align:left!important;
+  }
+  .hero-left,
+  .hero-right,
+  .hero-actions,
+  .hero-note{
+    min-height:0!important;
+    padding:0!important;
+  }
+  .hero-left{
+    max-width:100%!important;
+  }
+  .tag{
+    max-width:none!important;
+    margin-bottom:1.05rem!important;
+    font-size:.58rem!important;
+    letter-spacing:.26em!important;
+  }
+  .hero h1{
+    max-width:11ch!important;
+    font-size:clamp(3.15rem,13.4vw,4.85rem)!important;
+    line-height:.91!important;
+    letter-spacing:-.065em!important;
+    margin-bottom:1.2rem!important;
+  }
+  .hero p{
+    max-width:35rem!important;
+    font-size:1rem!important;
+    line-height:1.68!important;
+  }
+  .hero-actions{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:.82rem!important;
+    margin-top:1.55rem!important;
+  }
+  .hero-actions a{
+    width:100%!important;
+    min-height:52px!important;
+  }
+  .hero-note{
+    display:flex!important;
+    gap:.48rem .74rem!important;
+    margin-top:1.05rem!important;
+    font-size:.61rem!important;
+    letter-spacing:.07em!important;
+  }
+  .hero-right{
+    display:flex!important;
+    justify-content:center!important;
+    opacity:1!important;
+    transform:none!important;
+    perspective:none!important;
+  }
+  .iphone-wrap{
+    width:min(318px,86vw)!important;
+    height:auto!important;
+    aspect-ratio:342 / 704!important;
+    transform:none!important;
+    animation:none!important;
+  }
+  .iphone{
+    border-radius:46px!important;
+    padding:10px!important;
+  }
+  .iphone::after{
+    border-radius:46px!important;
+  }
+  .island{
+    top:20px!important;
+    width:100px!important;
+    height:30px!important;
+  }
+  .screen{
+    border-radius:37px!important;
+  }
+  .screen-content{
+    padding:62px 16px 22px!important;
+  }
+  .screen-title{
+    font-size:1.5rem!important;
+    letter-spacing:-.045em!important;
+  }
+  .screen-desc{
+    font-size:.72rem!important;
+    line-height:1.5!important;
+  }
+  .phone-ai-shell{
+    gap:8px!important;
+    margin-top:.76rem!important;
+  }
+  .phone-ai-status{
+    padding:9px 10px!important;
+    border-radius:16px!important;
+  }
+  .phone-chat{
+    min-height:132px!important;
+    gap:7px!important;
+  }
+  .phone-bubble{
+    padding:8px 10px!important;
+    font-size:.61rem!important;
+    line-height:1.42!important;
+  }
+  .phone-quick-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:6px!important;
+  }
+  .phone-quick-grid button{
+    width:auto!important;
+    min-height:31px!important;
+    padding:0 7px!important;
+    font-size:.46rem!important;
+    white-space:nowrap!important;
+  }
+  .phone-ai-form{
+    gap:6px!important;
+  }
+  .phone-ai-form input{
+    height:36px!important;
+    min-height:36px!important;
+    font-size:.64rem!important;
+  }
+  .phone-ai-form button{
+    width:36px!important;
+    min-width:36px!important;
+    height:36px!important;
+    min-height:36px!important;
+    flex:0 0 36px!important;
+  }
+  main > section{
+    padding:74px 18px!important;
+  }
+  main > section::after{
+    height:86px;
+    background:
+      linear-gradient(180deg,transparent 0%,color-mix(in srgb,var(--bg) 82%,transparent) 72%,var(--bg) 100%);
+  }
+  .brand-section{
+    padding-top:62px!important;
+  }
+  .section-head{
+    max-width:100%!important;
+    text-align:left!important;
+    margin-bottom:2rem!important;
+  }
+  .section-head span,
+  .eyebrow{
+    display:block;
+    font-size:.62rem!important;
+    letter-spacing:.18em!important;
+    line-height:1.45!important;
+  }
+  .section-head h2,
+  .cta-minimal h2{
+    font-size:clamp(2.3rem,10.8vw,3.35rem)!important;
+    line-height:.98!important;
+    letter-spacing:-.052em!important;
+  }
+  .section-head p,
+  .cta-minimal p{
+    max-width:100%!important;
+    font-size:.98rem!important;
+    line-height:1.66!important;
+  }
+  .logo-box{
+    height:142px!important;
+    border-radius:24px!important;
+    margin-top:12px!important;
+  }
+  .logo-track{
+    gap:76px!important;
+  }
+  .logo-track img{
+    height:82px!important;
+    max-width:210px!important;
+  }
+  .vanta-growth-wrap,
+  .objections-grid{
+    padding:0!important;
+  }
+  .vanta-growth-grid,
+  .offers,
+  .vanta-home-offers,
+  .footer-grid{
+    grid-template-columns:1fr!important;
+    gap:14px!important;
+  }
+  .vanta-panel,
+  .offer,
+  .vanta-faq-list details{
+    border-radius:22px!important;
+    padding:22px!important;
+  }
+  .offer{
+    min-height:0!important;
+  }
+  .offer h3{
+    min-height:0!important;
+    font-size:1.45rem!important;
+    margin:.8rem 0 1rem!important;
+  }
+  .offer p,
+  .offer li,
+  .vanta-panel p{
+    font-size:.93rem!important;
+    line-height:1.58!important;
+  }
+  .offer ul{
+    margin:1.1rem 0 1.25rem!important;
+    gap:.58rem!important;
+  }
+  .price,
+  .offer.featured .price{
+    font-size:2.28rem!important;
+  }
+  .cta-minimal{
+    text-align:left!important;
+  }
+  .cta-minimal-actions .btn-primary{
+    width:100%!important;
+  }
+  footer{
+    padding:74px 18px calc(34px + env(safe-area-inset-bottom))!important;
+  }
+  .footer-brand h2{
+    font-size:clamp(2.35rem,10vw,3.2rem)!important;
+    line-height:.98!important;
+  }
+  .footer-bottom{
+    align-items:flex-start!important;
+  }
+  .vanta-mobile-actionbar{
+    left:10px!important;
+    right:10px!important;
+    bottom:max(10px,env(safe-area-inset-bottom))!important;
+    border-radius:18px!important;
+  }
+}
+
+@media(max-width:390px){
+  .hero{
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  .hero h1{
+    font-size:3rem!important;
+  }
+  main > section{
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  .iphone-wrap{
+    width:min(300px,88vw)!important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal,
+  .reveal:not(.visible),
+  .reveal.visible{
+    opacity:1!important;
+    transform:none!important;
+  }
+}
+</style>
+</head>
+<body id="top">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5MK9HPHX" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="bg-grid"></div>
+<div class="bg-orbs"></div>
+<header id="header">
+<a aria-label="VANTA" class="logo logo-img" href="vanta-black-enxuta-com-ofertas-otimizada.html">
+<img alt="VANTA" class="logo-dark-mode" src="/vanta-black-assets/vanta-logo-dark.png" decoding="async" width="2000" height="2000"/>
+<img alt="VANTA" class="logo-light-mode" src="/vanta-black-assets/vanta-logo-light.png" decoding="async" width="2000" height="2000"/>
+</a>
+<nav>
+<a class="active" href="vanta-black-enxuta-com-ofertas-otimizada.html">Início</a>
+<a href="ofertas.html">Ofertas</a>
+<a href="metodo.html">Método</a>
+<a href="mercados.html">Mercados</a>
+<a href="recursos.html">Recursos</a>
+</nav>
+<div class="header-actions">
+<button aria-label="Alternar tema" class="theme-toggle" id="themeToggle">☾</button>
+<a class="btn-nav" href="https://tally.so/r/ODbK77" rel="noopener noreferrer" target="_blank">Diagnóstico</a>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="hero-left reveal">
+<div class="tag">VANTA BLACK SYSTEM</div>
+<h1>Empresas fortes precisam parecer <span>fortes.</span></h1>
+<p>Criamos presença digital exclusiva para empresas high ticket transmitirem autoridade, confiança e valor antes da primeira conversa.</p>
+<div class="hero-actions">
+<a class="btn-primary" href="https://tally.so/r/ODbK77" rel="noopener noreferrer" target="_blank">Solicitar diagnóstico</a>
+<a class="btn-secondary" href="ofertas.html">Ver ofertas</a>
+</div>
+<div class="hero-note">
+<span>Branding</span><span>Landing Pages</span><span>Performance</span>
+</div>
+</div>
+<div class="hero-right reveal">
+<div class="iphone-wrap" id="iphoneTilt">
+<div class="iphone">
+<div class="island"></div>
+<div class="screen">
+<div class="screen-content">
+<div class="screen-kicker">Vanta AI</div>
+<div class="screen-title">Pergunte antes de <span>decidir.</span></div>
+<div class="screen-desc">Um consultor rápido para explicar planos, prazo, tráfego e próximo passo.</div>
+<div class="phone-ai-shell" aria-label="Assistente Vanta">
+<div class="phone-ai-status"><span>Consultor digital</span><strong>online</strong></div>
+<div class="phone-chat" id="phoneAiChat" aria-live="polite">
+<div class="phone-bubble ai">Olá. Eu sou a Vanta AI. Me pergunte sobre preço, prazo, tráfego ou diagnóstico.</div>
+</div>
+<div class="phone-quick-grid" aria-label="Perguntas rápidas">
+<button data-ai-question="Quanto custa?" type="button">Preço</button>
+<button data-ai-question="Em quanto tempo fica pronto?" type="button">Prazo</button>
+<button data-ai-question="Vocês cuidam do tráfego?" type="button">Tráfego</button>
+<button data-ai-question="Como funciona o diagnóstico?" type="button">Diagnóstico</button>
+</div>
+<form class="phone-ai-form" id="phoneAiForm">
+<input id="phoneAiInput" aria-label="Pergunte para a Vanta AI" autocomplete="off" maxlength="90" placeholder="Digite sua pergunta"/>
+<button aria-label="Enviar pergunta" type="submit">›</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="brand-section reveal">
+<div class="section-head">
+<span>Marcas em transformação</span>
+<h2>Silêncio visual. <em>Presença absoluta.</em></h2>
+<p>Uma marca premium não grita. Ela reduz dúvida, sustenta autoridade e aumenta valor percebido.</p>
+</div>
+<div class="logo-box">
+<div class="center-focus"></div>
+<div class="logo-track">
+<img alt="Harddy" src="/vanta-black-assets/harddy.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Safra Smart" src="/vanta-black-assets/safra-smart.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Ruraltins" src="/vanta-black-assets/ruraltins.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Harddy" src="/vanta-black-assets/harddy.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Safra Smart" src="/vanta-black-assets/safra-smart.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Ruraltins" src="/vanta-black-assets/ruraltins.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Harddy" src="/vanta-black-assets/harddy.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Safra Smart" src="/vanta-black-assets/safra-smart.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Ruraltins" src="/vanta-black-assets/ruraltins.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Harddy" src="/vanta-black-assets/harddy.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Safra Smart" src="/vanta-black-assets/safra-smart.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+<img alt="Ruraltins" src="/vanta-black-assets/ruraltins.png" decoding="async" loading="lazy" width="1080" height="1080"/>
+</div>
+</div>
+</section>
+
+<section class="vanta-growth-section reveal" id="essencial">
+<div class="section-head">
+<span>Valor antes do clique</span>
+<h2>Presença premium para reduzir dúvida e aumentar confiança.</h2>
+<p>Quando a percepção digital sustenta o valor real da empresa, o visitante entende mais rápido por que vale avançar.</p>
+</div>
+<div class="vanta-growth-wrap">
+<div class="vanta-growth-grid">
+<div class="vanta-panel"><small>01</small><h3>Autoridade visual</h3><p>Transformamos presença comum em uma primeira impressão compatível com empresas de alto valor.</p></div>
+<div class="vanta-panel"><small>02</small><h3>Oferta clara</h3><p>Organizamos narrativa, prova e CTA para o visitante entender o valor antes de pedir preço.</p></div>
+<div class="vanta-panel"><small>03</small><h3>Aquisição mensurável</h3><p>Cada clique importante pode ser rastreado para entender o caminho entre atenção, interesse e oportunidade.</p></div>
+</div>
+</div>
+</section>
+<section class="offers-section reveal" id="ofertas">
+<div class="section-head">
+<span>Oferta em destaque</span>
+<h2>A estrutura mais indicada para sair do comum e começar a captar melhor.</h2>
+<p>Para a maioria das empresas, o melhor ponto de partida é unir landing page, copy, criativos e campanha inicial.</p>
+</div>
+<div class="offers vanta-home-offers">
+<div class="offer featured">
+<span class="recommended">Mais escolhido</span>
+<small>VANTA CORE</small>
+<h3>Landing premium + aquisição inicial</h3>
+<p>Para empresas que querem parecer mais confiáveis, captar leads com mais clareza e rodar tráfego com uma página preparada.</p>
+<ul>
+<li>Landing page premium completa</li>
+<li>Copy estratégica</li>
+<li>3 criativos premium</li>
+<li>Setup Meta Ads</li>
+<li>Integrações e eventos básicos</li>
+</ul>
+<div class="price">R$ 1.497</div>
+<div class="obs">Recomendado para aquisição premium</div>
+<a href="ofertas.html" data-track="home_offer_details_click">Ver todos os planos</a>
+</div>
+<div class="offer">
+<small>Diagnóstico</small>
+<h3>Não sabe qual plano faz sentido?</h3>
+<p>Use o diagnóstico para entender se o gargalo está em percepção, oferta, tráfego, página ou mensuração.</p>
+<ul>
+<li>Análise da primeira dobra</li>
+<li>Leitura da oferta</li>
+<li>Rota de melhoria rápida</li>
+</ul>
+<div class="price">Grátis</div>
+<div class="obs">Entrada sem compromisso</div>
+<a href="https://tally.so/r/ODbK77" data-track="home_diagnostic_click" rel="noopener noreferrer" target="_blank">Solicitar diagnóstico</a>
+</div>
+</div>
+</section>
+<section class="vanta-growth-section reveal" id="paginas">
+<div class="section-head">
+<span>Escolha seu caminho</span>
+<h2>Entenda a Vanta pelo que mais importa para sua decisão.</h2>
+<p>Compare planos, veja o método ou use os recursos gratuitos para avaliar sua presença digital.</p>
+</div>
+<div class="vanta-growth-wrap">
+<div class="vanta-growth-grid">
+<a class="vanta-panel" href="ofertas.html"><small>Planos</small><h3>Ofertas</h3><p>Compare Start, Core, Ascension e Growth com detalhes de entrega.</p></a>
+<a class="vanta-panel" href="metodo.html"><small>Processo</small><h3>Método</h3><p>Veja como a Vanta transforma valor real em percepção digital.</p></a>
+<a class="vanta-panel" href="recursos.html"><small>Ferramentas</small><h3>Recursos</h3><p>Acesse calculadora, checklist, FAQ e mini diagnóstico.</p></a>
+</div>
+</div>
+</section>
+<section class="cta-minimal reveal" id="cta">
+<div class="cta-minimal-inner">
+<span>Diagnóstico estratégico</span>
+<h2>Sua presença digital transmite <em>o valor real da sua empresa?</em></h2>
+<p>Identificamos falhas de percepção, autoridade e conversão que podem estar reduzindo a confiança antes da primeira conversa.</p>
+<div class="cta-minimal-actions">
+<a class="btn-primary" href="https://tally.so/r/ODbK77" rel="noopener noreferrer" target="_blank">Solicitar diagnóstico</a>
+</div>
+</div>
+</section>
+<section class="cta-minimal reveal">
+<div class="cta-minimal-inner">
+<span>Vanta Black</span>
+<h2>Menos ruído. <em>Mais valor percebido.</em></h2>
+<p>A identidade da VANTA foi pensada para empresas que não querem parecer populares, genéricas ou baratas. Querem parecer inevitáveis.</p>
+</div>
+</section>
+</main>
+<footer class="reveal">
+<div class="footer-wrap">
+<div class="footer-grid">
+<div class="footer-brand">
+<h2>Percepção premium.<br/><em>Conversão mensurável.</em></h2>
+<p>A VANTA transforma empresas tradicionais em marcas digitais mais modernas, sofisticadas e desejadas no ambiente online.</p>
+</div>
+<div class="footer-col">
+<h4>Navegação</h4>
+<a href="vanta-black-enxuta-com-ofertas-otimizada.html">Início</a>
+<a href="ofertas.html">Ofertas</a>
+<a href="metodo.html">Método</a>
+<a href="mercados.html">Mercados</a>
+<a href="recursos.html">Recursos</a>
+<a href="privacidade.html">Privacidade</a>
+</div>
+<div class="footer-col">
+<h4>Especialidades</h4>
+<span>Agro</span>
+<span>Finanças</span>
+<span>Imobiliário</span>
+<span>Landing Pages</span>
+</div>
+<div class="footer-col">
+<h4>Contato</h4>
+<a data-track="whatsapp_click" href="https://wa.me/5562984147635?text=Olá%2C%20vim%20pela%20landing%20page%20da%20Vanta%20Black%20e%20quero%20um%20diagnóstico%20estratégico." rel="noopener noreferrer" target="_blank">WhatsApp</a>
+<span>Palmas • Tocantins</span>
+<span>Brasil</span>
+</div>
+</div>
+<div class="footer-hover" id="footerHover">
+<svg viewbox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialgradient cx="50%" cy="50%" id="footerReveal" r="18%">
+<stop offset="0%" stop-color="#FFD89F"></stop>
+<stop offset="100%" stop-color="#F2B86B" stop-opacity="0"></stop>
+</radialgradient>
+<mask id="footerMask">
+<rect fill="url(#footerReveal)" height="100%" width="100%"></rect>
+</mask>
+</defs>
+<text dominant-baseline="middle" fill="transparent" stroke="rgba(242,184,107,.11)" stroke-width=".55" style="font-family:Space Grotesk;font-size:58px;font-weight:800;letter-spacing:-.08em" text-anchor="middle" x="50%" y="50%">VANTA</text>
+<text dominant-baseline="middle" fill="transparent" mask="url(#footerMask)" stroke="#F2B86B" stroke-width=".55" style="font-family:Space Grotesk;font-size:58px;font-weight:800;letter-spacing:-.08em" text-anchor="middle" x="50%" y="50%">VANTA</text>
+</svg>
+</div>
+<div class="footer-bottom">
+<span>© 2026 VANTA Studio</span>
+<span>VANTA BLACK SYSTEM</span>
+</div>
+</div>
+<div class="vanta-instagram-footer"><a aria-label="Instagram Vanta Black" data-track="instagram_click" href="https://www.instagram.com/vantablackstd" rel="noopener noreferrer" target="_blank">Instagram</a></div>
+<div class="vanta-contact-instagram">
+<a href="https://www.instagram.com/vantablackstd?igsh=N2V5Y2VnZmVtMmww" rel="noopener noreferrer" target="_blank">
+Instagram • @vantablackstd
+</a>
+</div>
+</footer>
+<script>
+const header=document.getElementById("header");
+window.addEventListener("scroll",()=>header.classList.toggle("scrolled",window.scrollY>30));
+
+const toggle=document.getElementById("themeToggle");
+const saved=localStorage.getItem("vanta-theme");
+if(saved){
+  document.documentElement.setAttribute("data-theme",saved);
+  toggle.textContent=saved==="light"?"☾":"☀";
+}
+toggle.addEventListener("click",()=>{
+  const current=document.documentElement.getAttribute("data-theme")==="light"?"dark":"light";
+  document.documentElement.setAttribute("data-theme",current);
+  localStorage.setItem("vanta-theme",current);
+  toggle.textContent=current==="light"?"☾":"☀";
+});
+
+const phone=document.getElementById("iphoneTilt");
+if(phone && window.matchMedia("(pointer:fine)").matches){
+  phone.addEventListener("mousemove",(e)=>{
+    const r=phone.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5;
+    const y=(e.clientY-r.top)/r.height-.5;
+    phone.style.transform=`rotateY(${x*12}deg) rotateX(${-y*12}deg)`;
+  });
+  phone.addEventListener("mouseleave",()=>{
+    phone.style.transform="rotateY(0deg) rotateX(0deg)";
+  });
+}
+
+const phoneAiChat=document.getElementById("phoneAiChat");
+const phoneAiForm=document.getElementById("phoneAiForm");
+const phoneAiInput=document.getElementById("phoneAiInput");
+
+function addPhoneAiBubble(type,text){
+  if(!phoneAiChat) return null;
+  const bubble=document.createElement("div");
+  bubble.className=`phone-bubble ${type}`;
+  bubble.textContent=text;
+  phoneAiChat.appendChild(bubble);
+  while(phoneAiChat.children.length>8){
+    phoneAiChat.removeChild(phoneAiChat.firstElementChild);
+  }
+  phoneAiChat.scrollTop=phoneAiChat.scrollHeight;
+  return bubble;
+}
+
+function getPhoneAiAnswer(question){
+  const q=question.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+  if(/preco|valor|custa|plano|investimento|pagar/.test(q)){
+    return "Os projetos começam em R$ 697 e podem evoluir para estrutura premium com página, copy, criativos, Meta Ads e integrações. O diagnóstico indica o plano mais inteligente para o momento da empresa.";
+  }
+  if(/prazo|tempo|demora|entrega|pronto|dias/.test(q)){
+    return "A estrutura inicial costuma ser desenhada para entrar no ar com rapidez, priorizando a primeira dobra, oferta, CTA e mensuração. O prazo exato depende do volume de páginas, criativos e integrações.";
+  }
+  if(/trafego|ads|anuncio|campanha|meta|instagram|facebook/.test(q)){
+    return "Sim. A Vanta pode preparar a página para tráfego, configurar campanha inicial, UTMs, eventos e caminho até WhatsApp, formulário ou checkout.";
+  }
+  if(/diagnostico|analise|começar|comecar|duvida|duvidas|proximo|primeiro/.test(q)){
+    return "O diagnóstico identifica onde está o gargalo: percepção, oferta, tráfego, página ou mensuração. É o melhor primeiro passo antes de contratar uma estrutura maior.";
+  }
+  if(/whatsapp|wpp|contato|falar|chamar|mensagem/.test(q)){
+    return "O caminho recomendado é solicitar o diagnóstico e continuar a conversa no WhatsApp. Assim a proposta nasce em cima do cenário real da empresa.";
+  }
+  return "Boa pergunta. Pelo que você descreveu, eu começaria por um diagnóstico de percepção e oferta para entender o que precisa mudar antes de aumentar tráfego.";
+}
+
+function answerPhoneQuestion(question){
+  const clean=(question || "").trim();
+  if(!clean) return;
+  addPhoneAiBubble("user",clean);
+  if(phoneAiInput) phoneAiInput.value="";
+  const typing=addPhoneAiBubble("ai typing","analisando...");
+  window.setTimeout(()=>{
+    if(!typing) return;
+    typing.classList.remove("typing");
+    typing.textContent=getPhoneAiAnswer(clean);
+    phoneAiChat.scrollTop=phoneAiChat.scrollHeight;
+  },420);
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({event:"phone_ai_question",question:clean});
+}
+
+document.addEventListener("click",(event)=>{
+  const quickQuestion=event.target && event.target.closest ? event.target.closest("[data-ai-question]") : null;
+  if(!quickQuestion) return;
+  event.preventDefault();
+  answerPhoneQuestion(quickQuestion.dataset.aiQuestion);
+});
+
+if(phoneAiForm){
+  phoneAiForm.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    answerPhoneQuestion(phoneAiInput ? phoneAiInput.value : "");
+  });
+}
+
+const revealEls=document.querySelectorAll(".reveal");
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add("visible");
+  });
+},{threshold:.08, rootMargin:"0px 0px -40px 0px"});
+revealEls.forEach(el=>io.observe(el));
+
+
+const logoBox=document.querySelector(".logo-box");
+const logoImgs=document.querySelectorAll(".logo-track img");
+function updateLogoFocus(){
+  if(!logoBox || !logoImgs.length) return;
+  const box=logoBox.getBoundingClientRect();
+  const center=box.left + box.width/2;
+  let closest=null, closestDist=Infinity;
+  logoImgs.forEach(img=>{
+    const r=img.getBoundingClientRect();
+    const imgCenter=r.left + r.width/2;
+    const dist=Math.abs(center-imgCenter);
+    if(dist<closestDist){closestDist=dist;closest=img;}
+  });
+  logoImgs.forEach(img=>img.classList.toggle("is-center", img===closest && closestDist < 230));
+}
+updateLogoFocus();
+setInterval(updateLogoFocus, 220);
+
+const footerHover=document.getElementById("footerHover");
+if(footerHover){
+  const grad=footerHover.querySelector("#footerReveal");
+  footerHover.addEventListener("mousemove",(e)=>{
+    const r=footerHover.getBoundingClientRect();
+    const cx=((e.clientX-r.left)/r.width)*100;
+    const cy=((e.clientY-r.top)/r.height)*100;
+    grad.setAttribute("cx",cx+"%");
+    grad.setAttribute("cy",cy+"%");
+  });
+}
+</script>
+<div aria-hidden="true" class="vanta-exit-popup" id="vantaExitPopup">
+<div class="vanta-exit-card">
+<button aria-label="Fechar" class="vanta-exit-close" type="button">×</button>
+<h3>Antes de sair, receba um diagnóstico estratégico.</h3>
+<p>Veja onde sua presença digital pode estar reduzindo percepção de valor, autoridade e oportunidades comerciais.</p>
+<a data-track="popup_whatsapp_click" href="https://wa.me/5562984147635?text=Olá%2C%20vim%20pela%20landing%20page%20da%20Vanta%20Black%20e%20quero%20um%20diagnóstico%20estratégico." rel="noopener noreferrer" target="_blank">Receber diagnóstico</a>
+</div>
+</div>
+<script id="vanta-conversion-plugins-js">
+(function(){
+  window.dataLayer = window.dataLayer || [];
+
+  function pushEvent(name, params){
+    window.dataLayer.push(Object.assign({ event: name }, params || {}));
+  }
+
+  document.addEventListener('click', function(e){
+    var tracked = e.target.closest('[data-track]');
+    if(!tracked) return;
+
+    var type = tracked.getAttribute('data-track');
+    var payload = {
+      click_text: (tracked.innerText || tracked.textContent || '').trim(),
+      click_url: tracked.href || ''
+    };
+
+    if(type === 'checkout_click'){
+      payload.plan = tracked.getAttribute('data-plan') || '';
+      payload.value = Number(tracked.getAttribute('data-value') || 0);
+      pushEvent('checkout_click', payload);
+    } else if(type === 'whatsapp_click' || type === 'sticky_whatsapp_click' || type === 'popup_whatsapp_click'){
+      pushEvent(type, payload);
+    } else {
+      pushEvent(type, payload);
+    }
+  });
+  var popup = document.getElementById('vantaExitPopup');
+  var closeBtn = popup ? popup.querySelector('.vanta-exit-close') : null;
+  var popupShown = sessionStorage.getItem('vanta_exit_popup_shown') === '1';
+
+  function showPopup(){
+    if(!popup || popupShown) return;
+    popup.classList.add('is-visible');
+    popup.setAttribute('aria-hidden','false');
+    popupShown = true;
+    sessionStorage.setItem('vanta_exit_popup_shown','1');
+    pushEvent('exit_popup_view');
+  }
+
+  document.addEventListener('mouseleave', function(e){
+    if(e.clientY <= 8) showPopup();
+  });
+
+  if(closeBtn){
+    closeBtn.addEventListener('click', function(){
+      popup.classList.remove('is-visible');
+      popup.setAttribute('aria-hidden','true');
+      pushEvent('exit_popup_close');
+    });
+  }
+
+  if(popup){
+    popup.addEventListener('click', function(e){
+      if(e.target === popup){
+        popup.classList.remove('is-visible');
+        popup.setAttribute('aria-hidden','true');
+      }
+    });
+  }
+
+  var milestones = [25, 50, 75, 90];
+  var sent = {};
+  function onScroll(){
+    var doc = document.documentElement;
+    var scrollTop = window.pageYOffset || doc.scrollTop;
+    var height = doc.scrollHeight - window.innerHeight;
+    if(height <= 0) return;
+    var pct = Math.round((scrollTop / height) * 100);
+    milestones.forEach(function(m){
+      if(pct >= m && !sent[m]){
+        sent[m] = true;
+        pushEvent('scroll_depth', { percent: m });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  pushEvent('lp_plugins_loaded');
+})();
+</script>
+<script id="vanta-growth-additions-js">
+(function(){
+  var config = window.VANTA_CONFIG = Object.assign({
+    canonicalUrl: "https://vantablack.com.br/",
+    whatsappNumber: "5562984147635",
+    tallyUrl: "https://tally.so/r/ODbK77",
+    metaPixelId: "",
+    ga4MeasurementId: ""
+  }, window.VANTA_CONFIG || {});
+
+  window.dataLayer = window.dataLayer || [];
+  function pushEvent(name, params){
+    window.dataLayer.push(Object.assign({ event: name }, params || {}));
+  }
+
+  var utmKeys = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid"];
+  function currentPublicUrl(){
+    if(location.protocol === "file:") return config.canonicalUrl;
+    return location.href.split("#")[0];
+  }
+  function readTracking(){
+    var params = new URLSearchParams(location.search);
+    var saved = {};
+    try{ saved = JSON.parse(localStorage.getItem("vanta_tracking") || "{}"); }catch(e){}
+    var next = Object.assign({}, saved);
+    utmKeys.forEach(function(key){
+      var value = params.get(key);
+      if(value) next[key] = value;
+    });
+    next.page_url = currentPublicUrl();
+    try{ localStorage.setItem("vanta_tracking", JSON.stringify(next)); }catch(e){}
+    return next;
+  }
+  var tracking = readTracking();
+
+  function decorateUrl(rawUrl, extra){
+    try{
+      var url = new URL(rawUrl, location.href);
+      Object.keys(tracking).forEach(function(key){
+        if(tracking[key] && key !== "fbclid" && key !== "gclid") url.searchParams.set(key, tracking[key]);
+      });
+      Object.keys(extra || {}).forEach(function(key){
+        if(extra[key]) url.searchParams.set(key, extra[key]);
+      });
+      return url.toString();
+    }catch(e){
+      return rawUrl;
+    }
+  }
+
+  function decorateWhatsapp(rawUrl){
+    try{
+      var url = new URL(rawUrl, location.href);
+      var campaign = tracking.utm_campaign || "organico";
+      var source = tracking.utm_source || "site";
+      var text = [
+        "Olá, vim pela landing page da Vanta Black.",
+        "Quero um diagnóstico estratégico.",
+        "Origem: " + source,
+        "Campanha: " + campaign
+      ].join("\n");
+      url.searchParams.set("text", text);
+      return url.toString();
+    }catch(e){
+      return rawUrl;
+    }
+  }
+
+  document.querySelectorAll('a[href*="tally.so"]').forEach(function(link){
+    link.href = decorateUrl(link.href, { page_url: currentPublicUrl() });
+  });
+  document.querySelectorAll('a[href*="asaas.com"]').forEach(function(link){
+    link.href = decorateUrl(link.href, { plan: link.getAttribute("data-plan") || "" });
+  });
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(link){
+    link.href = decorateWhatsapp(link.href);
+  });
+
+  var visits = document.getElementById("vantaVisits");
+  var conversion = document.getElementById("vantaConversion");
+  var ticket = document.getElementById("vantaTicket");
+  var calcValue = document.getElementById("vantaCalcValue");
+  var calcText = document.getElementById("vantaCalcText");
+  function brl(value){
+    return value.toLocaleString("pt-BR", { style:"currency", currency:"BRL", maximumFractionDigits:0 });
+  }
+  function updateCalculator(){
+    if(!visits || !conversion || !ticket || !calcValue || !calcText) return;
+    var v = Math.max(0, Number(visits.value || 0));
+    var c = Math.max(0, Number(conversion.value || 0)) / 100;
+    var t = Math.max(0, Number(ticket.value || 0));
+    var current = v * c * t;
+    var improved = v * (c * 1.3) * t;
+    var upside = Math.max(0, improved - current);
+    calcValue.textContent = brl(upside);
+    calcText.textContent = "Com 30% de melhora na conversão, a oportunidade estimada sai de " + brl(current) + " para " + brl(improved) + " em receita potencial mensal.";
+  }
+  [visits, conversion, ticket].forEach(function(input){
+    if(!input) return;
+    input.addEventListener("input", function(){
+      updateCalculator();
+      pushEvent("calculator_update", {
+        visits: Number(visits.value || 0),
+        conversion_rate: Number(conversion.value || 0),
+        ticket: Number(ticket.value || 0)
+      });
+    });
+  });
+  updateCalculator();
+
+  var shareButton = document.getElementById("vantaShareOffer");
+  if(shareButton){
+    shareButton.addEventListener("click", function(){
+      var shareData = {
+        title: "Vanta Black",
+        text: "Olha essa estrutura da Vanta Black para landing page premium, tráfego e aquisição.",
+        url: currentPublicUrl()
+      };
+      if(navigator.share){
+        navigator.share(shareData).then(function(){ pushEvent("share_offer_success"); }).catch(function(){});
+      }else if(navigator.clipboard){
+        navigator.clipboard.writeText(shareData.url).then(function(){
+          shareButton.textContent = "Link copiado";
+          pushEvent("share_offer_copy");
+          setTimeout(function(){ shareButton.textContent = "Compartilhar oferta"; }, 1800);
+        });
+      }
+    });
+  }
+
+  document.querySelectorAll(".vanta-faq-list details").forEach(function(item){
+    item.addEventListener("toggle", function(){
+      if(item.open){
+        pushEvent("faq_open", { question: item.querySelector("summary").textContent.trim() });
+      }
+    });
+  });
+
+  if(config.metaPixelId && !window.fbq){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window, document,"script","https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", config.metaPixelId);
+    fbq("track", "PageView");
+  }
+})();
+</script>
+<div class="vanta-mobile-actionbar" aria-label="Ações rápidas">
+<a data-track="sticky_whatsapp_click" href="https://wa.me/5562984147635?text=Olá,%20vim%20pela%20landing%20page%20da%20Vanta%20Black." rel="noopener noreferrer" target="_blank">WhatsApp</a>
+<a data-track="sticky_diagnostic_click" href="https://tally.so/r/ODbK77" rel="noopener noreferrer" target="_blank">Diagnóstico</a>
+</div>
+<a aria-label="WhatsApp" class="vanta-wa-clean" href="https://wa.me/5562984147635?text=Olá,%20vim%20pela%20landing%20page%20da%20Vanta%20Black." rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" viewbox="0 0 64 64">
+<path d="M32 12
+           C21 12 13 19 13 30
+           C13 40 20 48 30 48
+           L37 53
+           C38 54 40 53 40 51
+           L39 46
+           C47 43 51 37 51 30
+           C51 19 43 12 32 12Z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+</svg>
+</a>
+<script id="vanta-late-link-decorator">
+(function(){
+  window.dataLayer = window.dataLayer || [];
+  var keys = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"];
+  var params = new URLSearchParams(location.search);
+  var tracking = {};
+  keys.forEach(function(key){
+    var value = params.get(key);
+    if(value) tracking[key] = value;
+  });
+  function publicUrl(){
+    return location.protocol === "file:" ? "https://vantablack.com.br/" : location.href.split("#")[0];
+  }
+  function withTracking(href, extra){
+    try{
+      var url = new URL(href, location.href);
+      Object.keys(tracking).forEach(function(key){ url.searchParams.set(key, tracking[key]); });
+      Object.keys(extra || {}).forEach(function(key){ if(extra[key]) url.searchParams.set(key, extra[key]); });
+      return url.toString();
+    }catch(e){ return href; }
+  }
+  function whatsapp(href){
+    try{
+      var url = new URL(href, location.href);
+      url.searchParams.set("text", [
+        "Olá, vim pela landing page da Vanta Black.",
+        "Quero um diagnóstico estratégico.",
+        "Origem: " + (tracking.utm_source || "site"),
+        "Campanha: " + (tracking.utm_campaign || "organico")
+      ].join("\n"));
+      return url.toString();
+    }catch(e){ return href; }
+  }
+  document.querySelectorAll('a[href*="tally.so"]').forEach(function(link){
+    link.href = withTracking(link.href, { page_url: publicUrl() });
+  });
+  document.querySelectorAll('a[href*="wa.me"]').forEach(function(link){
+    link.href = whatsapp(link.href);
+  });
+})();
+</script>
+<script id="vanta-external-link-opener">
+(function(){
+  var externalHosts = ["tally.so", "wa.me", "asaas.com", "instagram.com"];
+  document.addEventListener("click", function(event){
+    var link = event.target.closest("a[href]");
+    if(!link) return;
+    var href = link.getAttribute("href") || "";
+    var shouldOpenSameTab = externalHosts.some(function(host){
+      return href.indexOf(host) !== -1;
+    });
+    if(!shouldOpenSameTab) return;
+    event.preventDefault();
+    window.location.href = link.href;
+  }, true);
+})();
+</script>
+</body>
+</html>
+
